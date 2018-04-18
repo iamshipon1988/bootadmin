@@ -1,0 +1,477 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    background: $bodyColor;
+    color: $textColor;
+    font-family: $fontPrimary;
+    font-style: $fontStyle;
+    font-weight: $fontNormal;
+    font-size: $fontSize;
+    letter-spacing: $letterSpacing;
+    line-height: $lineHeight;
+    @include font-smoothing(on);
+    min-height: 100vh;
+
+    @media screen and (max-width: $grid-md) {
+        padding-left: 0;
+    }
+}
+
+body, input, select, textarea {
+    @include bezier-transition(all, $animateFast, cubic-bezier(0.42, 0, 0.58, 1));
+}
+
+::selection {
+    background-color: $primaryColor;
+    color: #ffffff;
+}
+
+a {
+    @include bezier-transition(all, $animateFast, cubic-bezier(0.42, 0, 0.58, 1));
+    cursor: pointer;
+    color: $textColor;
+    text-decoration: none;
+
+    &:hover {
+        color: $primaryColor;
+        border-color: $primaryColor;
+        text-decoration: none !important;
+        outline: none !important;
+    }
+
+    &:active, &:focus {
+        outline: none !important;
+        text-decoration: none !important;
+    }
+}
+
+strong, b {
+    font-weight: $fontBold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+p {
+    font-family: $fontPrimary;
+    font-size: $fontSize;
+    font-weight: $fontNormal;
+    letter-spacing: 0.025em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        padding-bottom: 2px;
+        border-bottom: 1px dashed $textColorLight;
+    }
+}
+
+abbr[title] {
+    border-bottom: none !important;
+    cursor: inherit !important;
+    text-decoration: none !important;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $fontHeader;
+    font-weight: 400;
+    color: $textColorDark;
+    line-height: 1.27;
+    margin: 0 0 $padding-lg;
+    letter-spacing: .025em;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    small {
+        color: inherit;
+    }
+
+    span {
+        color: $primaryColor;
+    }
+
+    &.add-line {
+        position: relative;
+        padding-bottom: 1.5rem;
+
+        &:after {
+            display: block;
+            position: absolute;
+            content: " ";
+            bottom: .5rem;
+            height: 3px;
+            width: 75px;
+            background: $textColor;
+            @include opacity(0.75);
+        }
+
+        &.secondary-line:after {
+            background: $secondaryColor;
+        }
+
+        &.primary-line:after {
+            background: $primaryColor;
+        }
+    }
+}
+
+h1 {
+    font-size: 2*$fontHeaderSize;
+}
+
+h2 {
+    font-size: 1.5*$fontHeaderSize;
+}
+
+h3 {
+    font-size: $fontHeaderSize;
+}
+
+h4 {
+    font-size: 0.75*$fontHeaderSize;
+}
+
+h5 {
+    font-size: 0.5*$fontHeaderSize;
+}
+
+h6 {
+    font-size: $fontSizeLarge;
+    font-weight: $fontBold;
+    font-family: $fontHeader;
+    letter-spacing: 0.025em;
+    line-height: 2;
+    color: $headerColor;
+    margin-bottom: $padding;
+}
+
+small {
+    font-size: 85%;
+}
+
+figure {
+    display: block;
+    border: 1px solid $frameColor;
+    padding: 0.75rem 0.75rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    img {
+        max-width: 100%;
+    }
+
+    figcaption {
+        display: block;
+        padding: 0.25rem 0.75rem;
+        font-size: 85%;
+        font-style: italic;
+        color: lighten($textColor, 10%);
+    }
+}
+
+// Sections
+
+section {
+    position: relative;
+    padding-top: 5*$padding-xl;
+    padding-bottom: 5*$padding-xl;
+    z-index: 0;
+
+    &.text-center div[class*='col-']:first-child:last-child {
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+main {
+    padding-top: $navSizeMobile;
+    min-height: 100vh;
+
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+pre {
+    background-color: $bodyColor;
+    border: 1px solid $borderColor;
+    padding: $padding-lg;
+    font-size: 13px;
+    @include border-radius(4px);
+
+    code {
+        color: $redAlert;
+    }
+}
+
+// Modify Bootstrap
+
+.lead {
+    font-size: $fontSizeLarge;
+    font-weight: $fontNormal;
+    color: $textColorLight;
+    margin: 0 0 $padding-lg;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: $fontBold;
+    letter-spacing: 0.01em;
+    color: white;
+    text-transform: uppercase;
+    height: 26px;
+    line-height: 26px;
+    min-width: $navSizeMobile;
+    padding: 0 $padding;
+    text-align: center;
+    @include border-radius(3px);
+    $b: &;
+
+    &-pill {
+        @include border-radius(13px);
+    }
+
+    &-primary {
+        background: $primaryColor;
+    }
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.button, button {
+    @extend %button;
+
+    i {
+        display: inline-block;
+        margin-right: $padding-sm;
+        //font-size: 1.15*$fontSize;
+    }
+
+    &:hover {
+        color: $white;
+        @include transform(translate(0, -3px));
+        @include box-shadow(0 3px 15px 0 rgba(0,0,0,0.2));
+        @include transition(all 200ms ease-in);
+    }
+
+    &.button-disabled {
+        background: $bodyColor;
+        color: $textColor;
+        cursor: not-allowed;
+        @include box-shadow(none);
+
+        &:hover {
+            @include transform(translate(0));
+            @include box-shadow(none);
+        }
+    }
+
+    &.button-blue {
+        background: $tirtiaryColor !important;
+        background-image: none;
+        color: white;
+
+        &:hover {
+            background: lighten($tirtiaryColor, 2%);
+        }
+    }
+
+    &.button-darkblue {
+        background: $textColor !important;
+        background-image: none;
+        color: white;
+
+        &:hover {
+            background: lighten($textColor, 2%);
+        }
+    }
+
+    &.button-green {
+        background: $greenAlert !important;
+        color: white;
+        background-image: none;
+
+        &:hover {
+            background: darken($greenAlert, 5%);
+        }
+    }
+
+    &.button-red {
+        background: $redAlert !important;
+        color: white;
+        background-image: none;
+
+        &:hover {
+            background: darken($redAlert, 5%);
+        }
+    }
+
+    &.button-white {
+        background: white !important;
+        color: $primaryColor;
+        background-image: none;
+
+        &:hover {
+            //
+        }
+    }
+
+    &.button-facebook {
+        background: $facebook !important;
+        color: white;
+        background-image: none;
+
+        &:hover {
+            background: lighten($facebook, 2%);
+        }
+    }
+
+    &.button-has-icon, &.has-icon {
+        padding: 0 $padding-lg 0 ($inputSize + $padding);
+
+        i {
+            display: block;
+            background: rgba(0,0,0,0.1);
+            width: $inputSize;
+            height: $inputSize;
+            line-height: $inputSize;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 0;
+        }
+    }
+
+    &.button-sm {
+        height: $inputSizeSm;
+        line-height: $inputSizeSm;
+        letter-spacing: 0;
+
+        &.button-has-icon, &.has-icon {
+            padding: 0 $padding-lg 0 ($inputSizeSm + $padding);
+
+            i {
+                width: $inputSizeSm;
+                height: $inputSizeSm;
+                line-height: $inputSizeSm;
+            }
+        }
+    }
+
+    &.button-md {
+        height: $inputSizeLg;
+        line-height: $inputSizeLg;
+
+        &.button-has-icon, &.has-icon {
+            padding: 0 $padding-lg 0 ($inputSizeLg + $padding);
+
+            i {
+                width: $inputSizeLg;
+                height: $inputSizeLg;
+                line-height: $inputSizeLg;
+            }
+        }
+    }
+
+    &.button-lg {
+        height: $inputSizeLg;
+        line-height: $inputSizeLg;
+
+        &.button-has-icon, &.has-icon {
+            padding: 0 $padding-lg 0 ($inputSizeLg + $padding);
+
+            i {
+                width: $inputSizeLg;
+                height: $inputSizeLg;
+                line-height: $inputSizeLg;
+            }
+        }
+    }
+
+    &.button-rounded {
+
+    }
+
+    &.button-block {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    &.button-appstore {
+        background: #353535 !important;
+        background-image: none;
+        color: white;
+    }
+
+    &.button-playstore {
+        background: white !important;
+        background-image: none;
+        color: $textColor;
+        border: 1px solid lighten($textColor, 50%);
+    }
+}
+
+.separator {
+    display: block;
+    height: 2px;
+    border: 1px solid $borderColor;
+    margin: (1.5*$padding-xl) 0;
+}
+
+.img-responsive {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.auto-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+
+    > [class*='col-'], > .col {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+
+
+@media (min-width: $grid-xl) {
+    .container {
+        width: 1280px;
+        max-width: 100%;
+    }
+}

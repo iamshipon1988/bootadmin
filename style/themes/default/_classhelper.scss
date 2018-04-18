@@ -1,0 +1,1268 @@
+.btn {
+    border-color: $borderColor;
+}
+
+img, .img-responsive {
+    max-width: 100%;
+}
+
+.btn {
+    &.btn-default {
+        background-color: $bodyColor;
+        font-size: $fontSize;
+    }
+
+    &.btn-primary {
+        color: white !important;
+    }
+}
+
+.input-group-addon {
+    background: $bodyColor;
+    border-color: $borderColor;
+}
+
+.list {
+    &.vertical {
+        width: auto;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            list-style-type: none;
+            margin-right: $padding;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+            }
+
+            .icon {
+                display: inline-block;
+                margin-right: .5*$padding;
+            }
+        }
+    }
+
+    &.icon {
+        list-style: none;
+        position: relative;
+        padding: 0;
+
+        li {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            padding-left: 1.5*$inputSize;
+            margin: 3*$padding-lg 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .icon {
+                position: absolute;
+                left: 0;
+                width: $inputSize;
+                height: $inputSize;
+                font-size: 1.75em;
+                text-align: center;
+            }
+
+            .content {
+                h4 {
+                    color: $textColorDark;
+                    font-size: 1.25*$fontSize;
+                    margin-bottom: $padding-xs;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @media only screen and (min-width: $grid-md) {
+            &.icon-right {
+                text-align: right;
+
+                li {
+                    padding-left: 0;
+                    padding-right: 1.5*$inputSize;
+
+                    .icon {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: $grid-md) {
+            padding-top: 2*$padding-xl;
+            padding-bottom: 2*$padding-xl;
+
+            .split {
+                padding: 0;
+
+                ol li {
+                    margin: 0 0 $padding-xl;
+                }
+            }
+        }
+    }
+
+    &.timeline {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: list-counter;
+        display: block;
+
+        li {
+            display: block;
+            min-height: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 3rem;
+            position: relative;
+            @include linear-gradient(180deg, $borderColor 0%, $borderColor 100%);
+            background-repeat: no-repeat;
+            background-size: 2px 100%;
+            background-position: 1rem center;
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    &::before {
+                        background-position: center #{$i}0%;
+                    }
+                }
+            }
+
+            &::before {
+                background: #0082d5;
+                @include linear-gradient(180deg, $blueAlert 0%, $redAlert 100%);
+                background-repeat: no-repeat;
+                background-size: 2rem 20rem;
+                border-radius: 50%;
+                color: white;
+                content: counter(list-counter);
+                counter-increment: list-counter;
+                display: block;
+                height: 2rem;
+                left: 0;
+                line-height: 2;
+                position: absolute;
+                text-align: center;
+                width: 2rem;
+            }
+        }
+    }
+}
+
+.tabs {
+    .nav-tabs {
+        > li {
+            border: 1px solid $borderColor;
+            border-bottom: none;
+            margin-right: -1px;
+            position: relative;
+
+            a {
+                display: block;
+                padding: $padding-sm $padding;
+                background: $bodyColor;
+            }
+
+            &.active {
+                border-color: $primaryColor;
+                z-index: 1;
+
+                a {
+                    color: white;
+                    background: $primaryColor;
+                }
+            }
+        }
+    }
+
+    .tab-pane {
+        padding: $padding;
+    }
+}
+
+.nav-pills {
+    > li {
+        border: 1px solid transparent;
+        @include border-radius(4px);
+        z-index: 1;
+
+        a {
+            display: block;
+            padding: $padding-xs $padding;
+            border: 1px solid transparent;
+
+            .badge {
+                min-width: 0;
+                height: auto;
+                line-height: inherit;
+                background: white;
+                color: $primaryColor;
+                padding: 2px $padding-xs;
+                border: none;
+            }
+        }
+
+        &:hover {
+            border-color: $primaryColor;
+        }
+
+        &.active {
+            border-color: $primaryColor;
+            background: $primaryColor;
+            color: white;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    &.nav-stacked {
+        display: block;
+
+        li {
+            display: block;
+
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+.pagination {
+    li {
+        a {
+            display: block;
+            border: 1px solid transparent;
+            padding: $padding-xs $padding-sm;
+            @include border-radius(4px);
+        }
+
+        &:hover {
+            a {
+                border-color: $primaryColor;
+            }
+        }
+
+        &.active {
+            a {
+                border-color: $primaryColor;
+                background: $primaryColor;
+                color: white;
+            }
+        }
+    }
+}
+
+.pager {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+        a {
+            display: block;
+            padding: $padding-xs $padding-sm;
+            border: 1px solid transparent;
+            @include border-radius(4px);
+        }
+
+        &:hover {
+            a {
+                border-color: $primaryColor;
+            }
+        }
+
+        &.active {
+            border-color: $primaryColor;
+            background: $primaryColor;
+            color: white;
+
+            a {
+                color: white;
+            }
+        }
+    }
+}
+
+.progress {
+    margin-bottom: $padding-sm;
+}
+
+.dropdown-menu {
+    border: 1px solid $borderColor;
+    color: $textColor;
+    @include border-radius(5px);
+    @include box-shadow(0 0 25px 0 rgba(0, 0, 0, 0.08));
+
+    li, .dropdown-item {
+        padding: 0;
+        background: transparent !important;
+
+        a {
+            display: block;
+            padding: $padding-xs $padding-lg;
+        }
+    }
+}
+
+.or-separator {
+    display: block;
+    width: 70%;
+    margin: $padding auto;
+    position: relative;
+    border-bottom: 2px dashed $borderColor;
+    text-align: center;
+    color: $textColorLight;
+
+    span {
+        position: relative;
+        z-index: 2;
+        background: white;
+        padding: 0 $padding;
+        bottom: -12px;
+    }
+}
+
+.read-more {
+    margin: 0;
+    font-size: $fontSizeSmall;
+    text-align: inherit;
+
+    a {
+        display: block;
+        text-align: center;
+        color: $primaryColor;
+        text-decoration: none;
+        border: none;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Displays
+.display {
+    $b: &;
+
+    &-none {
+        display: none !important;
+    }
+
+    &-block {
+        display: block !important;
+    }
+
+    &-inline {
+        display: inline !important;
+    }
+
+    &-inline-block {
+        display: inline-block !important;
+    }
+
+    &-table {
+        display: table !important;
+    }
+
+    &-flex {
+        display: flex !important;
+    }
+}
+
+.no {
+    $b: &;
+
+    &-margin {
+        margin: 0 !important;
+    }
+
+    &-margin-bottom {
+        margin-bottom: 0 !important;
+    }
+
+    &-padding-right {
+        padding-right: 0 !important;
+    }
+
+    &-margin-top {
+        margin-top: 0 !important;
+    }
+
+    &-margin-left {
+        margin-left: 0 !important;
+    }
+
+    &-padding {
+        padding: 0 !important;
+    }
+
+    &-padding-left {
+        padding-left: 0 !important;
+    }
+
+    &-padding-top {
+        padding-top: 0 !important;
+    }
+
+    &-padding-right {
+        padding-right: 0 !important;
+    }
+
+    &-padding-bottom {
+        padding-bottom: 0 !important;
+    }
+
+    &-borders {
+        border: none !important;
+    }
+
+    &-style {
+        border: none !important;
+        text-decoration: none !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        background: transparent !important;
+        color: $textColor !important;
+    }
+}
+
+// Backgrounds
+.bg {
+    $b: &;
+
+    &-dark, &-blue, &-red, &-green {
+        color: white;
+
+        h1, h2, h3, h4, h5, h6, a, .lead {
+            color: white;
+        }
+    }
+
+    &-dark {
+        background: $bodyColorDark;
+    }
+
+    &-white {
+        background: white;
+    }
+
+    &-grey, &-gray {
+        background: $bodyColor;
+    }
+
+    &-red {
+        background: $redAlert !important;
+    }
+
+    &-green {
+        background: $greenAlert !important;
+    }
+
+    &-blue {
+        background: $blueAlert !important;
+    }
+
+    &-yellow {
+        background: $yellowAlert !important;
+        color: $textColor;
+    }
+
+    &-ltorange {
+        background: $ltorange !important;
+        color: $textColor;
+    }
+
+    &-image {
+        position: relative;
+
+        .bg-image-holder {
+            will-change: transform, top;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: cover !important;
+            background-position: 50% 50%;
+            z-index: 0;
+            @include transition(0.3s linear);
+
+            &.bg-contain {
+                background-size: contain !important;
+            }
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+    &-gradient {
+        @extend %gradient;
+
+        h1, h2, h3, h4, h5, h6, p {
+            color: white;
+        }
+    }
+
+    &-gradient-bluegreen {
+        @include linear-gradient(to bottom right, #00c589 0,#00aeef 75%);
+
+        h1, h2, h3, h4, h5, h6, p {
+            color: white;
+        }
+    }
+}
+
+
+
+// Backgrounds
+.color {
+    $b: &;
+
+    &-dark {
+        color: $bodyColorDark;
+    }
+
+    &-white {
+        color: white;
+    }
+
+    &-grey, &-gray {
+        color: #666;
+    }
+
+    &-textColor {
+        color: $textColor !important;
+    }
+
+    &-red {
+        color: $redAlert !important;
+    }
+
+    &-primary {
+        color: $primaryColor !important;
+    }
+
+    &-green {
+        color: $greenAlert !important;
+    }
+
+    &-blue {
+        color: $blueAlert !important;
+    }
+
+    &-yellow {
+        color: $yellowAlert !important;
+    }
+
+    &-ltorange {
+        color: $ltorange !important;
+    }
+}
+
+.has {
+    $b: &;
+
+    &-overlay {
+        &:before {
+            position: absolute;
+            content: '';
+            background: $bodyColorDark;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            @include opacity(.65);
+        }
+
+        > div:not(.bg-image-holder) {
+            z-index: 1;
+            color: white;
+
+            h1, h2, h3, h4, h5, h6, a, .lead {
+                color: white;
+            }
+        }
+    }
+}
+
+// Font Colors
+.text {
+    $b: &;
+
+    &-light {
+        color: $textColorLight !important;
+    }
+
+    &-primary {
+        color: $primaryColor !important;
+    }
+}
+
+// Heights
+.vh {
+    $b: &;
+
+    &-10 {
+        height: 10vh;
+    }
+
+    &-20 {
+        height: 20vh;
+    }
+
+    &-30 {
+        height: 30vh;
+    }
+
+    &-40 {
+        height: 40vh;
+    }
+
+    &-50 {
+        height: 50vh;
+    }
+
+    &-60 {
+        height: 60vh;
+    }
+
+    &-70 {
+        height: 70vh;
+    }
+
+    &-80 {
+        height: 80vh;
+    }
+
+    &-90 {
+        height: 90vh;
+    }
+
+    &-100 {
+        height: 100vh;
+    }
+}
+
+.auto-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+
+    > [class*='col-'], > .col {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+
+        .box {
+            height: 100%;
+        }
+    }
+}
+
+// Extend Paddings
+.ptb {
+    $b: &;
+
+    &-1 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    &-2 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    &-3 {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+}
+
+.pt {
+    $b: &;
+
+    &-6 {
+        padding-top: 4rem;
+    }
+
+    &-7 {
+        padding-top: 5rem;
+    }
+
+    &-8 {
+        padding-top: 6rem;
+    }
+
+    &-9 {
+        padding-top: 7rem;
+    }
+
+    &-10 {
+        padding-top: 8rem;
+    }
+}
+
+.pb {
+    $b: &;
+
+    &-6 {
+        padding-bottom: 4rem;
+    }
+
+    &-7 {
+        padding-bottom: 5rem;
+    }
+
+    &-8 {
+        padding-bottom: 6rem;
+    }
+
+    &-9 {
+        padding-bottom: 7rem;
+    }
+
+    &-10 {
+        padding-bottom: 8rem;
+    }
+}
+
+.pl {
+    $b: &;
+
+    &-6 {
+        padding-left: 4rem;
+    }
+
+    &-7 {
+        padding-left: 5rem;
+    }
+
+    &-8 {
+        padding-left: 6rem;
+    }
+
+    &-9 {
+        padding-left: 7rem;
+    }
+
+    &-10 {
+        padding-left: 8rem;
+    }
+}
+
+.pr {
+    $b: &;
+
+    &-6 {
+        padding-right: 4rem;
+    }
+
+    &-7 {
+        padding-right: 5rem;
+    }
+
+    &-8 {
+        padding-right: 6rem;
+    }
+
+    &-9 {
+        padding-right: 7rem;
+    }
+
+    &-10 {
+        padding-right: 8rem;
+    }
+}
+
+// Extended Margins
+.mtb {
+    $b: &;
+
+    &-1 {
+        margin-top: 25px !important;
+        margin-bottom: 25px !important;
+    }
+
+    &-2 {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+    }
+
+    &-3 {
+        margin-top: 75px !important;
+        margin-bottom: 75px !important;
+    }
+}
+
+.mt {
+    $b: &;
+
+    &-6 {
+        margin-top: 4rem;
+    }
+
+    &-7 {
+        margin-top: 5rem;
+    }
+
+    &-8 {
+        margin-top: 6rem;
+    }
+
+    &-9 {
+        margin-top: 7rem;
+    }
+
+    &-10 {
+        margin-top: 8rem;
+    }
+}
+
+.mb {
+    $b: &;
+
+    &-6 {
+        margin-bottom: 4rem;
+    }
+
+    &-7 {
+        margin-bottom: 5rem;
+    }
+
+    &-8 {
+        margin-bottom: 6rem;
+    }
+
+    &-9 {
+        margin-bottom: 7rem;
+    }
+
+    &-10 {
+        margin-bottom: 8rem;
+    }
+}
+
+.ml {
+    $b: &;
+
+    &-6 {
+        margin-left: 4rem;
+    }
+
+    &-7 {
+        margin-left: 5rem;
+    }
+
+    &-8 {
+        margin-left: 6rem;
+    }
+
+    &-9 {
+        margin-left: 7rem;
+    }
+
+    &-10 {
+        margin-left: 8rem;
+    }
+}
+
+.mr {
+    $b: &;
+
+    &-6 {
+        margin-right: 4rem;
+    }
+
+    &-7 {
+        margin-right: 5rem;
+    }
+
+    &-8 {
+        margin-right: 6rem;
+    }
+
+    &-9 {
+        margin-right: 7rem;
+    }
+
+    &-10 {
+        margin-right: 8rem;
+    }
+}
+
+// Alignments
+.align-bottom {
+    height: 100%;
+    @include flexbox-col(bottom);
+    align-self: center;
+}
+
+.align-center, .align-middle {
+    @include flexbox-col(center);
+}
+
+.align-bottom, .aligh-center, .align-middle {
+    height: 100%;
+
+    img {
+        -webkit-align-self: center;
+        align-self: center;
+    }
+}
+
+// Positions
+.position {
+    $b: &;
+
+    &-relative {
+        position: relative !important;
+    }
+
+    &-absolute {
+        position: absolute !important;
+    }
+
+    &-static {
+        position: static !important;
+    }
+
+    &-fixed {
+        position: fixed !important;
+    }
+
+    &-inherit {
+        position: inherit !important;
+    }
+
+    &-initial {
+        position: initial !important;
+    }
+}
+
+// Font-Sizes
+
+.font {
+    $b: &;
+
+    &-small {
+        font-size: $fontSizeSmall;
+    }
+
+    &-2x {
+        font-size: 2*$fontSize !important;
+    }
+
+    &-3x {
+        font-size: 3*$fontSize !important;
+    }
+
+    &-4x {
+        font-size: 4*$fontSize !important;
+    }
+
+    &-5x {
+        font-size: 5*$fontSize !important;
+    }
+
+    &-weight-light {
+        font-weight: 300 !important;
+    }
+
+    &-weight-normal {
+        font-weight: 400 !important;
+    }
+
+    &-weight-bold {
+        font-weight: bold !important;
+    }
+
+    &-style-italic {
+        font-style: italic !important;
+    }
+
+    &-style-normal {
+        font-style: normal !important;
+    }
+
+    &-style-oblique {
+        font-style: oblique !important;
+    }
+}
+
+// Hr
+
+hr {
+    width: 100%;
+    border-color: $borderColor;
+    margin: 1rem 0;
+
+    &.hr-primary {
+        border-color: $primaryColor;
+    }
+
+    &.hr-short {
+        width: $navSize;
+    }
+
+    &.hr-center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// Image Effects
+
+.image, .card {
+    max-width: 100%;
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    $b: &;
+
+    .img, img {
+        position: relative;
+        max-width: 100%;
+        z-index: 1;
+    }
+
+    &-rounded {
+        @include border-radius(5px);
+        overflow: hidden;
+    }
+
+    &-circle {
+        @include border-radius(50%);
+        overflow: hidden;
+    }
+
+    &-shadow {
+        @include box-shadow(0 5px 15px rgba(0,0,0,0.15));
+    }
+
+    &-shadow-narrow {
+        @include box-shadow(0px 0px 15px 0px rgba(0, 0, 0, 0.06));
+    }
+
+    &-shadow-wide {
+        @include box-shadow(0 23px 40px rgba(0, 0, 0, 0.17));
+    }
+
+    &-shadow-floating {
+        position: relative;
+        overflow: visible;
+
+        &:before, &:after{
+            position: absolute;
+            content: "";
+            bottom: $padding;
+            left: $padding;
+            top:80%;
+            width:45%;
+            background: rgba(0,0,0,0.35);
+            z-index: 0;
+            @include box-shadow(0 15px 15px rgba(0,0,0,0.35));
+            @include transform(rotate(-6deg));
+        }
+
+        &:after{
+            @include transform(rotate(6deg));
+            right: $padding;
+            left: auto;
+        }
+
+        &.image-rounded, &.card-rounded {
+            overflow: visible;
+
+            img {
+                //@include border-radius(5px);
+            }
+        }
+    }
+
+    &-shadow-lifted {
+        position: relative;
+        overflow: visible;
+
+        &:before, &:after{
+            position: absolute;
+            content: "";
+            box-shadow: 0 10px 25px 20px rgba(0,0,0,0.25);
+            top: 40px;
+            left: $padding;
+            bottom: 2.5*$padding;
+            width: 15%;
+            z-index: 0;
+            @include transform(rotate(-3deg));
+        }
+
+        &:after{
+            right: $padding;
+            left: auto;
+            @include transform(rotate(3deg));
+        }
+
+        &.image-rounded, &.card-rounded {
+            overflow: visible;
+
+            img {
+                //@include border-radius(5px);
+            }
+        }
+    }
+
+    &-shadow-layer {
+        position: relative;
+        @include box-shadow(0 2.5rem 2.5rem -2rem rgba(0,0,0,0.2));
+    }
+}
+
+// Responsive hidden classes
+.hidden-md-down {
+    @media (max-width: $grid-md){
+        display: none;
+    }
+}
+
+.hidden-md-up {
+    @media (min-width: $grid-lg){
+        display: none;
+    }
+}
+
+.image.image-rounded {
+    img {
+        @include border-radius(5px);
+    }
+}
+
+.card-shadow, .card-shadow-narrow, .card-shadow-wide, .card-shadow-floating, .card-shadow-lifted, .card-shadow-layer {
+    background: white;
+    border: 1px solid $borderColor;
+
+    .card-block {
+        position: relative;
+        background: white;
+        z-index: 1;
+    }
+}
+
+// Animation Delays
+
+.delay {
+    $b: &;
+
+    &-025s {
+        @include animation-delay(.25s);
+    }
+
+    &-05s {
+        @include animation-delay(.5s);
+    }
+
+    &-075s {
+        @include animation-delay(.75s);
+    }
+
+    &-1s {
+        @include animation-delay(1s);
+    }
+
+    &-125s {
+        @include animation-delay(1.25s);
+    }
+
+    &-15s {
+        @include animation-delay(1.5s);
+    }
+
+    &-175s {
+        @include animation-delay(1.75s);
+    }
+
+    &-2s {
+        @include animation-delay(2s);
+    }
+
+    &-225s {
+        @include animation-delay(2.25s);
+    }
+
+    &-25s {
+        @include animation-delay(2.5s);
+    }
+
+    &-275s {
+        @include animation-delay(2.75s);
+    }
+
+    &-3s {
+        @include animation-delay(3s);
+    }
+
+    &-325s {
+        @include animation-delay(3.25s);
+    }
+
+    &-35s {
+        @include animation-delay(3.5s);
+    }
+
+    &-375s {
+        @include animation-delay(3.75s);
+    }
+
+    &-4s {
+        @include animation-delay(4s);
+    }
+
+    &-5s {
+        @include animation-delay(5s);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    [class^="delay-"] {
+        @include animation-delay(0s);
+    }
+}

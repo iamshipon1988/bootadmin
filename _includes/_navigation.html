@@ -1,0 +1,69 @@
+{% assign current = page.url | downcase | split: '/' %}
+
+<!-- Main Menu -->
+<nav id="mainNav" class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ site.baseurl }}/" class="animsition-link">
+                <img src="../images/logo/logocircle.svg" alt="BeeBack Logo" />
+                BeeBack
+            </a>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item {% if current[1] == 'why' %}active{% endif %}">
+                <a href="{{ site.baseurl }}/why" class="animsition-link">Why BeeBack</a>
+            </li>
+            <li class="nav-item {% if current[1] == 'app' %}active{% endif %}">
+                <a href="{{ site.baseurl }}/app" class="animsition-link">Mobile App</a>
+            </li>
+            <li class="nav-item {% if current[1] == 'business' %}active{% endif %}">
+                <a href="{{ site.baseurl }}/business" class="animsition-link">For Business</a>
+            </li>
+            <li class="nav-item {% if current[1] == 'about' %}active{% endif %}">
+                <a href="{{ site.baseurl }}/about" class="animsition-link">About</a>
+            </li>
+        </ul>
+        <ul class="nav-items right">
+            <li class="">
+                <a href="https://app.beeback.io" class="animsition-link" target="_blank">Merchant Portal</a>
+            </li>
+            <li class="nav-button">
+                <a href="https://itunes.apple.com/us/app/beeback/id1245521413?mt=8" class="animsition-link"><i class="fa fa-cloud-download"></i> Download App</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<nav id="mobileNav" class="mobileNav">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ site.baseurl }}/" class="animsition-link">
+                <img src="../images/logo/logocircle.svg" alt="BeeBack Logo" />
+                BeeBack
+            </a>
+        </div>
+        <a href="#" id="mobileMenuButton" class="dropMenu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <ul class="dropDown" id="mobileMenu" style="display: none;">
+            <li>
+                <a href="{{ site.baseurl }}/why" class="animsition-link">Why BeeBack</a>
+            </li>
+            <li>
+                <a href="{{ site.baseurl }}/app" class="animsition-link">Mobile App</a>
+            </li>
+            <li>
+                <a href="{{ site.baseurl }}/business" class="animsition-link">For Business</a>
+            </li>
+            <li>
+                <a href="{{ site.baseurl }}/about" class="animsition-link">About</a>
+            </li>
+            <li>
+                <a href="https://app.beeback.io" class="animsition-link">Merchant Portal</a>
+            </li>
+            <li>
+                <a href="https://itunes.apple.com/us/app/beeback/id1245521413?mt=8" class="animsition-link">Download App</a>
+            </li>
+        </ul>
+    </div>
+</nav>

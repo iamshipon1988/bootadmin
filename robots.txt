@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+
+Sitemap: https://beeback.io/sitemap.xml

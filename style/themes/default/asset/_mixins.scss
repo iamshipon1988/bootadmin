@@ -1,0 +1,488 @@
+.var {}
+
+// WebKit font-smoothing
+// Values: none, antialiased (default), subpixel-antialiased
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+// Flex-box upgrade
+@mixin flexbox-row($value: on) {
+    @if $value == on {
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+    @else {
+        display: block;
+    }
+}
+
+@mixin flexbox-col($value: center) {
+    @if $value == center {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        align-self: center;
+    }
+    @elseif $value == bottom {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: center;
+        justify-content: flex-end;
+        align-self: center;
+    }
+    @else {
+        display: block;
+    }
+}
+
+// Cross-browser mixins transition and shadow
+@mixin bezier-transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin transform-opal($axex,$axey,$axez) {
+    -webkit-transform: translate3d($axex,$axey,$axez);
+    -moz-transform: translate3d($axex,$axey,$axez);
+    -o-transform: translate3d($axex,$axey,$axez);
+    -ms-transform: translate3d($axex,$axey,$axez);
+    transform: translate3d($axex,$axey,$axez);
+}
+
+@mixin box-shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false) {
+ $params: $shadow1;
+  @if $shadow2
+    { $params: $shadow1, $shadow2; }
+    @if $shadow3 != false
+      { $params: $shadow1, $shadow2, $shadow3; }
+      @if $shadow4 != false
+        { $params: $shadow1, $shadow2, $shadow3, $shadow4; }
+        @if $shadow5 != false
+          { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5; }
+
+  -webkit-box-shadow: $params;
+     -moz-box-shadow: $params;
+          box-shadow: $params;
+
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin backface-visibility ($arguments) {
+  -webkit-backface-visibility: $arguments;
+     -moz-backface-visibility: $arguments;
+      -ms-backface-visibility: $arguments;
+       -o-backface-visibility: $arguments;
+          backface-visibility: $arguments;
+}
+
+// Cross-browser mixins border-radius
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin border-top-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+// Cross-browser transform mixins
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin rotate($rotate) {
+    -ms-transform: rotate($rotate);
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Image effect
+@mixin linear-gradient($direction, $color-stops...) {
+    background: nth(nth($color-stops, 1), 1) !important;
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops) !important;
+    background: linear-gradient($direction, $color-stops) !important;
+}
+
+@mixin blur ($radius) {
+	-webkit-filter: blur($radius+px); /* Chrome, Safari */
+	-ms-filter: blur($radius+px); /* IE12? */
+	filter: url("data:image/svg+xml;utf8,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"#{$radius}\" /></filter></svg>#blur"); /* Firefox, Safari, Chrome*/
+	filter: progid:DXImageTransform.Microsoft.Blur(Strength=$radius); /* IE9 */
+}
+
+@mixin filter($filter-type,$filter-amount) {
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin horizontal-align($position: relative) {
+    position: $position;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+// Hamburger
+@mixin hamburger($width, $bar-height, $space, $color) {
+  display: block;
+  width: $width;
+  height: (($bar-height * 3) + ($space * 2));
+  background: linear-gradient(
+            to bottom,
+            $color 0, $color $bar-height,
+            transparent $bar-height, transparent ($bar-height + $space),
+            $color ($bar-height + $space), $color (($bar-height * 2) + $space),
+            transparent (($bar-height * 2) + $space),transparent (($bar-height * 2) + ($space * 2)),
+            $color (($bar-height * 2) + ($space * 2)), $color (($bar-height * 3) + ($space * 2)));
+}
+
+// Keyframes and Animations
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin animation-delay ($animationDelay) {
+    -moz-animation-delay: $animationDelay;
+    -webkit-animation-delay: $animationDelay;
+    animation-delay: $animationDelay;
+}
+
+// Doughnut Creator
+@mixin donut-creator($donut-diameter, $center-diameter, $bg-color, $donut-color) {
+    .donut {
+        width: $donut-diameter;
+        height: $donut-diameter;
+        font-size: $donut-diameter;
+        position: relative;
+        overflow: hidden;
+        display: table;
+
+        //delete[START]//
+        display: inline-block;
+        margin: 0 10px;
+        //delete[END]//
+
+        &:before, &:after {
+            content: "";
+            background: $donut-color;
+            position: absolute;
+            display: block;
+            width: 50%;
+            height: 100%;
+            transform-origin: 100% 50%;
+            border-radius: 100% 0 0 100% / 50% 0 0 50%;
+        }
+
+        &:before {
+            z-index: 2;
+            border-right: none;
+        }
+
+        &:after {
+            border-left: none;
+            z-index: 3;
+            transform: rotate(180deg);
+            opacity: 0;
+        }
+
+        &-center {
+            background: $bg-color;
+            width: $center-diameter;
+            height: $center-diameter;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 100%;
+        }
+
+        &-mask {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+            &:before, &:after {
+                content: "";
+                background: darken($bg-color, 20%);
+                position: absolute;
+                display: block;
+                width: 50%;
+                height: 100%;
+                transform-origin: 100% 50%;
+                border-radius: 100% 0 0 100% / 50% 0 0 50%;
+            }
+
+            &:before {
+                border-right: none;
+                z-index: 3;
+            }
+
+            &:after {
+                border-left: none;
+                transform: rotate(180deg);
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@for $i from 1 through 100 {
+    $aux: $i * 3.60;
+    $equiv: $aux - 180;
+    $time: .8;
+
+    .donut--#{$i} {
+        &:before { animation: rota1-#{$i} $time + s forwards; }
+    }
+
+    @if ($i < 50) {
+        @keyframes rota1-#{$i} {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate($aux + deg); }
+        }
+    }
+    @else {
+        .donut--#{$i}:after { animation: rota2-#{$i} ($equiv*$time)/180 + s forwards $time + s; }
+
+        @keyframes rota1-#{$i} {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(180deg); }
+        }
+
+        @keyframes rota2-#{$i} {
+            0% { transform: rotate(180deg); opacity: 1; }
+            100% { transform: rotate($aux + deg); opacity: 1; }
+        }
+    }
+}
+
+// Parallax Mixins
+@mixin perspective($val) {
+    -webkit-perspective: $val;
+    -moz-perspective: $val;
+    -ms-perspective: $val;
+    perspective: $val;
+}
+
+@mixin transform-style($val) {
+    -webkit-transform-style: $val;
+    -moz-transform-style: $val;
+    -ms-transform-style: $val;
+    transform-style: $val;
+}
+
+@mixin backface-visibility ($arguments) {
+    -webkit-backface-visibility: $arguments;
+    -moz-backface-visibility: $arguments;
+    -ms-backface-visibility: $arguments;
+    -o-backface-visibility: $arguments;
+    backface-visibility: $arguments;
+}
+
+@mixin MQ($canvas) {
+    @if $canvas == S {
+        @media only screen and (min-width: $S) { @content; }
+    }
+    @else if $canvas == M {
+        @media only screen and (min-width: $M) { @content; }
+    }
+    @else if $canvas == L {
+        @media only screen and (min-width: $L) { @content; }
+    }
+}
+
+// Hacks
+%clearfix {
+    *zoom: 1;
+
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+%gradient {
+    position: relative;
+    @include linear-gradient(-270deg, #FF9D6D 0%, #FE616F 100%);
+}
+
+%button {
+    position: relative;
+    border: none;
+    color: $white;
+    background: $primaryColor;
+    display: inline-block;
+    font-size: $fontSize;
+    margin: 0;
+    padding: 0 $padding-lg;
+    height: $inputSize;
+    line-height: $inputSize;
+    cursor: pointer;
+    vertical-align: middle;
+    overflow: hidden;
+    @include border-radius(4px);
+    @include linear-gradient(-270deg, #FF9D6D 0%, #FE616F 100%);
+    @include transition(all 200ms ease-in);
+    @include box-shadow($boxShadowSolid);
+
+    &:hover {
+        @include transform(translate(0, -3px));
+        @include box-shadow(0 3px 15px 0 rgba(0,0,0,0.2));
+        @include transition(all 200ms ease-in);
+    }
+}
+
+%no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// Convert PX to Rem
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}

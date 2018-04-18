@@ -1,0 +1,87 @@
+<head>
+    <!-- Le Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        {% if page.title == "Home" %}
+            {{ site.title }} &middot; {{ site.tagline }}
+        {% else %}
+            {{ page.title }} &middot; {{ site.title }}
+        {% endif %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <script type="text/javascript">
+        var host = "bootadmin.org";
+        if ((host == window.location.host) && (window.location.protocol != "https:"))
+            window.location.protocol = "https";
+    </script>
+
+    <!-- Le Meta Data -->
+    <meta content="{{ site.title }}" property="og:site_name">
+    {% if post.title %}<meta content="{{ post.title }}" property="og:title">
+    {% else %}<meta content="{{ site.title }}" property="og:title">{% endif %}
+    {% if post.title %}<meta content="article" property="og:type">
+    {% else %}<meta content="website" property="og:type">{% endif %}
+    {% if post.description %}<meta content="{{ post.description }}" property="og:description">
+    {% else %}<meta content="{{ site.seo.description }}" property="og:description">{% endif %}
+    <meta name="keywords" content="{{ site.seo.keywords }}">
+    {% if post.url %}<meta content="{{site.baseurl}}{{ post.url }}" property="og:url">    {% endif %}
+    {% if post.date %}<meta content="{{ post.date | date_to_xmlschema }}" property="article:published_time">
+    <meta content="{{site.baseurl}}/about/" property="article:author">{% endif %}
+    {% if post.img %}<meta content="/images/{{ post.img }}" property="og:image">
+    {% else %}<meta content="/images/logo.png" property="og:image">{% endif %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{site.owner.twitter}}">
+    <meta name="twitter:creator" content="@{{site.owner.twitter}}">
+    {% if post.title %}<meta name="twitter:title" content="{{ post.title }}">{% else %}
+    <meta name="twitter:title" content="{{ site.title }}">{% endif %}
+    {% if post.url %}<meta name="twitter:url" content="{{site.baseurl}}{{ post.url }}">{% endif %}
+    {% if post.description %}<meta name="twitter:description" content="{{ post.description }}">{% else %}
+    <meta name="twitter:description" content="{{ site.description }}">{% endif %}
+    {% if post.header-img %}<meta name="twitter:image:src" content="{{site.baseurl}}/{{ post.img }}">{% endif %}
+
+    <!-- Le App Banner Data -->
+    <meta name="apple-itunes-app" content="app-id=1245521413">
+    <!--<meta name="apple-itunes-app" content="app-id=1245521413, affiliate-data=myAffiliateData, app-argument=myURL">-->
+
+    <!-- Le Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/style/vendor/library.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/style/theme/style.min.css">
+
+    <!-- Le IE Conditionals
+    ================================================== -->
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le Javascript Pre-loads
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+	<!-- Le Favicons
+	================================================== -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ site.baseurl }}/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl }}/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{ site.baseurl }}/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ site.baseurl }}/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
