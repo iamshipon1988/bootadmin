@@ -5,7 +5,7 @@
 */
 
 /** Fonts **/
-@import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 /** Import **/
 @import "asset/variables";
@@ -75,7 +75,7 @@ nav {
             a {
                 display: block;
                 text-align: center;
-                min-width: $logoSize;
+                min-width: $navSize;
                 line-height: $navSize;
                 @include transition(all .2s linear);
             }
@@ -86,29 +86,36 @@ nav {
 /** Sidebar **/
 .sidebar {
     display: block;
-    width: $sidebarSize;
+    width: 0;
     position: fixed;
     left: 0;
     top: $navSize;
     bottom: 0;
     overflow-y: auto;
+    overflow-x: hidden;
     background: white;
     z-index: 10;
+    font-size: $fontSize - 1px;
+    @include transition(all .4s ease);
 
-    ul {
+    &.sidebar-open {
+        width: $sidebarSize;
+        @include transition(all .4s ease);
+    }
+
+    > ul {
         margin: 0;
         padding: 0;
 
-        li {
-            font-weight: $fontBold;
-            padding: $padding-sm $padding;
+        > li {
+            white-space: nowrap;
+            border-bottom: 1px solid $borderColor;
 
             &.profile {
                 padding: $padding $padding;
                 position: relative;
                 padding-left: $inputSizeXl;
                 border-top: 1px solid $borderColor;
-                border-bottom: 1px solid $borderColor;
 
                 span {
                     display: block;
@@ -133,14 +140,48 @@ nav {
                     }
                 }
             }
+
+            &.title {
+                padding: $padding-sm $padding-lg $padding-xs;
+                font-weight: $fontBold;
+                border: none;
+                text-transform: uppercase;
+                font-size: $fontSize - 3px;
+            }
+
+            &.nav-item {
+                a {
+                    padding: $padding-sm $padding-lg;
+
+                    i {
+                        display: inline-block;
+                        margin-right: $padding-sm;
+                        color: $primaryColor;
+
+                        &.down-arrow {
+                            color: $textColorLight;
+                            float: right;
+                        }
+                    }
+                }
+
+                .collapse ul li {
+                    list-style-type: square;
+                }
+            }
         }
     }
 }
 
 /** Main **/
 main {
-    padding-left: $sidebarSize;
     padding-top: $navSize;
+    @include transition(all .4s ease);
+
+    &.sidebar-open {
+        padding-left: $sidebarSize;
+        @include transition(all .4s ease);
+    }
 }
 
 /** Box Elements **/

@@ -2,6 +2,13 @@
    Initialize
    ========================================================================== */
 
+// Sidebar Toggle
+$('.menu-toggle').click(function(e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('sidebar-open');
+    $('main').toggleClass('sidebar-open');
+});
+
 // Mobile Menu
 $('#mobileMenuButton').click( function(e) {
    e.preventDefault();
