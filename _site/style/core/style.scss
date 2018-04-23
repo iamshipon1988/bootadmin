@@ -23,6 +23,9 @@
 nav {
     background: white;
     height: $navSize;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
     @include box-shadow($boxShadow);
 
     [class^="col-md-"] {
@@ -78,6 +81,66 @@ nav {
             }
         }
     }
+}
+
+/** Sidebar **/
+.sidebar {
+    display: block;
+    width: $sidebarSize;
+    position: fixed;
+    left: 0;
+    top: $navSize;
+    bottom: 0;
+    overflow-y: auto;
+    background: white;
+    z-index: 10;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            font-weight: $fontBold;
+            padding: $padding-sm $padding;
+
+            &.profile {
+                padding: $padding $padding;
+                position: relative;
+                padding-left: $inputSizeXl;
+                border-top: 1px solid $borderColor;
+                border-bottom: 1px solid $borderColor;
+
+                span {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1;
+
+                    &.profile-image {
+                        position: absolute;
+                        width: $inputSize;
+                        left: $padding-xl;
+                        top: $padding + 2px;
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+
+                    &.profile-info {
+                        font-weight: $fontNormal;
+                        color: $textColorLight;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** Main **/
+main {
+    padding-left: $sidebarSize;
+    padding-top: $navSize;
 }
 
 /** Box Elements **/

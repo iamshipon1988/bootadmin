@@ -9,7 +9,10 @@
     <div class="page-container">
         <div id="{{ page.bodyID }}">
             {% include _navigation.html %}
-            {{ content }}
+            {% include _sidebar.html %}
+            <main>
+                {{ content }}
+            </main>
         </div>
 
         {% include _footer.html %}
