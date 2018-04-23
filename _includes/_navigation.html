@@ -1,17 +1,25 @@
 {% assign current = page.url | downcase | split: '/' %}
 
 <!-- Main Menu -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link  {% if current[1] == 'home' %}active{% endif %}"" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+<nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="menu-toggle"><i class="ti-view-grid"></i><span>Menu</span></a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="#" class="logo">BootAdmin</a>
+            </div>
+            <div class="col-md-4 text-right">
+                <ul>
+                    <li>
+                        <a href="#"><i class="ti-settings"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ti-bell"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

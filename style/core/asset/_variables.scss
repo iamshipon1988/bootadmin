@@ -2,11 +2,11 @@
 
 // Fonts
 $fontSize:        15px;
-$fontSizeLarge:   16px;
-$fontSizeSmall:   11px;
+$fontSizeLarge:   18px;
+$fontSizeSmall:   13px;
 $fontHeaderSize:  38px;
-$fontPrimary:     'Poppins', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
-$fontHeader:      'Antic Slab', 'Times New Roman', cursive, Arial, Verdana;
+$fontPrimary:     'Karla', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
+$fontHeader:      $fontPrimary;
 $fontLight:       300;
 $fontNormal:      400;
 $fontMedium:      500;
@@ -17,7 +17,7 @@ $lineHeight:      1.77;
 
 // Sizes
 $sidebarSize:     330px;
-$navSize:         50px;
+$navSize:         60px;
 $navSizeMobile:   44px;
 $logoSize:        50px;
 $logoSizeMobile:  36px;
@@ -44,20 +44,20 @@ $inputSizeSm:     22px;
 $inputSizeXs:     18px;
 
 // Colors
-$primaryColor:    #FF586C;
+$primaryColor:    #5389F7;
 $secondaryColor:  #FFD63B;
 $tirtiaryColor:   #4680FE;
 
-$textColor:       #2F3340;
+$textColor:       #65777A;
 $textColorLight:  #8CA0B3;
-$headerColor:     #2c398f;
+$headerColor:     #1D2435;
 $textColorDark:   #2c398f;
 
 $white:           #FFFFFF;
-$bodyColor:       #FFFFFF;
+$bodyColor:       #F5F7FA;
 $bodyColorDark:   #F4F6F8;
 $bodyYellow:      #FFDC00;
-$borderColor:     #DDE3EB;
+$borderColor:     rgba(0,0,0,0.05);
 $frameColor:      #E5F5FE;
 $overlayColor:    rgba(255,255,255,0.5);
 

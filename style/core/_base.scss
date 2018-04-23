@@ -187,8 +187,8 @@ figure {
 
 section {
     position: relative;
-    padding-top: 5*$padding-xl;
-    padding-bottom: 5*$padding-xl;
+    padding-top: $padding-xl;
+    padding-bottom: $padding-xl;
     z-index: 0;
 
     &.text-center div[class*='col-']:first-child:last-child {
