@@ -142,11 +142,12 @@ nav {
             }
 
             &.title {
-                padding: $padding-sm $padding-lg $padding-xs;
-                font-weight: $fontBold;
+                padding: $padding-sm $padding-lg 0;
+                //font-weight: $fontBold;
                 border: none;
                 text-transform: uppercase;
                 font-size: $fontSize - 3px;
+                color: $textColorLight;
             }
 
             &.nav-item {
