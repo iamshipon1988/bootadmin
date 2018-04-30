@@ -86,21 +86,93 @@ nav {
 /** Sidebar **/
 .sidebar {
     display: block;
-    width: 0;
+    width: $sidebarSize;
     position: fixed;
     left: 0;
     top: $navSize;
     bottom: 0;
     overflow-y: auto;
-    overflow-x: hidden;
     background: white;
     z-index: 10;
     font-size: $fontSize - 1px;
     @include transition(all .4s ease);
 
+    span, div, ul, li, a, i {
+        @include transition(all 0.2s linear)
+    }
+
     &.sidebar-open {
         width: $sidebarSize;
         @include transition(all .4s ease);
+    }
+
+    &.sidebar-closed:not(:hover) {
+        width: $navSize;
+
+        .title, .down-arrow {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        > ul {
+            padding: 0;
+            margin: 0;
+
+            > li {
+                position: relative;
+
+                &.profile {
+                    padding: 0;
+                    width: $navSize;
+
+                    .profile-image {
+                        left: ($navSize - $inputSize)/2;
+                    }
+
+                    .profile-name, .profile-info {
+                        width: 0;
+                        overflow: hidden;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+
+                &.nav-item {
+                    a {
+                        padding: 0;
+                        line-height: $navSize;
+                        height: $navSize;
+                        width: $navSize;
+                        text-align: center;
+                        @include transition(all 0.2s linear)
+
+                        i {
+                            margin: 0;
+                            font-size: $fontSizeLarge;
+                            display: block;
+                        }
+
+                        .menu-title {
+                            opacity: 0;
+                            width: 0;
+                            overflow: hidden;
+                            @include transition(all 0.2s linear)
+                        }
+                    }
+                }
+
+                .collapse {
+                    position: absolute;
+                    background: white;
+                    left: $navSize;
+                    top: 0;
+                    width: 250px;
+                }
+            }
+        }
     }
 
     > ul {
@@ -110,18 +182,20 @@ nav {
         > li {
             white-space: nowrap;
             border-bottom: 1px solid $borderColor;
+            position: relative;
 
             &.profile {
                 padding: $padding $padding;
                 position: relative;
                 padding-left: $inputSizeXl;
+                height: 70px;
                 border-top: 1px solid $borderColor;
 
                 span {
                     display: block;
                     margin: 0;
                     padding: 0;
-                    line-height: 1;
+                    line-height: 1.3;
 
                     &.profile-image {
                         position: absolute;
@@ -132,6 +206,10 @@ nav {
                         img {
                             max-width: 100%;
                         }
+                    }
+
+                    &.profile-name {
+                        margin-top: $padding-xs - 1px;
                     }
 
                     &.profile-info {
@@ -151,23 +229,42 @@ nav {
             }
 
             &.nav-item {
-                a {
-                    padding: $padding-sm $padding-lg;
+                > a {
+                    padding: $padding-sm ($padding-xl + $padding-sm) $padding-sm $padding-lg;
+                    position: relative;
 
                     i {
                         display: inline-block;
                         margin-right: $padding-sm;
                         color: $primaryColor;
+                        z-index: 3px;
+                        position: relative;
+                        background: white;
 
                         &.down-arrow {
                             color: $textColorLight;
-                            float: right;
+                            position: absolute;
+                            right: $padding-sm;
                         }
                     }
                 }
 
-                .collapse ul li {
-                    list-style-type: square;
+                ul.sub-menu {
+                    padding-left: 2*$padding-lg - 3px;
+
+                    li {
+                        list-style-type: square;
+                        color: $textColorLight;
+
+                        a {
+                            color: lighten($textColor, 25%);
+                            padding-left: $padding-sm - 1px;
+
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -177,6 +274,7 @@ nav {
 /** Main **/
 main {
     padding-top: $navSize;
+    padding-left: $navSize;
     @include transition(all .4s ease);
 
     &.sidebar-open {

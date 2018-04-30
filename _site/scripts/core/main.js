@@ -5,9 +5,18 @@
 // Sidebar Toggle
 $('.menu-toggle').click(function(e) {
     e.preventDefault();
-    $('.sidebar').toggleClass('sidebar-open');
+    $('.sidebar').toggleClass('sidebar-open sidebar-closed');
     $('main').toggleClass('sidebar-open');
 });
+
+/*('.sidebar').hover(function() {
+    if ($(this).hasClass('sidebar-closed')) {
+        $(this).toggleClass('sidebar-open sidebar-closed');
+    }
+    else {
+        $(this).toggleClass('sidebar-open sidebar-closed');
+    }
+});*/
 
 // Mobile Menu
 $('#mobileMenuButton').click( function(e) {
