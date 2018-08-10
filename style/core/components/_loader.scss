@@ -1,0 +1,18 @@
+.loading {
+    @include fixed100();
+    line-height: 100%;
+    text-align: center;
+    background: $bodyColor;
+    z-index: 100;
+
+    .loading-center {
+        width: 100%;
+        display: block;
+        height: 300px;
+        @include vertical-align(absolute);
+    }
+
+    img {
+        max-height: 100%;
+    }
+}

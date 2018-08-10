@@ -476,6 +476,14 @@
     user-select: none;
 }
 
+@mixin fixed100 () {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
 // Convert PX to Rem
 @function calculateRem($size) {
     $remSize: $size / 16px;

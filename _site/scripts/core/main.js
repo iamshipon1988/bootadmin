@@ -1,22 +1,41 @@
 /* ==========================================================================
-   Initialize
+   main.js
    ========================================================================== */
+
+"use strict";
+$.noConflict();
+var $ = jQuery;
+
+$(document).ready(function() {
+    $(".animsition").animsition({
+        inClass: 'fade-in',
+        outClass: 'fade-out',
+        inDuration: 1500,
+        outDuration: 800,
+        linkElement: '.animsition-link',
+        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'loading',
+        loadingInner: '',
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        overlay : false,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body',
+        transition: function(url){ window.location.href = url; }
+    });
+});
 
 // Sidebar Toggle
 $('.menu-toggle').click(function(e) {
     e.preventDefault();
     $('.sidebar').toggleClass('sidebar-open sidebar-closed');
+    $('.topbar').toggleClass('sidebar-open sidebar-closed');
     $('main').toggleClass('sidebar-open');
 });
-
-/*('.sidebar').hover(function() {
-    if ($(this).hasClass('sidebar-closed')) {
-        $(this).toggleClass('sidebar-open sidebar-closed');
-    }
-    else {
-        $(this).toggleClass('sidebar-open sidebar-closed');
-    }
-});*/
 
 // Mobile Menu
 $('#mobileMenuButton').click( function(e) {

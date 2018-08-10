@@ -1,17 +1,14 @@
 /*
-* Theme: BeeBack Client Library
-* Author: BeeBack, LLC.
-* Author URL: http://beeback.io
+* Theme: Bootadmin Library
 */
 
 /** Libraries **/
-@import "bootstrap.scss";
+@import "bootstrap.min.css";
 @import "animate.css";
 @import "animsition.min.css";
-
-// Fonts
 @import "//at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css";
-//@import "themify.css";
+
+// FontAwesome
 @import "fontawesome/fontawesome";
 @import "fontawesome/fa-brands";
 @import "fontawesome/fa-light";

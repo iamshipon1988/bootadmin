@@ -1,8 +1,8 @@
 # Setup
 name:                Bootadmin
 title:               Bootadmin
-tagline:             Loyalty Made Simple
-author:              BeeBack, LLC.
+tagline:             Bootstrapping made simple.
+author:              Sazzad Hossain
 author_email:        sazzad@beeback.io
 url:                 http://bootadmin.org
 baseurl:             ''

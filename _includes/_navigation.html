@@ -1,16 +1,15 @@
 {% assign current = page.url | downcase | split: '/' %}
 
 <!-- Main Menu -->
-<nav>
+<div class="topbar sidebar-closed">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
-                <a href="#" class="menu-toggle"><i class="feather icon-command"></i><span>Menu</span></a>
+            <div class="col-md-5">
+                <a href="#" class="menu-toggle">
+                    <i class="feather icon-menu"></i>
+                </a>
             </div>
-            <div class="col-md-4 text-center">
-                <a href="#" class="logo">BootAdmin</a>
-            </div>
-            <div class="col-md-4 text-right">
+            <div class="col-md-7 text-right">
                 <ul>
                     <li>
                         <a href="#"><i class="feather icon-settings"></i></a>
@@ -22,4 +21,4 @@
             </div>
         </div>
     </div>
-</nav>
+</div>

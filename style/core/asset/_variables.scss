@@ -1,23 +1,26 @@
 .var {}
 
 // Fonts
-$fontSize:        15px;
-$fontSizeLarge:   18px;
+$fontSizexSmall:  10px;
 $fontSizeSmall:   13px;
+$fontSize:        16px;
+$fontSizeLarge:   20px;
+$fontSizexLarge:  24px;
 $fontHeaderSize:  38px;
-$fontPrimary:     'Nunito', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
+$fontPrimary:     system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+//$fontPrimary:     'Nunito', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
 $fontHeader:      $fontPrimary;
-$fontLight:       300;
-$fontNormal:      400;
+$fontLight:       lighter;
+$fontNormal:      normal;
 $fontMedium:      500;
-$fontBold:        600;
+$fontBold:        bold;
 $fontStyle:       normal;
 $letterSpacing:   0;
 $lineHeight:      1.77;
 
 // Sizes
 $sidebarSize:     265px;
-$navSize:         60px;
+$navSize:         65px;
 $navSizeMobile:   44px;
 $logoSize:        50px;
 $logoSizeMobile:  36px;
@@ -38,17 +41,18 @@ $grid-xxl:        1400px;
 
 $inputSizeXl:     80px;
 $inputSizeLg:     60px;
-$inputSizeMd:     50px;
-$inputSize:       40px;
-$inputSizeSm:     22px;
-$inputSizeXs:     18px;
+$inputSize:       50px;
+$inputSizeSm:     40px;
+$inputSizeXs:     35px;
 
 // Colors
-$primaryColor:    #5389F7;
-$secondaryColor:  #FFD63B;
-$tirtiaryColor:   #4680FE;
+$blue:            #2962FF;
+$red:             #e74c3c;
+$yellow:          #f1c40f;
+$green:           #2ecc71;
+$orange:          #e67e22;
 
-$textColor:       #222222;
+$textColor:       #4F5467;
 $textColorLight:  #b7b7b7;
 $headerColor:     #1D2435;
 $textColorDark:   #2c398f;
@@ -56,10 +60,16 @@ $textColorDark:   #2c398f;
 $white:           #FFFFFF;
 $bodyColor:       #F5F7FA;
 $bodyColorDark:   #F4F6F8;
+$bodyColorLight:  #f7f7f7;
 $bodyYellow:      #FFDC00;
 $borderColor:     rgba(0,0,0,0.05);
 $frameColor:      #E5F5FE;
 $overlayColor:    rgba(255,255,255,0.5);
+
+// Brand Colors
+$primaryColor:    $blue;
+$secondaryColor:  $red;
+$tirtiaryColor:   $green;
 
 // Forms Colors
 $greenAlert:      #6FC080;

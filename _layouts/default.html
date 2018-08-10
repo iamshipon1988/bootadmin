@@ -5,38 +5,37 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 {% include _header.html %}
 <body id="landing">
-    {% include _loader.html %}
-    <div class="page-container">
-        <div id="{{ page.bodyID }}">
-            {% include _navigation.html %}
-            {% include _sidebar.html %}
-            <main>
-                {{ content }}
-            </main>
-        </div>
-
-        {% include _footer.html %}
+{% include _loader.html %}
+<div class="page-container animsition">
+    <div id="{{ page.bodyID }}">
+        {% include _navigation.html %}
+        {% include _sidebar.html %}
+        <main>
+            {{ content }}
+        </main>
     </div>
 
-    {% if page.customCode %}
-        {% for customPage in page.customCode %}
-            {% include {{ customPage }} %}
-        {% endfor %}
-    {% endif %}
+    {% include _footer.html %}
+</div>
 
-    <!-- Le Javascript -->
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="{{ site.baseurl }}/scripts/vendor/bootstrap.min.js"></script>
-    <script src="{{ site.baseurl }}/scripts/vendor/library.min.js"></script>
-    <script src="{{ site.baseurl }}/scripts/core/main.js"></script>
+{% if page.customCode %}
+    {% for customPage in page.customCode %}
+        {% include {{ customPage }} %}
+    {% endfor %}
+{% endif %}
 
-    {% if site.analytics_id %}<script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ site.analytics_id }}', 'auto');
-        ga('send', 'pageview');
-    </script>{% endif %}
+<!-- Le Javascript -->
+<script src="{{ site.baseurl }}/scripts/vendor/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/scripts/vendor/library.min.js"></script>
+<script src="{{ site.baseurl }}/scripts/core/main.js"></script>
+
+{% if site.analytics_id %}<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', '{{ site.analytics_id }}', 'auto');
+    ga('send', 'pageview');
+</script>{% endif %}
 </body>
 </html>

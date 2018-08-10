@@ -292,7 +292,11 @@ pre {
     }
 }
 
-
+/** Frame **/
+.page-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 @media (min-width: $grid-xl) {
     .container {

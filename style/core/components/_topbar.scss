@@ -1,0 +1,62 @@
+nav {
+    background: white;
+    height: $navSize;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    @include box-shadow($boxShadow);
+
+    [class^="col-md-"] {
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+        line-height: $navSize;
+        padding: 0 $padding;
+        vertical-align: middle;
+
+        i {
+            display: inline-block;
+            margin-right: $padding-sm;
+        }
+    }
+
+    .logo {
+        display: inline-block;
+        text-align: center;
+        line-height: $navSize;
+        color: $primaryColor;
+        font-weight: $fontBold;
+        padding: 0 $padding;
+    }
+
+    ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: block;
+            float: right;
+
+            &:first-child {
+                border-left: 1px solid $borderColor;
+
+                a:hover {
+                    background: $primaryColor;
+                    color: white;
+                    @include transition(all .2s linear);
+                }
+            }
+
+            a {
+                display: block;
+                text-align: center;
+                min-width: $navSize;
+                line-height: $navSize;
+                @include transition(all .2s linear);
+            }
+        }
+    }
+}
