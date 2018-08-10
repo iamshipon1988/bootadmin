@@ -118,14 +118,25 @@
         font-size: $fontSize;
         letter-spacing: 0.05em;
         border-bottom: 1px solid $borderColor;
+        @extend %clearfix;
 
         .logo-emblem {
-            display: inline-block;
+            display: block;
             width: $navSize;
             height: $navSize;
             line-height: $navSize;
             color: $primaryColor;
             text-align: center;
+            float: left;
+        }
+
+        .logo-full {
+            display: block;
+            width: $navSize;
+            height: $navSize;
+            line-height: $navSize;
+            float: left;
+            width: $sidebarSize - $navSize;
         }
     }
 
