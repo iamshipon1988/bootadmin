@@ -29,12 +29,14 @@ $(document).ready(function() {
     });
 });
 
+Waves.attach('.wave-effect', ['waves-block']);
+Waves.init();
+
 // Sidebar Toggle
 $('.menu-toggle').click(function(e) {
     e.preventDefault();
-    $('.sidebar').toggleClass('sidebar-open sidebar-closed');
-    $('.topbar').toggleClass('sidebar-open sidebar-closed');
     $('main').toggleClass('sidebar-open');
+    $('body').toggleClass('sidebar-open sidebar-closed');
 });
 
 // Mobile Menu

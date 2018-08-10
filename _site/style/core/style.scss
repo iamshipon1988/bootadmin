@@ -29,10 +29,6 @@
     padding-left: $navSize;
     color: white;
 
-    &.sidebar-open {
-        padding-left: $sidebarSize;
-    }
-
     [class^="col-md-"] {
         padding: 0;
     }
@@ -47,10 +43,11 @@
         padding: 0 $padding;
         vertical-align: middle;
         width: $navSize;
+        text-align: center;
+        @include transition(all .2s linear);
 
         i {
             display: inline-block;
-            margin-right: $padding-sm;
             text-align: center;
             font-size: $fontSizeLarge;
         }
@@ -120,6 +117,7 @@
         font-weight: $fontBold;
         font-size: $fontSize;
         letter-spacing: 0.05em;
+        border-bottom: 1px solid $borderColor;
 
         .logo-emblem {
             display: inline-block;
@@ -128,86 +126,6 @@
             line-height: $navSize;
             color: $primaryColor;
             text-align: center;
-        }
-    }
-
-    &.sidebar-open {
-        width: $sidebarSize;
-        @include transition(all .4s ease);
-    }
-
-    &.sidebar-closed:not(:hover) {
-        width: $navSize;
-
-        .down-arrow {
-            height: 0;
-            width: 0;
-            overflow: hidden;
-            padding: 0;
-            margin: 0;
-        }
-
-        > ul {
-            padding: 0;
-            margin: 0;
-
-            > li {
-                position: relative;
-
-                &.profile {
-                    height: $navSize;
-
-                    .profile-name, .profile-info {
-                        overflow: hidden;
-                        display: none;
-                    }
-                }
-
-                &.title {
-                    i {
-                        margin: 0;
-                        display: block;
-                    }
-
-                    .menu-title {
-                        @include opacity(0)
-                        width: 0;
-                        display: none;
-                        overflow: hidden;
-                        @include transition(all 0.2s linear)
-                    }
-                }
-
-                &.nav-item {
-                    a {
-                        padding: 0;
-                        line-height: $inputSize;
-                        height: $inputSize;
-                        width: $navSize;
-                        text-align: center;
-                        @include transition(all 0.2s linear)
-
-                        i {
-                            margin: 0;
-                            display: block;
-
-                            &.down-arrow {
-                                display: none;
-                                @include opacity(0);
-                                @include transition(all 0.5s linear)
-                            }
-                        }
-
-                        .menu-title {
-                            @include opacity(0)
-                            width: 0;
-                            display: none;
-                            overflow: hidden;
-                            @include transition(all 0.2s linear)
-                        }
-                    }
-                }
-            }
         }
     }
 
@@ -220,16 +138,19 @@
             position: relative;
             display: block;
 
+            &.spacer {
+                display: block;
+                height: $inputSizeXxs;
+            }
+
             &.profile {
                 display: block;
                 padding: $padding-sm $padding;
                 position: relative;
                 padding-left: $navSize;
                 height: $navSize;
-                border-top: 1px solid $borderColor;
-                border-bottom: 1px solid $borderColor;
 
-                div {
+                span {
                     display: block;
                     margin: 0;
                     padding: 0;
@@ -286,6 +207,7 @@
 
             &.nav-item {
                 > a {
+                    display: block;
                     padding: 0;
                     position: relative;
                     line-height: $inputSize - 2px;
@@ -367,6 +289,102 @@
     }
 }
 
+.sidebar-open {
+    .topbar {
+        padding-left: $sidebarSize;
+    }
+
+    .sidebar {
+        width: $sidebarSize;
+        @include transition(all .4s ease);
+    }
+
+    main {
+        padding-left: $sidebarSize;
+        @include transition(all .4s ease);
+    }
+}
+
+.sidebar-closed {
+    .topbar {}
+
+    .sidebar:not(:hover) {
+        width: $navSize;
+
+        .down-arrow {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        > ul {
+            padding: 0;
+            margin: 0;
+
+            > li {
+                position: relative;
+
+                &.profile {
+                    height: $navSize;
+
+                    .profile-name, .profile-info {
+                        overflow: hidden;
+                        display: none;
+                    }
+                }
+
+                &.title {
+                    i {
+                        margin: 0;
+                        display: block;
+                    }
+
+                    .menu-title {
+                        @include opacity(0)
+                        width: 0;
+                        display: none;
+                        overflow: hidden;
+                        @include transition(all 0.2s linear)
+                    }
+                }
+
+                &.nav-item {
+                    a {
+                        padding: 0;
+                        line-height: $inputSize;
+                        height: $inputSize;
+                        width: $navSize;
+                        text-align: center;
+                        @include transition(all 0.2s linear)
+
+                        i {
+                            margin: 0;
+                            display: block;
+
+                            &.down-arrow {
+                                display: none;
+                                @include opacity(0);
+                                @include transition(all 0.5s linear)
+                            }
+                        }
+
+                        .menu-title {
+                            @include opacity(0)
+                            width: 0;
+                            display: none;
+                            overflow: hidden;
+                            @include transition(all 0.2s linear)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /** Global **/
 @import "components/global";
 
@@ -376,11 +394,6 @@ main {
     padding-top: $navSize;
     padding-left: $navSize;
     @include transition(all .4s ease);
-
-    &.sidebar-open {
-        padding-left: $sidebarSize;
-        @include transition(all .4s ease);
-    }
 }
 
 /** Box Elements **/
