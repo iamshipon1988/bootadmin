@@ -8,7 +8,7 @@
 {% include _loader.html %}
 <div class="page-container animsition">
     <div id="{{ page.bodyID }}">
-        {% include _navigation.html %}
+        {% include _topbar.html %}
         {% include _sidebar.html %}
         <main>
             {{ content }}
@@ -25,6 +25,7 @@
 {% endif %}
 
 <!-- Le Javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="{{ site.baseurl }}/scripts/vendor/bootstrap.min.js"></script>
 <script src="{{ site.baseurl }}/scripts/vendor/library.min.js"></script>
 <script src="{{ site.baseurl }}/scripts/core/main.js"></script>
