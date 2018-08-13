@@ -298,6 +298,18 @@ pre {
     overflow-y: auto;
 }
 
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media (min-width: $grid-xl) {
     .container {
         width: 1280px;

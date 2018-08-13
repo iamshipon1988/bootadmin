@@ -51,7 +51,7 @@ $blue:            #2962FF;
 $red:             #e74c3c;
 $yellow:          #f1c40f;
 $green:           #2ecc71;
-$orange:          #e67e22;
+$orange:          #d35400;
 
 $textColor:       #4F5467;
 $textColorLight:  #b7b7b7;
@@ -62,8 +62,9 @@ $white:           #FFFFFF;
 $bodyColor:       #F5F7FA;
 $bodyColorDark:   #F4F6F8;
 $bodyColorLight:  #f7f7f7;
-$bodyYellow:      #FFDC00;
-$borderColor:     rgba(0,0,0,0.05);
+$borderColor:     rgba(0,0,0,0.1);
+$borderColorLight:rgba(0,0,0,0.065);
+$borderColorDark: rgba(0,0,0,0.25);
 $frameColor:      #E5F5FE;
 $overlayColor:    rgba(255,255,255,0.5);
 
@@ -81,10 +82,10 @@ $ltorange:        lighten($secondaryColor, 20%);
 $ltgreen:         #3bffb2;
 $pinkAlert:       #FAC0C0;
 
-$boxShadow:       0 2px 2px 1px rgba(119,151,178,0.16);
+$boxShadow:       0 2px 5px 0 rgba(62,57,107,.1);
 $boxShadowLg:     0 10px 45px 0 rgba(7,61,125,0.10);
 $boxShadowSolid:  4px 4px 0px rgba(34, 45, 125, 0.1);
-$boxShadowHover:  0px 20px 40px rgba(0, 0, 0, .2);
+$boxShadowHover:  0 14px 24px rgba(62,57,107,.1);
 
 // Social Media Brand Colors
 $twitter:         #00aced;

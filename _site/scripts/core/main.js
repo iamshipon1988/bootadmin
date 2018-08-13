@@ -7,6 +7,7 @@ $.noConflict();
 var $ = jQuery;
 
 $(document).ready(function() {
+    // Animsition
     $(".animsition").animsition({
         inClass: 'fade-in',
         outClass: 'fade-out',
@@ -27,10 +28,14 @@ $(document).ready(function() {
         overlayParentElement : 'body',
         transition: function(url){ window.location.href = url; }
     });
-});
 
-Waves.attach('.wave-effect', ['waves-block']);
-Waves.init();
+    // Bootstrap
+    $('.collapse').on('shown.bs.collapse', function(){
+        $(this).parent().find(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
+    }).on('hidden.bs.collapse', function(){
+        $(this).parent().find(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
+    });
+});
 
 // Sidebar Toggle
 $('.menu-toggle').click(function(e) {
@@ -45,7 +50,7 @@ $('#mobileMenuButton').click( function(e) {
    $('#mobileMenu').slideToggle();
 });
 
-// Modal Video Functions
+// Modal Video Autoplay
 function videoAutoplay() {
    var trigger = $("body").find('[data-toggle="modal"]');
    trigger.click(function () {
@@ -59,8 +64,17 @@ function videoAutoplay() {
        });
    });
 }
-
 videoAutoplay();
+
+// Forms
+$("input.jsNumeric").numeric();
+
+// Wow.js
+new WOW().init();
+
+// Waves.js
+Waves.attach('.wave-effect', ['waves-block']);
+Waves.init();
 
 // Detect Mobile Device
 var isMobile = false;
@@ -73,15 +87,14 @@ if (isMobile != false) {
    $('body').removeClass('mobile');
 }
 
-// Wow.js
-new WOW().init();
-
-// Forms
-$("input.jsNumeric").numeric();
-
-// BS Collapse Mod
-$('.collapse').on('shown.bs.collapse', function(){
-    $(this).parent().find(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
-}).on('hidden.bs.collapse', function(){
-    $(this).parent().find(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
+// Disable right click and f12
+/*$("html").on("contextmenu",function(e){
+   return false;
 });
+$(document).keydown(function (event) {
+    if (event.keyCode == 123) { // Prevent F12
+        return false;
+    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I
+        return false;
+    }
+});*/
