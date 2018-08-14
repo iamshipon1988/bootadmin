@@ -317,7 +317,7 @@ img, .img-responsive {
     @include box-shadow(0 0 25px 0 rgba(0, 0, 0, 0.08));
 
     li, .dropdown-item {
-        padding: 0;
+        //padding: 0;
         background: transparent !important;
 
         a {
@@ -538,9 +538,48 @@ img, .img-responsive {
     }
 }
 
+.pri-sec-gradient {
+    background: linear-gradient(150deg, #007bff, #7952b3);
+}
 
+.sec-pri-gradient {
+    background: linear-gradient(150deg, #7952b3, #007bff);
+}
 
-// Backgrounds
+.pri-gradient-lighter {
+    background: linear-gradient(150deg, #007bff, #66b0ff);
+}
+
+.pri-gradient-darker {
+    background: linear-gradient(150deg, #007bff, #004a99);
+}
+
+.sec-gradient-lighter {
+    background: linear-gradient(150deg, #7952b3, #b099d2);
+}
+
+.sec-gradient-darker {
+    background: linear-gradient(150deg, #7952b3, #49316e);
+}
+
+.dark-gradient {
+    background: linear-gradient(150deg, #000, #495057);
+    color: white !important;
+}
+
+.light-gradient {
+    background: linear-gradient(150deg, #fff, #dee2e6);
+    color: #495057 !important;
+}
+
+.brand-text-gradient {
+    background: -webkit-linear-gradient(left, #007bff, #7952b3);
+    background: linear-gradient(left, #007bff, #7952b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// colors
 .color {
     $b: &;
 

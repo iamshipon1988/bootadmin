@@ -1,16 +1,16 @@
 ---
 layout: default
-title:  Home
-bodyID: homePage
+title:  Dashboard
+bodyID: dashboardPage
 ---
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-5">
-            <h4 class="page-title">Dashboard</h4>
+            <h4 class="page-title">{{ page.title }}</h4>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
                 </ol>
             </nav>
         </div>
@@ -72,128 +72,6 @@ bodyID: homePage
                 <div class="card-body">
                     <h4 class="card-title">Recent Comments</h4>
                     duh
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="gallery">
-        <div class="row">
-            <div class="col-sm-6 col-lg-4">
-                <div class="photo has-shadow">
-                    <figure>
-                        <img src="{{ site.baseurl }}/images/demo/work1.jpg" alt="">
-                    </figure>
-                    <div class="overlay">
-                        <div class="content">
-                            <h2>Beautiful Photo</h2>
-                            <a href="#" class="btn">View Gallery</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="photo">
-                    <figure>
-                        <img src="{{ site.baseurl }}/images/demo/work2.jpg" alt="">
-                    </figure>
-                    <div class="overlay">
-                        <div class="content">
-                            <h2>Beautiful Photo</h2>
-                            <a href="#" class="btn">View Gallery</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="photo">
-                    <figure>
-                        <img src="{{ site.baseurl }}/images/demo/work3.jpg" alt="">
-                    </figure>
-                    <div class="overlay">
-                        <div class="content">
-                            <h2>Beautiful Photo</h2>
-                            <a href="#" class="btn">View Gallery</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="photo">
-                    <figure>
-                        <img src="{{ site.baseurl }}/images/demo/work4.jpg" alt="">
-                    </figure>
-                    <div class="overlay">
-                        <div class="content">
-                            <h2>Beautiful Photo</h2>
-                            <a href="#" class="btn">View Gallery</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="photo">
-                    <figure>
-                        <img src="{{ site.baseurl }}/images/demo/work5.jpg" alt="">
-                    </figure>
-                    <div class="overlay">
-                        <div class="content">
-                            <h2>Beautiful Photo</h2>
-                            <a href="#" class="btn">View Gallery</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="photo">
-                    <figure>
-                        <img src="{{ site.baseurl }}/images/demo/work6.jpg" alt="">
-                    </figure>
-                    <div class="overlay">
-                        <div class="content">
-                            <h2>Beautiful Photo</h2>
-                            <a href="#" class="btn">View Gallery</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="photo">
-                    <figure>
-                        <img src="{{ site.baseurl }}/images/demo/work7.jpg" alt="">
-                    </figure>
-                    <div class="overlay">
-                        <div class="content">
-                            <h2>Beautiful Photo</h2>
-                            <a href="#" class="btn">View Gallery</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="photo">
-                    <figure>
-                        <img src="{{ site.baseurl }}/images/demo/work8.jpg" alt="">
-                    </figure>
-                    <div class="overlay">
-                        <div class="content">
-                            <h2>Beautiful Photo</h2>
-                            <a href="#" class="btn">View Gallery</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="photo">
-                    <figure>
-                        <img src="{{ site.baseurl }}/images/demo/work9.jpg" alt="">
-                    </figure>
-                    <div class="overlay">
-                        <div class="content">
-                            <h2>Beautiful Photo</h2>
-                            <a href="#" class="btn">View Gallery</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -129,36 +129,6 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-h1 {
-    font-size: 2*$fontHeaderSize;
-}
-
-h2 {
-    font-size: 1.5*$fontHeaderSize;
-}
-
-h3 {
-    font-size: $fontHeaderSize;
-}
-
-h4 {
-    font-size: 0.75*$fontHeaderSize;
-}
-
-h5 {
-    font-size: 0.5*$fontHeaderSize;
-}
-
-h6 {
-    font-size: $fontSizeLarge;
-    font-weight: $fontBold;
-    font-family: $fontHeader;
-    letter-spacing: 0.025em;
-    line-height: 2;
-    color: $headerColor;
-    margin-bottom: $padding;
-}
-
 small {
     font-size: 85%;
 }
@@ -187,9 +157,6 @@ figure {
 
 section {
     position: relative;
-    padding-top: $padding-xl;
-    padding-bottom: $padding-xl;
-    z-index: 0;
 
     &.text-center div[class*='col-']:first-child:last-child {
         margin: 0 auto;
@@ -200,11 +167,6 @@ section {
 main {
     padding-top: $navSizeMobile;
     min-height: 100vh;
-
-    section {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
 }
 
 pre {
@@ -217,6 +179,10 @@ pre {
     code {
         color: $redAlert;
     }
+}
+
+:not(p) code {
+    color: inherit;
 }
 
 // Modify Bootstrap

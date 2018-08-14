@@ -35,6 +35,14 @@ $(document).ready(function() {
     }).on('hidden.bs.collapse', function(){
         $(this).parent().find(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
     });
+
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 });
 
 // Sidebar Toggle
@@ -42,6 +50,12 @@ $('.menu-toggle').click(function(e) {
     e.preventDefault();
     $('main').toggleClass('sidebar-open');
     $('body').toggleClass('sidebar-open sidebar-closed');
+});
+
+$('.offcanvas-toggle').click(function(e) {
+    e.preventDefault();
+    $('.offcanvas-menu').toggleClass('open');
+    $(this).toggleClass('active').find('.feather').toggleClass('icon-x icon-settings');
 });
 
 // Mobile Menu

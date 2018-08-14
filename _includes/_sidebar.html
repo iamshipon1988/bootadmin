@@ -3,14 +3,16 @@
 <!-- Main Menu -->
 <div class="sidebar sidebar-open">
     <div class="logo">
-        <span class="logo-emblem">BA</span>
-        <span class="logo-full">Bootadmin</span>
+        <a href="{{ site.baseurl }}/">
+            <span class="logo-emblem">BA</span>
+            <span class="logo-full">Bootadmin</span>
+        </a>
     </div>
     <ul>
         <li class="spacer"></li>
         <li class="profile">
             <span class="profile-image">
-                <img src="{{ site.baseurl }}/images/profile.png" alt="profile" />
+                <img src="{{ site.baseurl }}/images/demo/user.jpg" alt="profile" />
             </span>
             <span class="profile-name">
                 Daniel Craig
@@ -33,19 +35,48 @@
             <div class="collapse" id="navDashboard">
                 <ul class="flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="pages/layout/boxed-layout.html">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
+                            <i class="feather icon-link"></i>
+                            <span class="menu-title">Default</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
                             <i class="feather icon-link"></i>
                             <span class="menu-title">Boxed</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="pages/layout/boxed-layout.html">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
+                            <i class="feather icon-link"></i>
+                            <span class="menu-title">Top Menu</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link wave-effect collapsed" data-toggle="collapse" href="#navPageLayouts" aria-expanded="false" aria-controls="page-layouts">
+                <i class="feather icon-sidebar"></i>
+                <span class="menu-title">Page Layouts</span>
+                <i class="feather icon-chevron-down down-arrow"></i>
+            </a>
+            <div class="collapse" id="navPageLayouts">
+                <ul class="flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
                             <i class="feather icon-link"></i>
                             <span class="menu-title">Boxed</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="pages/layout/boxed-layout.html">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
+                            <i class="feather icon-link"></i>
+                            <span class="menu-title">Boxed</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
                             <i class="feather icon-link"></i>
                             <span class="menu-title">Boxed</span>
                         </a>
@@ -54,27 +85,27 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link wave-effect collapsed" data-toggle="collapse" href="#navPageLayouts" aria-expanded="false" aria-controls="page-layouts">
+            <a class="nav-link wave-effect collapsed" data-toggle="collapse" href="#navElements" aria-expanded="false" aria-controls="page-layouts">
                 <i class="feather icon-layout"></i>
-                <span class="menu-title">Page Layouts</span>
+                <span class="menu-title">Elements</span>
                 <i class="feather icon-chevron-down down-arrow"></i>
             </a>
-            <div class="collapse" id="navPageLayouts">
+            <div class="collapse" id="navElements">
                 <ul class="flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="pages/layout/boxed-layout.html">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/elements/bootstrap">
                             <i class="feather icon-link"></i>
-                            <span class="menu-title">Boxed</span>
+                            <span class="menu-title">Bootstrap</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="pages/layout/boxed-layout.html">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/elements/gallery">
                             <i class="feather icon-link"></i>
-                            <span class="menu-title">Boxed</span>
+                            <span class="menu-title">Gallery</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="pages/layout/boxed-layout.html">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
                             <i class="feather icon-link"></i>
                             <span class="menu-title">Boxed</span>
                         </a>
@@ -95,19 +126,19 @@
             <div class="collapse" id="navMailbox">
                 <ul class="flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="pages/layout/boxed-layout.html">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
                             <i class="feather icon-inbox"></i>
                             <span class="menu-title">Inbox</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="pages/layout/boxed-layout.html">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
                             <i class="feather icon-mail"></i>
                             <span class="menu-title">Email</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="pages/layout/boxed-layout.html">
+                        <a class="nav-link wave-effect" href="{{ site.url }}/">
                             <i class="feather icon-send"></i>
                             <span class="menu-title">Compose</span>
                         </a>

@@ -4,25 +4,45 @@
 <div class="topbar sidebar-open">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-5 col-xs-4">
+            <div class="col-md-5 col-4">
                 <a href="#" class="menu-toggle wave-effect">
                     <i class="feather icon-menu"></i>
                 </a>
             </div>
-            <div class="col-md-7 col-xs-8 text-right">
+            <div class="col-md-7 col-8 text-right">
                 <ul>
-                    <li>
-                        <a href="#" class="btn wave-effect"><i class="feather icon-settings"></i></a>
+                    <!-- Profile Menu -->
+                    <li class="btn-group user-account">
+                        <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="user-content">
+                                <div class="user-name">Andrew Gill</div>
+                                <div class="user-plan">BeeBack Free Tier</div>
+                            </div>
+                            <div class="avatar">
+                                <img src="{{ site.baseurl }}/images/demo/user.jpg" alt="profile" />
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right animated bounceInUp">
+                            <li><a href="/account/profile" class="animsition-link dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
+                            <li><a href="/account/billing" class="animsition-link dropdown-item"><i class="feather icon-dollar-sign"></i> Billing</a></li>
+                            <li><a href="/account/profile/edit" class="animsition-link dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
+                            <li><a href="/" class="animsition-link dropdown-item"><i class="feather icon-log-in"></i> Logout</a></li>
+                        </ul>
                     </li>
+                    <!-- Offcanvas Menu -->
+                    <li>
+                        <a href="#" class="btn wave-effect offcanvas-toggle"><i class="feather icon-settings"></i></a>
+                    </li>
+                    <!-- Notification Menu -->
                     <li class="btn-group notification">
                         <a href="javascript:;" class="btn dropdown-toggle wave-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="feather icon-bell"><span class="notification-count">27</span></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right animated bounceInDown">
+                        <ul class="dropdown-menu dropdown-menu-right animated fadeIn">
                             <li>
                                 <a href="#" class="wave-effect">
                                     <span class="avatar">
-                                        <img src="{{ site.baseurl }}/images/profile.png" alt="Mr. Chu" />
+                                        <img src="{{ site.baseurl }}/images/demo/profile.png" alt="Mr. Chu" />
                                     </span>
                                     <span class="name">Jas Gillionaire</span>
                                     <span class="message">Like your post: “Contact Form 7 Multi-Step”</span>
@@ -32,7 +52,7 @@
                             <li>
                                 <a href="#" class="wave-effect">
                                     <span class="avatar">
-                                        <img src="{{ site.baseurl }}/images/profile.png" alt="Andrew" />
+                                        <img src="{{ site.baseurl }}/images/demo/user.jpg" alt="Andrew" />
                                     </span>
                                     <span class="name">Gurinder Singh</span>
                                     <span class="message">Like your post: “Contact Form 7 Multi-Step”</span>
@@ -42,7 +62,7 @@
                             <li>
                                 <a href="#" class="wave-effect">
                                     <span class="avatar">
-                                        <img src="{{ site.baseurl }}/images/profile.png" alt="Mr. Chu" />
+                                        <img src="{{ site.baseurl }}/images/demo/profile.png" alt="Mr. Chu" />
                                     </span>
                                     <span class="name">Andrew the Canadian</span>
                                     <span class="message">Like your post: “Contact Form 7 Multi-Step”</span>
@@ -52,7 +72,7 @@
                             <li>
                                 <a href="#" class="wave-effect">
                                     <span class="avatar">
-                                        <img src="{{ site.baseurl }}/images/profile.png" alt="Mr. Chu" />
+                                        <img src="{{ site.baseurl }}/images/demo/user.jpg" alt="Mr. Chu" />
                                     </span>
                                     <span class="name">Artsy Shohan</span>
                                     <span class="message">Like your post: “Contact Form 7 Multi-Step”</span>
@@ -62,7 +82,7 @@
                             <li>
                                 <a href="#" class="wave-effect">
                                     <span class="avatar">
-                                        <img src="{{ site.baseurl }}/images/profile.png" alt="Mr. Chu" />
+                                        <img src="{{ site.baseurl }}/images/demo/profile.png" alt="Mr. Chu" />
                                     </span>
                                     <span class="name">Sazzad Shammad</span>
                                     <span class="message">Like your post: “Contact Form 7 Multi-Step”</span>
@@ -78,6 +98,6 @@
     </div>
 </div>
 
-<!--<aside class="slide-menu">
+<aside class="offcanvas-menu">
     slideout menu here
-</aside>-->
+</aside>
