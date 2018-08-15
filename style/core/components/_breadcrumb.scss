@@ -1,0 +1,32 @@
+.breadcrumb {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: 0.35rem;
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+.breadcrumb-item {
+    float: left;
+    + .breadcrumb-item {
+        &::before {
+            display: inline-block;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            color: #868e96;
+            content: "/";
+        }
+        &:hover::before {
+            text-decoration: underline;
+            text-decoration: none;
+        }
+    }
+    &.active {
+        color: #868e96;
+    }
+}

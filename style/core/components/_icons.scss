@@ -1,0 +1,120 @@
+.icon {
+    max-width: 60px;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease;
+
+    &.icon-circle {
+        border-radius: 50%;
+        background-color: #FFFFFF;
+    }
+
+    &.icon-square {
+        border-radius: 0.35rem;
+        background-color: #FFFFFF;
+    }
+
+    &.icon-shadow {
+        box-shadow: 0px 9px 30px -6px rgba(17,17,17,0.3);
+    }
+
+    i {
+        line-height: 60px;
+    }
+
+    &.icon-hover:hover {
+        box-shadow: 0px 15px 35px 0px rgba(17,17,17,0.35);
+        transform: translate3d(0,-0.5rem,0);
+    }
+}
+
+.icon-primary {
+    box-shadow: 0px 9px 30px -6px rgba(0,123,255,0.3);
+    i {
+        color: #007bff;
+    }
+    &.icon-hover:hover {
+        box-shadow: 0px 15px 35px 0px rgba(0,123,255,0.35);
+        transform: translate3d(0,-0.5rem,0);
+    }
+}
+
+.icon-secondary {
+    box-shadow: 0px 9px 30px -6px rgba(121,82,179,0.3);
+    i {
+        color: #7952b3;
+    }
+    &.icon-hover:hover {
+        box-shadow: 0px 15px 35px 0px rgba(121,82,179,0.35);
+        transform: translate3d(0,-0.5rem,0);
+    }
+}
+
+.icon-success {
+    box-shadow: 0px 9px 30px -6px rgba(40,167,69,0.3);
+    i {
+        color: #28a745;
+    }
+    &.icon-hover:hover {
+        box-shadow: 0px 15px 35px 0px rgba(40,167,69,0.35);
+        transform: translate3d(0,-0.5rem,0);
+    }
+}
+
+.icon-info {
+    box-shadow: 0px 9px 30px -6px rgba(3,169,244,0.3);
+    i {
+        color: #03a9f4;
+    }
+    &.icon-hover:hover {
+        box-shadow: 0px 15px 35px 0px rgba(3,169,244,0.35);
+        transform: translate3d(0,-0.5rem,0);
+    }
+}
+
+.icon-warning {
+    box-shadow: 0px 9px 30px -6px rgba(255,193,7,0.3);
+    i {
+        color: #ffc107;
+    }
+    &.icon-hover:hover {
+        box-shadow: 0px 15px 35px 0px rgba(255,193,7,0.35);
+        transform: translate3d(0,-0.5rem,0);
+    }
+}
+
+.icon-danger {
+    box-shadow: 0px 9px 30px -6px rgba(220,53,69,0.3);
+    i {
+        color: #dc3545;
+    }
+    &.icon-hover:hover {
+        box-shadow: 0px 15px 35px 0px rgba(220,53,69,0.35);
+        transform: translate3d(0,-0.5rem,0);
+    }
+}
+
+.icon-light {
+    box-shadow: 0px 9px 30px -6px rgba(233,236,239,0.3);
+    i {
+        color: #e9ecef;
+    }
+    &.icon-hover:hover {
+        box-shadow: 0px 15px 35px 0px rgba(233,236,239,0.35);
+        transform: translate3d(0,-0.5rem,0);
+    }
+}
+
+.icon-dark {
+    box-shadow: 0px 9px 30px -6px rgba(17,17,17,0.3);
+    i {
+        color: #111111;
+    }
+    &.icon-hover:hover {
+        box-shadow: 0px 15px 35px 0px rgba(17,17,17,0.35);
+        transform: translate3d(0,-0.5rem,0);
+    }
+}

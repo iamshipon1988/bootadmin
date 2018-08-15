@@ -649,6 +649,14 @@ img, .img-responsive {
             }
         }
     }
+
+    &-shadow {
+        @include box-shadow($boxShadowLg);
+    }
+
+    &-shadow-long {
+        @include box-shadow($boxShadowHover);
+    }
 }
 
 // Font Colors
@@ -1043,6 +1051,38 @@ img, .img-responsive {
         font-size: 5*$fontSize !important;
     }
 
+    &-13 {
+        @include font-size(13);
+    }
+
+    &-14 {
+        @include font-size(14);
+    }
+
+    &-15 {
+        @include font-size(15);
+    }
+
+    &-16 {
+        @include font-size(16);
+    }
+
+    &-17 {
+        @include font-size(17);
+    }
+
+    &-18 {
+        @include font-size(18);
+    }
+
+    &-19 {
+        @include font-size(19);
+    }
+
+    &-20 {
+        @include font-size(20);
+    }
+
     &-weight-light {
         font-weight: 300 !important;
     }
@@ -1193,6 +1233,19 @@ hr {
     &-shadow-layer {
         position: relative;
         @include box-shadow(0 2.5rem 2.5rem -2rem rgba(0,0,0,0.2));
+    }
+}
+
+/** Ratio **/
+.ratio {
+    $b: &;
+
+    &-16-9 {
+        @include responsive-ratio(16,9);
+    }
+
+    &-4-3 {
+        @include responsive-ratio(4,3);
     }
 }
 

@@ -3,27 +3,247 @@
     width: $sidebarSize;
     position: fixed;
     left: 0;
-    top: $navSize;
+    top: 0;
     bottom: 0;
     overflow-y: auto;
     background: white;
     z-index: 10;
     font-size: $fontSize - 1px;
+    box-shadow: 1px 0 20px rgba(0,0,0,.08);
     @include transition(all .4s ease);
 
     span, div, ul, li, a, i {
-        @include transition(all 0.2s linear)
+        @include transition(all $animateFast linear)
     }
 
-    &.sidebar-open {
+    .logo {
+        display: block;
+        width: 100%;
+        height: $navSize;
+        overflow: hidden;
+        text-transform: uppercase;
+        font-weight: $fontBold;
+        font-size: $fontSize;
+        letter-spacing: 0.05em;
+        border-bottom: 1px solid $borderColor;
+        @extend %clearfix;
+
+        a {
+            display: block;
+        }
+
+        .logo-emblem {
+            display: block;
+            width: $navSize;
+            height: $navSize;
+            line-height: $navSize;
+            color: $primaryColor;
+            text-align: center;
+            float: left;
+        }
+
+        .logo-full {
+            display: block;
+            height: $navSize;
+            line-height: $navSize;
+            float: left;
+            width: $sidebarSize - $navSize - $padding;
+        }
+    }
+
+    > ul {
+        margin: 0;
+        padding: 0;
+
+        > li {
+            white-space: nowrap;
+            position: relative;
+            display: block;
+
+            &.spacer {
+                display: block;
+                height: $inputSizeXxs;
+            }
+
+            &.profile {
+                display: block;
+                padding: $padding-sm $padding;
+                position: relative;
+                padding-left: $navSize;
+                height: $navSize;
+
+                span {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1.3;
+
+                    &.profile-image {
+                        position: absolute;
+                        width: $navSize;
+                        height: $navSize;
+                        left: 0;
+                        top: 0;
+                        padding: $padding;
+
+                        img {
+                            display: block;
+                            width: $navSize - 2*$padding;
+                            height: $navSize - 2*$padding;
+                            @include border-radius(50%);
+                            overflow: hidden;
+                        }
+                    }
+
+                    &.profile-name {
+                        font-weight: $fontMedium;
+                        padding-top: 3px;
+                    }
+
+                    &.profile-info {
+                        font-weight: $fontNormal;
+                        color: $textColorLight;
+                    }
+                }
+            }
+
+            &.button-container {
+                padding: 0 $padding;
+            }
+
+            &.title {
+                padding: 0;
+                text-transform: uppercase;
+                font-size: $fontSize - 3px;
+                color: $textColorLight;
+                position: relative;
+                width: auto;
+                height: $inputSize;
+                line-height: $inputSize;
+
+                i {
+                    display: inline-block;
+                    width: $navSize;
+                    height: $inputSize;
+                    line-height: $inputSize;
+                    z-index: 3px;
+                    position: relative;
+                    font-size: $fontSizexSmall;
+                    text-align: center;
+                    color: $textColorLight;
+                }
+            }
+
+            &.nav-item {
+                > a {
+                    display: block;
+                    padding: 0;
+                    position: relative;
+                    line-height: $inputSize - 2px;
+                    color: $textColor;
+
+                    i {
+                        display: inline-block;
+                        width: $navSize;
+                        height: $inputSize;
+                        line-height: $inputSize;
+                        z-index: 3;
+                        position: relative;
+                        text-align: center;
+                        font-size: $fontSizeLarge;
+
+                        &.down-arrow {
+                            color: $textColorLight;
+                            position: absolute;
+                            right: 0;
+                            font-size: $fontSize;
+                            width: $navSize;
+                            height: $inputSize;
+                            @include transform(rotate(-90deg));
+                        }
+                    }
+
+                    .menu-title {
+                        position: relative;
+                        top: -2px;
+                    }
+
+                    &:not(.collapsed):not(.nav-single) {
+                        background: $bodyColorLight;
+                        color: $textColorDark;
+
+                        i.down-arrow {
+                            @include transform(rotate(0));
+                        }
+                    }
+
+                    &:hover {
+                        background: $bodyColorLight;
+                    }
+                }
+
+                ul.sub-menu {
+                    display: block;
+                    position: relative;
+                    padding-left: 0;
+
+                    li {
+                        list-style-type: square;
+                        color: $textColorLight;
+                        list-style-type: none;
+
+                        a {
+                            padding: 0;
+                            position: relative;
+                            line-height: $inputSize;
+                            color: lighten($textColor, 25%);
+
+                            i {
+                                display: inline-block;
+                                width: $navSize;
+                                height: $inputSize;
+                                line-height: $inputSize;
+                                z-index: 3;
+                                position: relative;
+                                text-align: center;
+                                font-size: $fontSizeSmall;
+                            }
+
+                            &:hover {
+                                color: $primaryColor;
+                                background: $bodyColorLight;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar-open {
+    .topbar {
+        padding-left: $sidebarSize;
+    }
+
+    .sidebar {
         width: $sidebarSize;
         @include transition(all .4s ease);
     }
 
-    &.sidebar-closed:not(:hover) {
+    main {
+        padding-left: $sidebarSize;
+        @include transition(all .4s ease);
+    }
+}
+
+.sidebar-closed {
+    .topbar {}
+
+    .sidebar:not(:hover) {
         width: $navSize;
 
-        .title, .down-arrow {
+        .down-arrow {
             height: 0;
             width: 0;
             overflow: hidden;
@@ -39,148 +259,87 @@
                 position: relative;
 
                 &.profile {
-                    padding: 0;
-                    width: $navSize;
-
-                    .profile-image {
-                        left: ($navSize - $inputSize)/2;
-                    }
+                    height: $navSize;
 
                     .profile-name, .profile-info {
-                        width: 0;
                         overflow: hidden;
-                        padding: 0;
+                        display: none;
+                    }
+                }
+
+                &.title {
+                    i {
                         margin: 0;
+                        display: block;
+                    }
+
+                    .menu-title {
+                        @include opacity(0)
+                        width: 0;
+                        display: none;
+                        overflow: hidden;
+                        @include transition(all $animateFast linear)
                     }
                 }
 
                 &.nav-item {
                     a {
                         padding: 0;
-                        line-height: $navSize;
-                        height: $navSize;
+                        line-height: $inputSize;
+                        height: $inputSize;
                         width: $navSize;
                         text-align: center;
-                        @include transition(all 0.2s linear)
+                        @include transition(all $animateFast linear)
 
                         i {
                             margin: 0;
-                            font-size: $fontSizeLarge;
                             display: block;
+
+                            &.down-arrow {
+                                display: none;
+                                @include opacity(0);
+                                @include transition(all 0.5s linear)
+                            }
                         }
 
                         .menu-title {
-                            opacity: 0;
+                            @include opacity(0)
                             width: 0;
+                            display: none;
                             overflow: hidden;
-                            @include transition(all 0.2s linear)
+                            @include transition(all $animateFast linear)
                         }
                     }
-                }
-
-                .collapse {
-                    position: absolute;
-                    background: white;
-                    left: $navSize;
-                    top: 0;
-                    width: 250px;
                 }
             }
         }
     }
+}
 
-    > ul {
-        margin: 0;
-        padding: 0;
+/** Offcanvas Menu **/
+.offcanvas-toggle {
+    &.active {
+        background: $redAlert !important;
+        color: white !important;
+    }
+}
 
-        > li {
-            white-space: nowrap;
-            border-bottom: 1px solid $borderColor;
-            position: relative;
+.offcanvas-menu {
+    display: block;
+    width: $sidebarSize;
+    height: calc(100vh - $navSize);
+    position: fixed;
+    right: -100%;
+    top: $navSize;
+    bottom: 0;
+    overflow-y: auto;
+    background: white;
+    z-index: 10;
+    font-size: $fontSize - 1px;
+    box-shadow: -1px 0 20px rgba(0,0,0,.08);
+    @include transition(all .4s ease);
 
-            &.profile {
-                padding: $padding $padding;
-                position: relative;
-                padding-left: $inputSizeXl;
-                height: 70px;
-                border-top: 1px solid $borderColor;
-
-                span {
-                    display: block;
-                    margin: 0;
-                    padding: 0;
-                    line-height: 1.3;
-
-                    &.profile-image {
-                        position: absolute;
-                        width: $inputSize;
-                        left: $padding-xl;
-                        top: $padding + 2px;
-
-                        img {
-                            max-width: 100%;
-                        }
-                    }
-
-                    &.profile-name {
-                        margin-top: $padding-xs - 1px;
-                    }
-
-                    &.profile-info {
-                        font-weight: $fontNormal;
-                        color: $textColorLight;
-                    }
-                }
-            }
-
-            &.title {
-                padding: $padding-sm $padding-lg 0;
-                //font-weight: $fontBold;
-                border: none;
-                text-transform: uppercase;
-                font-size: $fontSize - 3px;
-                color: $textColorLight;
-            }
-
-            &.nav-item {
-                > a {
-                    padding: $padding-sm ($padding-xl + $padding-sm) $padding-sm $padding-lg;
-                    position: relative;
-
-                    i {
-                        display: inline-block;
-                        margin-right: $padding-sm;
-                        color: $primaryColor;
-                        z-index: 3px;
-                        position: relative;
-                        background: white;
-
-                        &.down-arrow {
-                            color: $textColorLight;
-                            position: absolute;
-                            right: $padding-sm;
-                        }
-                    }
-                }
-
-                ul.sub-menu {
-                    padding-left: 2*$padding-lg - 3px;
-
-                    li {
-                        list-style-type: square;
-                        color: $textColorLight;
-
-                        a {
-                            color: lighten($textColor, 25%);
-                            padding-left: $padding-sm - 1px;
-
-                            &:hover {
-                                color: $primaryColor;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    &.open {
+        right: 0;
     }
 }

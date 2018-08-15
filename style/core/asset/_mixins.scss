@@ -490,7 +490,21 @@
     @return #{$remSize}rem;
 }
 
-@mixin fontSize($size) {
-    font-size: $size; //Fallback in px
-    font-size: calculateRem($size);
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue / 10) + rem;
+    font-size: $sizeValue + px;
+}
+
+// Ratio
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
 }

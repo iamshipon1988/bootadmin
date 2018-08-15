@@ -12,10 +12,11 @@
         {% include _sidebar.html %}
         <main>
             {{ content }}
+
+            {% include _footer.html %}
         </main>
     </div>
 
-    {% include _footer.html %}
 </div>
 
 {% if page.customCode %}

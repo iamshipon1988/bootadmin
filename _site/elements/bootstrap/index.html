@@ -225,7 +225,7 @@
             <span class="menu-title">Main</span>
         </li>
         <li class="nav-item">
-            <a class="nav-link wave-effect collapsed wave-effect" data-toggle="collapse" href="#navDashboard" aria-expanded="false" aria-controls="page-layouts">
+            <a class="nav-link wave-effect collapsed wave-effect" data-toggle="collapse" href="#navDashboard" aria-expanded="false" aria-controls="page-dashboards">
                 <i class="feather icon-grid"></i>
                 <span class="menu-title">Dashboard</span>
                 <i class="feather icon-chevron-down down-arrow"></i>
@@ -283,7 +283,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link wave-effect collapsed" data-toggle="collapse" href="#navElements" aria-expanded="false" aria-controls="page-layouts">
+            <a class="nav-link wave-effect collapsed" data-toggle="collapse" href="#navElements" aria-expanded="false" aria-controls="page-elements">
                 <i class="feather icon-layout"></i>
                 <span class="menu-title">Elements</span>
                 <i class="feather icon-chevron-down down-arrow"></i>
@@ -316,7 +316,7 @@
             <span class="menu-title">App Features</span>
         </li>
         <li class="nav-item">
-            <a class="nav-link wave-effect collapsed" data-toggle="collapse" href="#navMailbox" aria-expanded="false" aria-controls="page-layouts">
+            <a class="nav-link wave-effect collapsed" data-toggle="collapse" href="#navMailbox" aria-expanded="false" aria-controls="page-mailbox">
                 <i class="feather icon-mail"></i>
                 <span class="menu-title">Mailbox</span>
                 <i class="feather icon-chevron-down down-arrow"></i>
@@ -324,19 +324,19 @@
             <div class="collapse" id="navMailbox">
                 <ul class="flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="http://localhost:4000/">
+                        <a class="nav-link wave-effect" href="http://localhost:4000/app/inbox">
                             <i class="feather icon-inbox"></i>
                             <span class="menu-title">Inbox</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="http://localhost:4000/">
+                        <a class="nav-link wave-effect" href="http://localhost:4000/app/inbox/email">
                             <i class="feather icon-mail"></i>
                             <span class="menu-title">Email</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="http://localhost:4000/">
+                        <a class="nav-link wave-effect" href="http://localhost:4000/app/inbox/compose">
                             <i class="feather icon-send"></i>
                             <span class="menu-title">Compose</span>
                         </a>
@@ -344,6 +344,11 @@
                 </ul>
             </div>
         </li>
+        <li class="nav-item">
+            <a href="http://localhost:4000/app/calendar" class="nav-link wave-effect nav-single">
+                <i class="feather icon-calendar"></i>
+                <span class="menu-title">Calendar</span>
+            </a>
         <li class="spacer"></li>
         <li class="button-container">
             <a href="https://github.com/iamshipon1988/bootadmin" class="btn btn-primary display-block"><i class="feather icon-download"></i> Download on Github</a>
@@ -358,7 +363,7 @@
             <h4 class="page-title">Bootstrap UI</h4>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Bootstrap UI</li>
                 </ol>
             </nav>
@@ -1727,13 +1732,14 @@
   </div>
 </div>
 
+
+            <!-- Footer -->
+<footer>
+    <p>&copy; Bootadmin. All Rights Reserved. <br />Designed and Developed by <a href="https://sazzad.me">Sazzad Hossain</a>.</p>
+</footer>
+
         </main>
     </div>
-
-    <!-- Footer -->
-<footer>
-    <p>&copy; Bootadmin. All Rights Reserved. Designed and Developed by <a href="https://sazzad.me">Sazzad Hossain</a>.</p>
-</footer>
 
 </div>
 

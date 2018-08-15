@@ -1,0 +1,102 @@
+.gallery {
+    .photo {
+        position: relative;
+        height: 15rem;
+        margin: 1rem 0;
+        overflow: hidden;
+        background-size:cover;
+        overflow:hidden;
+        @include border-radius(7px);
+        @include transition(transform 0.2s linear, box-shadow 0.2s linear);
+
+        &.has-shadow {
+            &:hover {
+                @include box-shadow($boxShadowHover);
+                @include transform(translateY(-4px)!important);
+            }
+        }
+
+        figure {
+            padding: 0;
+            margin: 0;
+            border: none;
+
+            image {
+                position: relative;
+                min-height: 100%;
+                min-width: 100%;
+            }
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            z-index:10;
+
+            &:after {
+                content:'';
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                position: absolute;
+                z-index: -10;
+                top: 0;
+                left: 0;
+                @include border-radius(7px);
+                @include opacity(0);
+                @include transition(all .3s ease);
+            }
+
+            .content {
+                text-align: center;
+                @include vertical-align();
+
+                h2 {
+                    position: relative;
+                    top: -15rem;
+                    color: white;
+                    text-align: center;
+                    font-size: 2rem;
+                    margin: 0 0 1rem;
+                    @include transition(all .3s cubic-bezier(.3, 0, 0, 1.3));
+                }
+
+                .btn {
+                    position: relative;
+                    bottom: -15rem;
+                    border-color: white;
+                    color: white;
+                    text-align: center;
+                    @include transition(all .3s cubic-bezier(.3, 0, 0, 1.3));
+
+                    &:hover {
+                        border-color: $primaryColor;
+                        background: white;
+                        color: $textColor;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            color: $textColor;
+            @include transition(all 0.2s linear);
+
+            .overlay {
+                &:after {
+                    @include opacity(.75);
+                }
+
+                h2 {
+                    top: 0;
+                }
+
+                .btn {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

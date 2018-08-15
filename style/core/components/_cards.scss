@@ -1,0 +1,28 @@
+.card {
+    height: 100%;
+    margin-bottom: $padding-lg;
+    border: 1px solid $borderColorLight;
+
+    &.has-shadow {
+        @include box-shadow($boxShadow);
+    }
+
+    .card-body-title {
+        flex: inherit;
+    }
+
+    &.card-hover {
+        @include transition(all $animateFast ease-in-out)
+
+        &:hover {
+            @include transform(translateY(-4px) scale(1.01));
+            @include box-shadow($boxShadowHover);
+            @include transition(all $animateFast ease-in-out)
+        }
+    }
+
+    .card-title {
+        font-size: .9*$fontSizeLarge;
+        font-weight: $fontMedium;
+    }
+}
