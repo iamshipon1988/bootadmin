@@ -67,6 +67,14 @@
     ================================================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <!-- Le Page Specific Codes
+    ================================================== -->
+    {% if page.customStyle %}
+        {% for customPage in page.customStyle %}
+            {% include {{ customPage }} %}
+        {% endfor %}
+    {% endif %}
+
 	<!-- Le Favicons
 	================================================== -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/images/favicon/apple-icon-57x57.png">
