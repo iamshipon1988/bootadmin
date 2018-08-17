@@ -54,8 +54,12 @@
     ================================================== -->
     <link rel="stylesheet" href="{{ site.baseurl }}/style/vendor/library.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/style/vendor/jqueryui-flat/jquery-ui.min.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/style/core/style.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    {% if page.customCDNCSS %}{% for customCDNCSSFile in page.customCDNCSS %}
+    <link rel="stylesheet" href="{{ customCDNCSSFile }}" crossorigin="anonymous">{% endfor %}{% endif %}
+    {% if page.customCSS %}{% for customCSSFile in page.customCSS %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/style/{{ customCSSFile }}">{% endfor %}{% endif %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/style/core/style.min.css">
 
     <!-- Le IE Conditionals
     ================================================== -->

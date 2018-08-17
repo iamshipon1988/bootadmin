@@ -107,14 +107,101 @@
     border-color: $borderColor;
 }
 
-.dropzone {
-  border-color: #e9ecef; }
 
-.dropzone {
-  border-style: dotted; }
+// Fullcalendar
+.fc-state-default {
+	text-shadow: none;
+	box-shadow: none;
+}
 
-  .note-toolbar {
-  z-index: 1; }
+.fc-basic-view .fc-body .fc-row {
+	min-height: 5rem;
+}
+
+.fc-toolbar {
+	.fc-button-group {
+		border: 1px solid $primaryColor;
+		@include border-radius(4px);
+	}
+
+	.fc-button {
+		background: $primaryColor;
+		color: #fff;
+		border: none;
+        //font-size: $fontSizeSmall;
+		text-transform: uppercase;
+
+		&:hover {
+			background: lighten($primaryColor, 7%);
+			@include opacity(1);
+		}
+
+    	&.fc-state-active {
+    		background: #fff;
+    		color: $primaryColor;
+    	}
+	}
+}
+
+.fc-widget-header {
+	border: 0px !important;
+}
+
+.fc-widget-content {
+	border-color: rgba(120, 130, 140, 0.13) !important;
+	tr {
+		border-bottom: none;
+	}
+}
+
+.fc-view {
+	margin-top: 0px;
+}
+
+.fc-toolbar {
+	margin: 0px;
+	padding: $padding-lg 0;
+}
+
+.fc-event {
+	border: none;
+	cursor: move;
+	color: #fff !important;
+	font-size: 13px;
+	margin: 1px -1px 0 -1px;
+	padding: 5px 5px;
+	text-align: center;
+	background: $secondaryColor;
+    @include border-radius(2px);
+}
+
+.fc td.fc-today {
+    background: $bodyColor;
+}
+
+.calendar-add-button {
+    position: fixed;
+    bottom: $padding;
+    right: $padding;
+    background: $red;
+    color: white;
+    width: $inputSize + 4px;
+    height: $inputSize + 4px;
+    line-height: $inputSize + 4px;
+    text-align: center;
+    font-size: $fontSizexLarge;
+    z-index: 4;
+    cursor: pointer;
+    @include border-radius(50%);
+    @include box-shadow($boxShadowHover);
+
+    &:hover {
+        background: lighten($red, 10%);
+        color: white;
+    }
+}
+
+
 
 /** Main **/
 main {
@@ -145,6 +232,37 @@ main {
             padding: 0;
             margin: 0;
             font-size: $fontSizeSmall;
+        }
+    }
+}
+
+/** Error **/
+#error {
+    min-height: calc(100vh - 180px);
+    height: 80vh;
+
+    .error-box {
+        max-width: 800px;
+        text-align: center;
+        padding: $padding-xl $padding-xl 2*$padding-xl;
+        margin: 0 auto;
+        background: white;
+        @include box-shadow($boxShadowLg);
+        @include border-radius(4px);
+        @include vertical-align();
+
+        .error-image {
+            display: block;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
         }
     }
 }

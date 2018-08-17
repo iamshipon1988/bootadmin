@@ -30,6 +30,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="{{ site.baseurl }}/scripts/vendor/bootstrap.min.js"></script>
 <script src="{{ site.baseurl }}/scripts/vendor/library.min.js"></script>
+{% if page.customCDNJs %}{% for customCDNJsFile in page.customCDNJs %}
+<script src="{{ customCDNJsFile }}"></script>{% endfor %}{% endif %}
+{% if page.customJs %}{% for customJsFile in page.customJs %}
+<script src="{{ site.baseurl }}/scripts/{{ customJsFile }}"></script>{% endfor %}{% endif %}
+
 <script src="{{ site.baseurl }}/scripts/core/main.js"></script>
 
 {% if site.analytics_id %}<script>
