@@ -267,6 +267,18 @@ main {
     }
 }
 
+/** Modal **/
+.modal-content {
+    border: none;
+    @include border-radius(0);
+    @include box-shadow($boxShadowHover);
+
+    .modal-title {
+        font-size: $fontSizeLarge;
+        font-weight: $fontNormal;
+    }
+}
+
 /** Footer **/
 footer {
     text-align: center;
