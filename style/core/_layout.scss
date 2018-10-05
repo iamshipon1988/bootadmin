@@ -1,0 +1,110 @@
+.boxed {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+
+    .page-container {
+        background: white;
+        @include box-shadow($boxShadow);
+    }
+}
+
+.horizontal {
+    .topbar {
+        position: relative;
+        padding-left: 0 !important;
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .logo {
+            display: block;
+        }
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: $inputSize;
+        overflow: visible;
+
+        .logo {
+            display: none;
+        }
+
+        ul {
+            li {
+                display: block;
+                float: left;
+
+                &.profile,
+                &.spacer,
+                &.title {
+                    display: none;
+                }
+
+                &.nav-item {
+                    position: relative;
+                    > a {
+                        padding: 0 $padding;
+
+                        > i {
+                            width: auto;
+                            margin-right: $padding-sm;
+
+                            &.down-arrow {
+                                margin-right: 0;
+                                margin-left: $padding-sm;
+                                position: relative;
+                                display: inline-block;
+                                @include transform(rotate(0deg));
+                            }
+                        }
+
+                        &:not(.collapsed):not(.nav-single) {
+                            .down-arrow {
+                                @include transform(rotate(-90deg));
+                            }
+                        }
+                    }
+
+                    > div {
+                        position: absolute;
+                        background: white;
+                        @include box-shadow($boxShadowHover);
+
+                        ul.sub-menu li {
+                            display: block;
+                            width: 100%;
+
+                            > a {
+                                padding: 0 $padding-lg;
+
+                                > i {
+                                    width: auto;
+                                    margin-right: $padding-sm;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.button-container {
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+
+    main {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+main {
+    padding-top: $navSize;
+    padding-left: $navSize;
+    @include transition(all .4s ease);
+}

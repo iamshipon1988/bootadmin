@@ -1,0 +1,92 @@
+// Fullcalendar
+.fc-state-default {
+	text-shadow: none;
+	box-shadow: none;
+}
+
+.fc-basic-view .fc-body .fc-row {
+	min-height: 5rem;
+}
+
+.fc-toolbar {
+	.fc-button-group {
+		border: 1px solid $primaryColor;
+		@include border-radius(4px);
+	}
+
+	.fc-button {
+		background: $primaryColor;
+		color: #fff;
+		border: none;
+        //font-size: $fontSizeSmall;
+		text-transform: uppercase;
+
+		&:hover {
+			background: lighten($primaryColor, 7%);
+			@include opacity(1);
+		}
+
+    	&.fc-state-active {
+    		background: #fff;
+    		color: $primaryColor;
+    	}
+	}
+}
+
+.fc-widget-header {
+	border: 0px !important;
+}
+
+.fc-widget-content {
+	border-color: rgba(120, 130, 140, 0.13) !important;
+	tr {
+		border-bottom: none;
+	}
+}
+
+.fc-view {
+	margin-top: 0px;
+}
+
+.fc-toolbar {
+	margin: 0px;
+	padding: $padding-lg 0;
+}
+
+.fc-event {
+	border: none;
+	cursor: move;
+	color: #fff !important;
+	font-size: 13px;
+	margin: 1px -1px 0 -1px;
+	padding: 5px 5px;
+	text-align: center;
+	background: $secondaryColor;
+    @include border-radius(2px);
+}
+
+.fc td.fc-today {
+    background: $bodyColor;
+}
+
+.calendar-add-button {
+    position: fixed;
+    bottom: $padding;
+    right: $padding;
+    background: $red;
+    color: white;
+    width: $inputSize + 4px;
+    height: $inputSize + 4px;
+    line-height: $inputSize + 4px;
+    text-align: center;
+    font-size: $fontSizexLarge;
+    z-index: 4;
+    cursor: pointer;
+    @include border-radius(50%);
+    @include box-shadow($boxShadowHover);
+
+    &:hover {
+        background: lighten($red, 10%);
+        color: white;
+    }
+}
