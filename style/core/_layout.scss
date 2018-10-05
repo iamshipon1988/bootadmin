@@ -13,6 +13,7 @@
     .topbar {
         position: relative;
         padding-left: 0 !important;
+        z-index: 15;
 
         .menu-toggle {
             display: none;
@@ -28,6 +29,7 @@
         width: 100%;
         height: $inputSize;
         overflow: visible;
+        z-index: 10;
 
         .logo {
             display: none;
