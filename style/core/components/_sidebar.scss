@@ -243,7 +243,7 @@
     }
 }
 
-.sidebar-closed {
+.sidebar-closed:not(.horizontal) {
     .topbar {}
 
     .sidebar:not(:hover) {
