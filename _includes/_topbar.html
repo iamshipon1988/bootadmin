@@ -1,10 +1,10 @@
 {% assign current = page.url | downcase | split: '/' %}
 
 <!-- Main Menu -->
-<div class="topbar sidebar-open">
+<div class="topbar">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-5 col-4">
+            <div class="col-md-5 hidden-xs">
                 <div class="logo">
                     <a href="{{ site.baseurl }}/">
                         <span class="logo-emblem">BA</span>
@@ -15,7 +15,7 @@
                     <i class="feather icon-menu"></i>
                 </a>
             </div>
-            <div class="col-md-7 col-8 text-right">
+            <div class="col-md-7 text-right">
                 <ul>
                     <!-- Profile Menu -->
                     <li class="btn-group user-account">
@@ -28,7 +28,7 @@
                                 <img src="{{ site.baseurl }}/images/demo/user.jpg" alt="profile" />
                             </div>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right animated bounceInUp">
+                        <ul class="dropdown-menu dropdown-menu-right animated fadeInUp">
                             <li><a href="/account/profile" class="animsition-link dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
                             <li><a href="/account/billing" class="animsition-link dropdown-item"><i class="feather icon-dollar-sign"></i> Billing</a></li>
                             <li><a href="/account/profile/edit" class="animsition-link dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
@@ -97,6 +97,11 @@
                             </li>
                             <li><a href="/notification" class="dropdown-item all-notifications wave-effect">See more messages <i class="feather icon-arrow-down"></i></a></li>
                         </ul>
+                    </li>
+                    <li class="mobile-menu-toggle">
+                        <a href="#" class="menu-toggle wave-effect">
+                            <i class="feather icon-menu"></i>
+                        </a>
                     </li>
                 </ul>
             </div>

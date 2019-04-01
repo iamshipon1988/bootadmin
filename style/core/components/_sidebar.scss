@@ -235,6 +235,12 @@
         padding-left: $sidebarSize;
         @include transition(all .4s ease);
     }
+
+    @media screen and (max-width: ($grid-md - 1px)){
+        .topbar {
+            padding-left: 0;
+        }
+    }
 }
 
 .sidebar-closed {

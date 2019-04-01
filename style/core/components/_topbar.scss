@@ -185,6 +185,8 @@
                 @media screen and (max-width: ($grid-md - 1px)){
                     height: $navSizeMobile;
                     line-height: $navSizeMobile;
+                    padding: 0 $padding-xs;
+                    width: 100%;
                 }
             }
 
@@ -372,11 +374,14 @@
 
     @media screen and (max-width: ($grid-md - 1px)){
         position: fixed;
-        top: 0;
-        left: 0;
         height: $navSizeMobile;
         line-height: $navSizeMobile;
         z-index: 30;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        width: 100%;
+        padding: 0 !important;
         @include box-shadow($boxShadow);
 
         ul {
@@ -389,35 +394,73 @@
                 line-height: $navSizeMobile !important;
             }
 
-            li.user-account {
-                .dropdown-toggle {
-                    padding-left: 0;
-                    padding-right: $navSizeMobile + $padding-sm;
+            li {
+                width: 25%;
 
-                    .avatar {
-                        width: $navSizeMobile;
-                        height: $navSizeMobile;
-                        overflow: hidden;
+                a {
+                    width: 100%;
+                    padding: 0;
+
+                    &:hover {
+                        background: $primaryColor;
                     }
+                }
 
-                    .user-content {
-                        .user-name {
-                            font-size: $fontSize;
+                &.mobile-menu-toggle {
+                    .menu-toggle {
+                        width: 100%;
+                        height: $navSizeMobile;
+                        line-height: $navSizeMobile;
+                        padding: 0;
+                        display: block;
+                    }
+                }
+
+                &.user-account {
+
+                    .dropdown-toggle {
+                        padding-left: 0;
+                        padding-right: 0;
+                        display: block;
+                        text-align: center;
+                        padding-top: ($navSizeMobile - $inputSizeSm) / 2;
+
+                        .avatar {
+                            position: relative;
+                            width: $inputSizeSm;
+                            height: $inputSizeSm;
+                            overflow: hidden;
+                            right: unset;
+                            display: inline-block;
+                            vertical-align: top;
+                            @include border-radius(.5*$inputSizeSm);
+
+                            img {
+                                display: block;
+                            }
                         }
 
-                        .user-plan {
+                        .user-content {
                             display: none;
+
+                            .user-name {
+                                display: none;
+                            }
+
+                            .user-plan {
+                                display: none;
+                            }
                         }
                     }
                 }
-            }
 
-            li.notification {
-                ul.dropdown-menu {
-                    position: fixed;
-                    left: 0;
-                    width: 100%;
-                    top: $navSizeMobile + 1px;
+                &.notification {
+                    ul.dropdown-menu {
+                        position: fixed;
+                        left: 0;
+                        width: 100%;
+                        top: $navSizeMobile + 1px;
+                    }
                 }
             }
         }

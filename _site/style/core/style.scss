@@ -176,10 +176,30 @@ footer {
 
 @media (max-width: ($grid-md - 1px)) {
     main {
-        padding-left: 0 !important;
+        padding: 0 0 $navSizeMobile !important;
     }
 
-    .sidebar {
-        left: -100%;
+    .sidebar-open .sidebar {
+        position: fixed;
+        width: calc(100% - 30px);
+        height: 94%;
+        bottom: 0;
+        top: auto;
+        left: 15px;
+        overflow-y: auto;
+        @include transition(.2s all ease);
+    }
+
+    .sidebar-closed .sidebar:not(:hover), .sidebar-closed .sidebar {
+        height: 0;
+        width: calc(100% - 30px);
+        bottom: 0;
+        top: auto;
+        left: 15px;
+        @include transition(.2s all ease);
+    }
+
+    .hidden-xs {
+        display: none !important;
     }
 }
