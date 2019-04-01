@@ -91,6 +91,10 @@
                 }
             }
 
+            &.mobile-menu-toggle {
+                display: none;
+            }
+
             #mobileMenu {
                 display: block;
                 width: $navSizeMobile;
@@ -407,6 +411,8 @@
                 }
 
                 &.mobile-menu-toggle {
+                    display: block;
+
                     .menu-toggle {
                         width: 100%;
                         height: $navSizeMobile;
