@@ -99,7 +99,7 @@ $(document).ready(function() {
     if (isMobile != false) {
        $('body').addClass('mobile sidebar-closed').removeClass('sidebar-open');
     } else {
-       $('body').removeClass('mobile sidebar-open').addClass('sidebar-closed');
+       $('body').removeClass('mobile');
     }
 });
 

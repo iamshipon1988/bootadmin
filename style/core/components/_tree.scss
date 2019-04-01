@@ -1,0 +1,79 @@
+.tree {
+    position: relative;
+    padding: $padding-xl;
+    font-family: monospace;
+    font-size: $fontSize;
+    font-weight: 400;
+    line-height: 1.5;
+    background: $bodyColorLight;
+    border-left: 3px solid $secondaryColor;
+
+    span {
+        font-size: 13px;
+        font-style: italic;
+        letter-spacing: .4px;
+        color: $textColorLight;
+    }
+
+    .fa-folder {
+        color: $textColorDark;
+    }
+
+    .fa-folder-open {
+        color: $primaryColor;
+    }
+
+    .fa-html5 {
+        color: $redAlert;
+    }
+
+    ul {
+        padding: 0 0 0 $padding-xs;
+        margin: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-top: $padding-xs;
+            padding-bottom: $padding-xs;
+            padding-left: $padding;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            &:before {
+                position: absolute;
+                top: $padding;
+                left: 0;
+                width: $inputSizeXxs;
+                height: 1px;
+                margin: auto;
+                content: '';
+                background-color: $borderColorDark;
+            }
+
+            &:after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 1px;
+                height: 100%;
+                content: '';
+                background-color: $borderColorDark;
+            }
+
+            &:last-child:after {
+                height: $inputSizeXxs + 1px;
+            }
+        }
+
+        a {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -302,7 +302,7 @@
                             display: block;
 
                             &.down-arrow {
-                                display: none;
+                                right: -100px;
                                 @include opacity(0);
                                 @include transition(all 0.5s linear)
                             }
@@ -313,6 +313,7 @@
                             width: 0;
                             display: none;
                             overflow: hidden;
+                            @include transition(all 0.3s linear)
                             @include transition(all $animateFast linear)
                         }
                     }

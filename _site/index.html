@@ -120,11 +120,11 @@
                                 <img src="/images/demo/user.jpg" alt="profile" />
                             </div>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right animated fadeInUp">
-                            <li><a href="/account/profile" class="animsition-link dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
-                            <li><a href="/account/billing" class="animsition-link dropdown-item"><i class="feather icon-dollar-sign"></i> Billing</a></li>
-                            <li><a href="/account/profile/edit" class="animsition-link dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
-                            <li><a href="/" class="animsition-link dropdown-item"><i class="feather icon-log-in"></i> Logout</a></li>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="/account/profile" class="animsition-link dropdown-item wave-effect"><i class="feather icon-user"></i> Profile</a></li>
+                            <li><a href="/account/billing" class="animsition-link dropdown-item wave-effect"><i class="feather icon-dollar-sign"></i> Billing</a></li>
+                            <li><a href="/account/profile/edit" class="animsition-link dropdown-item wave-effect"><i class="feather icon-settings"></i> Settings</a></li>
+                            <li><a href="/" class="animsition-link dropdown-item wave-effect"><i class="feather icon-log-in"></i> Logout</a></li>
                         </ul>
                     </li>
                     <!-- Offcanvas Menu -->
@@ -136,7 +136,7 @@
                         <a href="javascript:;" class="btn dropdown-toggle wave-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="feather icon-bell"><span class="notification-count">27</span></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right animated fadeIn">
+                        <ul class="dropdown-menu dropdown-menu-right">
                             <li>
                                 <a href="#" class="wave-effect">
                                     <span class="avatar">
@@ -244,6 +244,35 @@
                     <li class="nav-item">
                         <a class="nav-link wave-effect" href="http://localhost:4000/">
                             <i class="feather icon-link"></i>
+                            <span class="menu-title">Boxed</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wave-effect" href="http://localhost:4000/">
+                            <i class="feather icon-link"></i>
+                            <span class="menu-title">Boxed</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wave-effect" href="http://localhost:4000/">
+                            <i class="feather icon-link"></i>
+                            <span class="menu-title">Boxed</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link wave-effect collapsed" data-toggle="collapse" href="#navPageLayouts" aria-expanded="false" aria-controls="page-layouts">
+                <i class="feather icon-sidebar"></i>
+                <span class="menu-title">Page Layouts</span>
+                <i class="feather icon-chevron-down down-arrow"></i>
+            </a>
+            <div class="collapse" id="navPageLayouts">
+                <ul class="flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link wave-effect" href="http://localhost:4000/">
+                            <i class="feather icon-link"></i>
                             <span class="menu-title">Default</span>
                         </a>
                     </li>
@@ -263,35 +292,6 @@
                         <a class="nav-link wave-effect" href="http://localhost:4000/boxedhorizontal">
                             <i class="feather icon-link"></i>
                             <span class="menu-title">Boxed &amp; Horizontal</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link wave-effect collapsed" data-toggle="collapse" href="#navPageLayouts" aria-expanded="false" aria-controls="page-layouts">
-                <i class="feather icon-sidebar"></i>
-                <span class="menu-title">Page Layouts</span>
-                <i class="feather icon-chevron-down down-arrow"></i>
-            </a>
-            <div class="collapse" id="navPageLayouts">
-                <ul class="flex-column sub-menu">
-                    <li class="nav-item">
-                        <a class="nav-link wave-effect" href="http://localhost:4000/">
-                            <i class="feather icon-link"></i>
-                            <span class="menu-title">Boxed</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link wave-effect" href="http://localhost:4000/">
-                            <i class="feather icon-link"></i>
-                            <span class="menu-title">Boxed</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link wave-effect" href="http://localhost:4000/">
-                            <i class="feather icon-link"></i>
-                            <span class="menu-title">Boxed</span>
                         </a>
                     </li>
                 </ul>
@@ -763,12 +763,33 @@
         <div class="col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    asdf <br />
-                    aseasdf<br />
-                    aseasdf<br />
-                    aseasdf<br />
-                    aseasdf<br />
-                    aseasdf
+                    <h4 class="card-title">File Tree</h4>
+                    <div class="tree">
+                        <ul>
+                            <li><i class="fa fa-folder-open"></i> Project
+                                <ul>
+                                    <li><i class="fa fa-folder-open"></i> Opened Folder <span>- 15kb</span>
+                                        <ul>
+                                            <li><i class="fa fa-folder-open"></i> css
+                                                <ul>
+                                                    <li><i class="fa fa-code"></i> CSS Files <span>- 3kb</span>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                            <li><i class="fa fa-folder"></i> Folder close <span>- 10kb</span>
+                                            </li>
+                                            <li><i class="fab fa-html5"></i> index.html</li>
+                                            <li><i class="fa fa-picture-o"></i> favicon.ico</li>
+                                        </ul>
+                                    </li>
+                                    <li><i class="fa fa-folder"></i> Folder close <span>- 420kb</span>
+
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

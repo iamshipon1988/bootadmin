@@ -16,7 +16,7 @@
 
         &:hover {
             @include transform(translateY(-4px) scale(1.01));
-            @include box-shadow($boxShadowHover);
+            @include box-shadow($boxShadowCard);
             @include transition(all $animateFast ease-in-out)
         }
     }
