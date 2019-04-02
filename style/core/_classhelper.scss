@@ -23,7 +23,7 @@ img, .img-responsive {
 }
 
 .list {
-    &.vertical {
+    &.list-horizontal {
         width: auto;
         padding: 0;
         margin: 0;
@@ -49,7 +49,7 @@ img, .img-responsive {
         }
     }
 
-    &.icon {
+    &.list-icon {
         list-style: none;
         position: relative;
         padding: 0;

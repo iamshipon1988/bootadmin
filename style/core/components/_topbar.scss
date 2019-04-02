@@ -34,6 +34,11 @@
             color: white;
             text-align: center;
             float: left;
+
+            img {
+                max-width: $logoSizeMobile;
+                max-height: $logoSizeMobile;
+            }
         }
 
         .logo-full {
@@ -463,7 +468,7 @@
                     ul.dropdown-menu {
                         position: fixed;
                         left: 0;
-                        width: 100%;
+                        width: 95vmin;
                         top: $navSizeMobile + 1px;
                     }
                 }

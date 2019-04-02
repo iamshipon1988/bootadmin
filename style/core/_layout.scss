@@ -1,108 +1,110 @@
-body:not(.mobile) {
-    &.boxed {
-        max-width: 1200px;
-        position: relative;
-        margin: 0 auto;
-
-        .page-container {
-            background: white;
-            @include box-shadow($boxShadow);
-        }
-    }
-
-    &.horizontal {
-        .topbar {
+@media (min-width: $grid-md) {
+    body:not(.mobile) {
+        &.boxed {
+            max-width: 1200px;
             position: relative;
-            padding-left: 0 !important;
-            z-index: 15;
+            margin: 0 auto;
 
-            .menu-toggle {
-                display: none;
-            }
-
-            .logo {
-                display: block;
+            .page-container {
+                background: white;
+                @include box-shadow($boxShadow);
             }
         }
 
-        .sidebar {
-            position: relative;
-            width: 100%;
-            height: $inputSize;
-            overflow: visible;
-            z-index: 10;
+        &.horizontal {
+            .topbar {
+                position: relative;
+                padding-left: 0 !important;
+                z-index: 15;
 
-            .logo {
-                display: none;
-            }
+                .menu-toggle {
+                    display: none;
+                }
 
-            ul {
-                li {
+                .logo {
                     display: block;
-                    float: left;
+                }
+            }
 
-                    &.profile,
-                    &.spacer,
-                    &.title {
-                        display: none;
-                    }
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: $inputSize + 2px;
+                overflow: visible;
+                z-index: 10;
+                white-space: nowrap;
 
-                    &.nav-item {
-                        position: relative;
-                        > a {
-                            padding: 0 $padding;
+                .logo {
+                    display: none;
+                }
 
-                            > i {
-                                width: auto;
-                                margin-right: $padding-sm;
+                ul {
+                    display: flex;
 
-                                &.down-arrow {
-                                    margin-right: 0;
-                                    margin-left: $padding-sm;
-                                    position: relative;
-                                    display: inline-block;
-                                    @include transform(rotate(0deg));
-                                }
-                            }
-
-                            &:not(.collapsed):not(.nav-single) {
-                                .down-arrow {
-                                    @include transform(rotate(-90deg));
-                                }
-                            }
+                    li {
+                        &.profile,
+                        &.spacer,
+                        &.title {
+                            display: none;
                         }
 
-                        > div {
-                            position: absolute;
-                            background: white;
-                            @include box-shadow($boxShadowHover);
+                        &.nav-item {
+                            position: relative;
+                            > a {
+                                padding: 0 $padding;
 
-                            ul.sub-menu li {
-                                display: block;
-                                width: 100%;
+                                > i {
+                                    width: auto;
+                                    margin-right: $padding-sm;
 
-                                > a {
-                                    padding: 0 $padding-lg;
+                                    &.down-arrow {
+                                        margin-right: 0;
+                                        margin-left: $padding-sm;
+                                        position: relative;
+                                        display: inline-block;
+                                        @include transform(rotate(0deg));
+                                    }
+                                }
 
-                                    > i {
-                                        width: auto;
-                                        margin-right: $padding-sm;
+                                &:not(.collapsed):not(.nav-single) {
+                                    .down-arrow {
+                                        @include transform(rotate(-90deg));
+                                    }
+                                }
+                            }
+
+                            > div {
+                                position: absolute;
+                                background: white;
+                                @include box-shadow($boxShadowHover);
+
+                                ul.sub-menu li {
+                                    display: block;
+                                    width: 100%;
+
+                                    > a {
+                                        padding: 0 $padding-lg;
+
+                                        > i {
+                                            width: auto;
+                                            margin-right: $padding-sm;
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
 
-                    &.button-container {
-                        padding-top: 5px;
+                        &.button-container {
+                            padding-top: 5px;
+                        }
                     }
                 }
             }
-        }
 
-        main {
-            padding: 0;
-            margin: 0;
+            main {
+                padding: 0;
+                margin: 0;
+            }
         }
     }
 }

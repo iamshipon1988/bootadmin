@@ -342,16 +342,43 @@
     height: calc(100vh - $navSize);
     position: fixed;
     right: -100%;
-    top: $navSize;
+    top: 0;
     bottom: 0;
     overflow-y: auto;
     background: white;
-    z-index: 10;
+    z-index: 20;
     font-size: $fontSize - 1px;
     box-shadow: -1px 0 20px rgba(0,0,0,.08);
     @include transition(all .4s ease);
 
     &.open {
         right: 0;
+    }
+
+    .offcanvas-button {
+        a.btn {
+            border: 1px solid $borderColor;
+            height: $navSize;
+            line-height: $navSize;
+            padding: 0;
+            @include border-radius(0);
+
+            &:hover {
+                background: $redAlert;
+                color: white;
+            }
+        }
+    }
+
+    .offcanvas-title {
+        font-size: $fontSize;
+        padding: $padding-sm $padding;
+        font-weight: $fontBold;
+        margin: 0;
+    }
+
+    @media screen and (max-width: ($grid-md - 1px)){
+        top: 0;
+        bottom: $navSizeMobile;
     }
 }

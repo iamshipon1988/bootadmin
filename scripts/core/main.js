@@ -55,7 +55,7 @@ $('.menu-toggle').click(function(e) {
 $('.offcanvas-toggle').click(function(e) {
     e.preventDefault();
     $('.offcanvas-menu').toggleClass('open');
-    $(this).toggleClass('active').find('.feather').toggleClass('icon-x icon-settings');
+    //$(this).toggleClass('active').find('.feather').toggleClass('icon-x icon-settings');
 });
 
 // Mobile Menu
