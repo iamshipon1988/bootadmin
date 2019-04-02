@@ -40,6 +40,11 @@
             color: $primaryColor;
             text-align: center;
             float: left;
+
+            img {
+                max-width: $logoSizeMobile;
+                max-height: $logoSizeMobile;
+            }
         }
 
         .logo-full {
