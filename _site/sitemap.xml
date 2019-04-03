@@ -37,9 +37,12 @@
 <loc>http://localhost:4000/app/inbox/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/email/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>http://localhost:4000/login/</loc>
 </url>
 </urlset>

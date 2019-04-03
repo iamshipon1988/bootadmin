@@ -31,6 +31,10 @@
 @import "components/calendar";
 @import "components/tree";
 
+/** Pages **/
+@import "pages/login";
+@import "pages/error";
+
 /** Layout **/
 @import "layout";
 
@@ -86,6 +90,9 @@
     border-color: $borderColor;
 }
 
+
+
+
 /** Page Styles **/
 .page {
     $b: &;
@@ -108,37 +115,6 @@
             padding: 0;
             margin: 0;
             font-size: $fontSizeSmall;
-        }
-    }
-}
-
-/** Error **/
-#error {
-    min-height: calc(100vh - 180px);
-    height: 80vh;
-
-    .error-box {
-        max-width: 800px;
-        text-align: center;
-        padding: $padding-xl $padding-xl 2*$padding-xl;
-        margin: 0 auto;
-        background: white;
-        @include box-shadow($boxShadowLg);
-        @include border-radius(4px);
-        @include vertical-align();
-
-        .error-image {
-            display: block;
-            text-align: center;
-            margin-bottom: 2rem;
-
-            img {
-                max-width: 100%;
-            }
-        }
-
-        h1 {
-            font-size: 2rem;
         }
     }
 }

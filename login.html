@@ -1,0 +1,45 @@
+---
+layout: blank
+title:  Login
+bodyID: loginPage
+---
+
+<div class="login">
+    <div class="login-container">
+        <div class="login-form">
+            <div class="logo mb-5">
+                <a href="{{ site.baseurl }}/">
+                    <span class="logo-emblem"><img src="{{ site.baseurl }}/images/boot.png" alt="BA" /></span>
+                    <span class="logo-full">Bootadmin</span>
+                </a>
+            </div>
+
+            <form action="">
+                <div class="form-group">
+                    <input type="text" name="username" placeholder="Username or E-Mail" />
+                    <label><i class="fas fa-user"></i></label>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password" />
+                    <label><i class="fas fa-lock"></i></label>
+                </div>
+                <div class="row login-button">
+                    <div class="col-6">
+                        <a href="{{ site.baseurl }}/forgot-password" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <div class="col text-right">
+                        <a href="{{ site.baseurl }}/" class="btn btn-success">Sign In</a>
+                    </div>
+                </div>
+            </form>
+
+            <div class="or-separator">
+                <span>Don't have an account?</span>
+            </div>
+
+            <div class="login-facebook">
+                <a href="{{ site.baseurl }}/signup" class="btn btn-primary">Sign Up for Free</a>
+            </div>
+        </div>
+    </div>
+</div>

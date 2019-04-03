@@ -1,0 +1,250 @@
+#loginPage {
+    position: relative;
+    background: white;
+
+    &:before {
+        content: " ";
+        position: absolute;
+        left: 1.75*$sidebarSize;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background: url('../../images/demo/bg.jpg') no-repeat center right;
+        background-size: cover;
+    }
+
+    .login {
+        position: fixed;
+        width: 1.75*$sidebarSize;
+        max-width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        background: white;
+        overflow: hidden;
+        z-index: 3;
+        @include box-shadow(10px 0 35px 0 rgba(50,50,93,0.27));
+
+        .logo {
+            display: block;
+            width: 100%;
+            height: $navSize;
+            overflow: hidden;
+            text-transform: uppercase;
+            font-weight: $fontBold;
+            font-size: $fontSize;
+            letter-spacing: 0.05em;
+            @extend %clearfix;
+
+            a {
+                display: block;
+                height: $navSize;
+            }
+
+            .logo-emblem {
+                display: block;
+                width: $navSize;
+                height: $navSize;
+                line-height: $navSize;
+                color: $primaryColor;
+                text-align: center;
+                float: left;
+
+                img {
+                    max-width: $logoSizeMobile;
+                    max-height: $logoSizeMobile;
+                }
+            }
+
+            .logo-full {
+                display: block;
+                height: $navSize;
+                line-height: $navSize;
+                float: left;
+                width: $sidebarSize - $navSize - $padding;
+            }
+        }
+
+        .login-container {
+            position: relative;
+            height: 100vh;
+        }
+
+        .login-form {
+            display: block;
+            padding: 3*$padding-xl 2*$padding-lg;
+            @include vertical-align(relative);
+
+            &.small-gutter {
+                padding: 1.5*$padding-xl 2*$padding-lg;
+            }
+
+            h5 {
+                margin-top: $padding;
+                font-size: $fontSize;
+            }
+
+            .form-group {
+                padding: 0;
+                margin-bottom: $padding;
+                position: relative;
+                display: block;
+
+                label {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: $inputSize;
+                    height: $inputSize;
+                    line-height: $inputSize;
+                    text-align: center;
+                    border-right: 1px solid $borderColor;
+                    color: $textColorLight;
+                    @include transition(all .1s ease);
+                }
+
+                input {
+                    width: 100%;
+                    border: 1px solid $borderColor;
+                    height: $inputSize;
+                    line-height: $inputSize;
+                    padding: 0 $padding 0 ($inputSize + $padding);
+                    color: $textColor;
+                    @include transition(all .1s ease);
+
+                    &:focus {
+                        outline: none;
+                        border-color: $textColor;
+                        @include box-shadow(none);
+                        @include transition(all .1s ease);
+
+                        ~ label {
+                            border-color: $textColor;
+                            color: $textColorDark;
+                            @include transition(all .1s ease);
+                        }
+                    }
+                }
+
+                .select-box {
+                    font-size: $fontSize;
+                    position: relative;
+                    height: $inputSize;
+                    line-height: $inputSize;
+                    border: 1px solid $borderColor;
+
+                    select {
+                        -webkit-appearance:none;
+                        -moz-appearance:none;
+                        appearance:none;
+                        padding-right: 40px;
+                        padding-left: ($inputSize + $padding);
+                        border: none;
+                        background: transparent;
+                        color: $textColor;
+
+                        option {
+                            &:disabled {
+                                color: $textColorLight;
+                            }
+                        }
+                    }
+
+                    &:after {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        content: '\21F5';
+                        pointer-events: none;
+                        padding: 0 $padding;
+                        color: $textColorLight;
+                        height: $inputSize;
+                        line-height: $inputSize;
+                    }
+                }
+            }
+
+            .login-button {
+                margin-top: $padding-lg;
+
+                .forgot-password {
+                    display: inline-block;
+                    font-weight: $fontNormal;
+                    color: $textColorLight;
+                    padding: $padding-sm 0;
+
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+            }
+
+            .login-facebook {
+                text-align: center;
+                margin-top: $padding-xl;
+            }
+        }
+
+        .login-info {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 2*$padding-xl;
+            background: $secondaryColor;
+            background: url('../images/hero/workout-female.png') no-repeat center center;
+            background-size: cover;
+
+            .register-info {
+                display: block;
+                text-align: center;
+                padding: $padding;
+                background: rgba(255,255,255,0.85);
+                @include box-shadow(0 1px 10px rgba(0,0,0,0.1));
+            }
+        }
+
+
+
+        @media screen and (max-width: $grid-md){
+            .login-form {
+                padding: $padding-xl;
+            }
+
+            .logo {
+                margin-bottom: $padding-xl;
+            }
+        }
+    }
+
+    @media (max-width: ($grid-md - 1px)) {
+        padding: 0;
+        height: 100vh;
+        &:before {
+            left: 0;
+            width: 100%;
+            background-position: center center;
+        }
+
+        .page-container {
+            height: 100vh;
+        }
+
+        .login {
+            background: rgba(255,255,255,0.99);
+            width: 100%;
+            height: auto;
+            padding: $padding;
+            @include vertical-align(relative);
+            @include box-shadow($boxShadowHover);
+
+            .login-container {
+                height: auto;
+
+                .login-form {
+                    top: 0;
+                    @include transform(translateY(0));
+                }
+            }
+        }
+    }
+}

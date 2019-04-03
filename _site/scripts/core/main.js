@@ -83,6 +83,23 @@ videoAutoplay();
 // Forms
 $("input.jsNumeric").numeric();
 
+// Sidebar Menu Active State
+$(document).ready(function() {
+    var last=$.cookie('activeSidebarGroup');
+    if (last!=null) {
+        //remove default collapse settings
+        $("#sidebarCookie .collapse").removeClass('in');
+        //show the last visible group
+        $("#"+last).collapse("show");
+    }
+});
+
+//when a group is shown, save it as the active accordion group
+$("#sidebarCookie").bind('shown', function() {
+    var active=$("#sidebarCookie .in").attr('id');
+    $.cookie('activeSidebarGroup', active)
+});
+
 // Wow.js
 new WOW().init();
 
