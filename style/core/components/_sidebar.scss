@@ -224,6 +224,43 @@
             }
         }
     }
+
+    &.sidebar-dark {
+        background: $sidebarDark;
+        color: $textColorLight;
+
+        .logo {
+            border-color: $textColor;
+
+            .logo-full {
+                color: $textColorLight;
+            }
+        }
+
+        ul {
+            li {
+                &.nav-item {
+                    a {
+                        color: $textColorLight;
+
+                        &:hover, &:not(.collapsed):not(.nav-single) {
+                            background: $sidebarDarkDropdown;
+                            color: $textColorLight;
+                        }
+                    }
+
+                    .collapse {
+                        background: $sidebarDarkDropdown;
+                        color: $textColorLight;
+
+                        a:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .sidebar-open {

@@ -58,6 +58,12 @@ $('.offcanvas-toggle').click(function(e) {
     //$(this).toggleClass('active').find('.feather').toggleClass('icon-x icon-settings');
 });
 
+// Dark Sidebar Toggle
+$('.js-darkSidebar').click(function(e) {
+    e.preventDefault();
+    $('.sidebar').toggleClass('sidebar-dark');
+});
+
 // Mobile Menu
 $('#mobileMenuButton').click( function(e) {
    e.preventDefault();
