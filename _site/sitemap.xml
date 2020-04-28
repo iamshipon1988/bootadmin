@@ -19,6 +19,9 @@
 <loc>http://localhost:4000/credits/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/dashboard/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/elements/gallery/</loc>
 </url>
 <url>

@@ -2,19 +2,19 @@
    main.js
    ========================================================================== */
 
-"use strict";
+'use strict';
 $.noConflict();
 var $ = jQuery;
 
 $(document).ready(function() {
     // Animsition
-    $(".animsition").animsition({
+    $('.animsition').animsition({
         inClass: 'fade-in',
         outClass: 'fade-out',
         inDuration: 1500,
         outDuration: 800,
         linkElement: '.animsition-link',
-        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        // e.g. linkElement: 'a:not([target='_blank']):not([href^='#'])'
         loading: true,
         loadingParentElement: 'body', //animsition wrapper element
         loadingClass: 'loading',
@@ -31,9 +31,9 @@ $(document).ready(function() {
 
     // Bootstrap
     $('.collapse').on('shown.bs.collapse', function(){
-        $(this).parent().find(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
+        $(this).parent().find('.fa-plus').removeClass('fa-plus').addClass('fa-minus');
     }).on('hidden.bs.collapse', function(){
-        $(this).parent().find(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
+        $(this).parent().find('.fa-minus').removeClass('fa-minus').addClass('fa-plus');
     });
 
     $(function () {
@@ -45,11 +45,16 @@ $(document).ready(function() {
     })
 });
 
-// Sidebar Toggle
-$('.menu-toggle').click(function(e) {
-    e.preventDefault();
-    $('main').toggleClass('sidebar-open');
-    $('body').toggleClass('sidebar-open sidebar-closed');
+// Sidebar Cookie
+$(document).ready(function() {
+    var body_class = $.cookie('body_class');
+    if(body_class) {
+        $('body').attr('class', body_class);
+    }
+    $('.menu-toggle').click(function() {
+        $('body').toggleClass('sidebar-open sidebar-closed');
+        $.cookie('body_class', $('body').attr('class'));
+    });
 });
 
 $('.offcanvas-toggle').click(function(e) {
@@ -72,11 +77,11 @@ $('#mobileMenuButton').click( function(e) {
 
 // Modal Video Autoplay
 function videoAutoplay() {
-   var trigger = $("body").find('[data-toggle="modal"]');
+   var trigger = $('body').find('[data-toggle="modal"]');
    trigger.click(function () {
-       var theModal = $(this).data("target"),
-           videoSRC = $(this).attr("data-theVideo"),
-           videoSRCauto = videoSRC + "?autoplay=1";
+       var theModal = $(this).data('target'),
+           videoSRC = $(this).attr('data-theVideo'),
+           videoSRCauto = videoSRC + '?autoplay=1';
        $(theModal + ' iframe').attr('src', videoSRCauto);
 
        $('body').on('hidden.bs.modal', '.modal', function () {
@@ -87,22 +92,22 @@ function videoAutoplay() {
 videoAutoplay();
 
 // Forms
-$("input.jsNumeric").numeric();
+$('input.jsNumeric').numeric();
 
 // Sidebar Menu Active State
 $(document).ready(function() {
     var last=$.cookie('activeSidebarGroup');
     if (last!=null) {
         //remove default collapse settings
-        $("#sidebarCookie .collapse").removeClass('in');
+        $('#sidebarCookie .collapse').removeClass('in');
         //show the last visible group
-        $("#"+last).collapse("show");
+        $('#'+last).collapse('show');
     }
 });
 
 //when a group is shown, save it as the active accordion group
-$("#sidebarCookie").bind('shown', function() {
-    var active=$("#sidebarCookie .in").attr('id');
+$('#sidebarCookie').bind('shown', function() {
+    var active=$('#sidebarCookie .in').attr('id');
     $.cookie('activeSidebarGroup', active)
 });
 
@@ -125,15 +130,3 @@ $(document).ready(function() {
        $('body').removeClass('mobile');
     }
 });
-
-// Disable right click and f12
-/*$("html").on("contextmenu",function(e){
-   return false;
-});
-$(document).keydown(function (event) {
-    if (event.keyCode == 123) { // Prevent F12
-        return false;
-    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I
-        return false;
-    }
-});*/
