@@ -51,6 +51,13 @@ $('.offcanvas-toggle').click(function(e) {
     //$(this).toggleClass('active').find('.feather').toggleClass('icon-x icon-settings');
 });
 
+// Sidebar Toggle
+$('.menu-toggle').click(function(e) {
+    e.preventDefault();
+    $('main').toggleClass('sidebar-open');
+    $('body').toggleClass('sidebar-open sidebar-closed');
+});
+
 // Dark Sidebar Toggle
 $('.js-darkSidebar').click(function(e) {
     e.preventDefault();

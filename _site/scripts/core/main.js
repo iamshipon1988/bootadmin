@@ -45,22 +45,17 @@ $(document).ready(function() {
     })
 });
 
-// Sidebar Cookie
-$(document).ready(function() {
-    var body_class = $.cookie('body_class');
-    if(body_class) {
-        $('body').attr('class', body_class);
-    }
-    $('.menu-toggle').click(function() {
-        $('body').toggleClass('sidebar-open sidebar-closed');
-        $.cookie('body_class', $('body').attr('class'));
-    });
-});
-
 $('.offcanvas-toggle').click(function(e) {
     e.preventDefault();
     $('.offcanvas-menu').toggleClass('open');
     //$(this).toggleClass('active').find('.feather').toggleClass('icon-x icon-settings');
+});
+
+// Sidebar Toggle
+$('.menu-toggle').click(function(e) {
+    e.preventDefault();
+    $('main').toggleClass('sidebar-open');
+    $('body').toggleClass('sidebar-open sidebar-closed');
 });
 
 // Dark Sidebar Toggle
