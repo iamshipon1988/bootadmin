@@ -1,0 +1,8 @@
+_site/
+node_modules/
+style/core/style.scss
+style/core/asset/
+style/core/components/
+style/core/pages/
+README.md
+LICENSE

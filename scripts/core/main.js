@@ -29,26 +29,27 @@ $(document).ready(function() {
         transition: function(url){ window.location.href = url; }
     });
 
-    // Bootstrap
+    // Bootstrap collapse icon toggle
     $('.collapse').on('shown.bs.collapse', function(){
         $(this).parent().find('.fa-plus').removeClass('fa-plus').addClass('fa-minus');
     }).on('hidden.bs.collapse', function(){
         $(this).parent().find('.fa-minus').removeClass('fa-minus').addClass('fa-plus');
     });
 
-    $(function () {
-        $('[data-toggle="popover"]').popover()
-    })
+    // Bootstrap 5: initialize popovers
+    document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function(el) {
+        new bootstrap.Popover(el);
+    });
 
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+    // Bootstrap 5: initialize tooltips
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function(el) {
+        new bootstrap.Tooltip(el);
+    });
 });
 
 $('.offcanvas-toggle').click(function(e) {
     e.preventDefault();
     $('.offcanvas-menu').toggleClass('open');
-    //$(this).toggleClass('active').find('.feather').toggleClass('icon-x icon-settings');
 });
 
 // Sidebar Toggle
@@ -72,9 +73,9 @@ $('#mobileMenuButton').click( function(e) {
 
 // Modal Video Autoplay
 function videoAutoplay() {
-   var trigger = $('body').find('[data-toggle="modal"]');
+   var trigger = $('body').find('[data-bs-toggle="modal"]');
    trigger.click(function () {
-       var theModal = $(this).data('target'),
+       var theModal = $(this).attr('data-bs-target'),
            videoSRC = $(this).attr('data-theVideo'),
            videoSRCauto = videoSRC + '?autoplay=1';
        $(theModal + ' iframe').attr('src', videoSRCauto);
@@ -91,19 +92,18 @@ $('input.jsNumeric').numeric();
 
 // Sidebar Menu Active State
 $(document).ready(function() {
-    var last=$.cookie('activeSidebarGroup');
-    if (last!=null) {
-        //remove default collapse settings
-        $('#sidebarCookie .collapse').removeClass('in');
-        //show the last visible group
-        $('#'+last).collapse('show');
+    var last = $.cookie("activeSidebarGroup");
+    if (last != null) {
+        var collapseEl = document.getElementById(last);
+        if (collapseEl) {
+            bootstrap.Collapse.getOrCreateInstance(collapseEl).show();
+        }
     }
 });
 
-//when a group is shown, save it as the active accordion group
-$('#sidebarCookie').bind('shown', function() {
-    var active=$('#sidebarCookie .in').attr('id');
-    $.cookie('activeSidebarGroup', active)
+// When a sidebar group is shown, save it as the active group
+$('#sidebarCookie').on('shown.bs.collapse', '.collapse', function() {
+    $.cookie('activeSidebarGroup', this.id);
 });
 
 // Wow.js

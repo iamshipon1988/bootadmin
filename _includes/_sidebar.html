@@ -1,4 +1,4 @@
-{% assign current = page.url | downcase | split: '/' %}
+{% set currentUrl = page.url | lower %}
 
 <!-- Main Menu -->
 <div class="sidebar">
@@ -27,7 +27,7 @@
             <span class="menu-title">Main</span>
         </li>
         <li class="nav-item">
-            <a class="nav-link wave-effect collapsed wave-effect" data-parent="#sidebarCookie" data-toggle="collapse" href="#navDashboard" aria-expanded="false" aria-controls="page-dashboards">
+            <a class="nav-link wave-effect collapsed wave-effect" data-bs-parent="#sidebarCookie" data-bs-toggle="collapse" href="#navDashboard" aria-expanded="false" aria-controls="page-dashboards">
                 <i class="feather icon-grid"></i>
                 <span class="menu-title">Dashboard</span>
                 <i class="feather icon-chevron-down down-arrow"></i>
@@ -35,13 +35,13 @@
             <div class="collapse" id="navDashboard">
                 <ul class="flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/">
                             <i class="feather icon-layout"></i>
                             <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/">
                             <i class="feather icon-shopping-bag"></i>
                             <span class="menu-title">eCommerce</span>
                         </a>
@@ -56,7 +56,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link wave-effect collapsed" data-parent="#sidebarCookie" data-toggle="collapse" href="#navPageLayouts" aria-expanded="false" aria-controls="page-layouts">
+            <a class="nav-link wave-effect collapsed" data-bs-parent="#sidebarCookie" data-bs-toggle="collapse" href="#navPageLayouts" aria-expanded="false" aria-controls="page-layouts">
                 <i class="feather icon-sidebar"></i>
                 <span class="menu-title">Page Layouts</span>
                 <i class="feather icon-chevron-down down-arrow"></i>
@@ -64,25 +64,25 @@
             <div class="collapse" id="navPageLayouts">
                 <ul class="flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/">
                             <i class="feather icon-layout"></i>
                             <span class="menu-title">Default</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/boxed">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/boxed">
                             <i class="feather icon-bold"></i>
                             <span class="menu-title">Boxed</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/horizontal">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/horizontal">
                             <i class="feather icon-pause"></i>
                             <span class="menu-title">Horizontal Menu</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/boxedhorizontal">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/boxedhorizontal">
                             <i class="feather icon-copy"></i>
                             <span class="menu-title">Boxed &amp; Horizontal</span>
                         </a>
@@ -91,7 +91,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link wave-effect collapsed" data-parent="#sidebarCookie" data-toggle="collapse" href="#navElements" aria-expanded="false" aria-controls="page-elements">
+            <a class="nav-link wave-effect collapsed" data-bs-parent="#sidebarCookie" data-bs-toggle="collapse" href="#navElements" aria-expanded="false" aria-controls="page-elements">
                 <i class="feather icon-layout"></i>
                 <span class="menu-title">Elements</span>
                 <i class="feather icon-chevron-down down-arrow"></i>
@@ -99,25 +99,25 @@
             <div class="collapse" id="navElements">
                 <ul class="flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/elements/bootstrap">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/elements/bootstrap">
                             <i class="feather icon-bold"></i>
                             <span class="menu-title">Bootstrap</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/elements/gallery">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/elements/gallery">
                             <i class="feather icon-image"></i>
                             <span class="menu-title">Gallery</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/elements/cards">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/elements/cards">
                             <i class="feather icon-credit-card"></i>
                             <span class="menu-title">Cards</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/elements/grid">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/elements/grid">
                             <i class="feather icon-grid"></i>
                             <span class="menu-title">Grid</span>
                         </a>
@@ -130,7 +130,7 @@
             <span class="menu-title">App Features</span>
         </li>
         <li class="nav-item">
-            <a class="nav-link wave-effect collapsed" data-parent="#sidebarCookie" data-toggle="collapse" href="#navMailbox" aria-expanded="false" aria-controls="page-mailbox">
+            <a class="nav-link wave-effect collapsed" data-bs-parent="#sidebarCookie" data-bs-toggle="collapse" href="#navMailbox" aria-expanded="false" aria-controls="page-mailbox">
                 <i class="feather icon-mail"></i>
                 <span class="menu-title">Mailbox</span>
                 <i class="feather icon-chevron-down down-arrow"></i>
@@ -138,19 +138,19 @@
             <div class="collapse" id="navMailbox">
                 <ul class="flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/app/inbox">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/app/inbox">
                             <i class="feather icon-inbox"></i>
                             <span class="menu-title">Inbox</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/app/inbox/email">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/app/inbox/email">
                             <i class="feather icon-mail"></i>
                             <span class="menu-title">Email</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/app/inbox/compose">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/app/inbox/compose">
                             <i class="feather icon-send"></i>
                             <span class="menu-title">Compose</span>
                         </a>
@@ -159,13 +159,13 @@
             </div>
         </li>
         <li class="nav-item">
-            <a href="{{ site.url }}/app/calendar" class="nav-link wave-effect nav-single">
+            <a href="{{ site.baseurl }}/app/calendar" class="nav-link wave-effect nav-single">
                 <i class="feather icon-calendar"></i>
                 <span class="menu-title">Calendar</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link wave-effect collapsed" data-parent="#sidebarCookie" data-toggle="collapse" href="#navProfilebox" aria-expanded="false" aria-controls="page-profilebox">
+            <a class="nav-link wave-effect collapsed" data-bs-parent="#sidebarCookie" data-bs-toggle="collapse" href="#navProfilebox" aria-expanded="false" aria-controls="page-profilebox">
                 <i class="feather icon-users"></i>
                 <span class="menu-title">Account</span>
                 <i class="feather icon-chevron-down down-arrow"></i>
@@ -173,19 +173,19 @@
             <div class="collapse" id="navProfilebox">
                 <ul class="flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/account/profile">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/account/profile">
                             <i class="feather icon-user"></i>
                             <span class="menu-title">Profile</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/account/billing">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/account/billing">
                             <i class="feather icon-dollar-sign"></i>
                             <span class="menu-title">Billing</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wave-effect" href="{{ site.url }}/account/settings">
+                        <a class="nav-link wave-effect" href="{{ site.baseurl }}/account/settings">
                             <i class="feather icon-settings"></i>
                             <span class="menu-title">Settings</span>
                         </a>
@@ -198,7 +198,7 @@
             <span class="menu-title">Misc</span>
         </li>
         <li class="nav-item">
-            <a href="{{ site.url }}/credits" class="nav-link wave-effect nav-single">
+            <a href="{{ site.baseurl }}/credits" class="nav-link wave-effect nav-single">
                 <i class="feather icon-zap"></i>
                 <span class="menu-title">Credits</span>
             </a>

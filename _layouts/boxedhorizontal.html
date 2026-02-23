@@ -1,38 +1,33 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-{% include _header.html %}
+<html lang="en">
+{% include "_header.html" %}
 <body id="landing" class="boxed horizontal sidebar-open">
-{% include _loader.html %}
+{% include "_loader.html" %}
 <div class="page-container animsition">
-    <div id="{{ page.bodyID }}">
-        {% include _topbar.html %}
-        {% include _sidebar.html %}
+    <div id="{{ bodyID }}">
+        {% include "_topbar.html" %}
+        {% include "_sidebar.html" %}
         <main>
-            {{ content }}
+            {{ content | safe }}
 
-            {% include _footer.html %}
+            {% include "_footer.html" %}
         </main>
     </div>
-
 </div>
 
-{% if page.customCode %}
-    {% for customPage in page.customCode %}
-        {% include {{ customPage }} %}
+{% if customCode %}
+    {% for customPage in customCode %}
+        {% include customPage %}
     {% endfor %}
 {% endif %}
 
 <!-- Le Javascript -->
-<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="{{ site.baseurl }}/scripts/vendor/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" crossorigin="anonymous"></script>
 <script src="{{ site.baseurl }}/scripts/vendor/library.min.js"></script>
-{% if page.customCDNJs %}{% for customCDNJsFile in page.customCDNJs %}
+<script src="{{ site.baseurl }}/scripts/vendor/bootstrap.min.js"></script>
+{% if customCDNJs %}{% for customCDNJsFile in customCDNJs %}
 <script src="{{ customCDNJsFile }}"></script>{% endfor %}{% endif %}
-{% if page.customJs %}{% for customJsFile in page.customJs %}
+{% if customJs %}{% for customJsFile in customJs %}
 <script src="{{ site.baseurl }}/scripts/{{ customJsFile }}"></script>{% endfor %}{% endif %}
 
 <script src="{{ site.baseurl }}/scripts/core/main.js"></script>

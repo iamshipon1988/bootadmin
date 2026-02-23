@@ -2,22 +2,22 @@
 layout: default
 title:  Compose
 bodyID: inboxPage
-permalink: app/inbox/compose
+permalink: /app/inbox/compose/index.html
 ---
 <div class="page-breadcrumb bg-white mb-4 has-shadow">
     <div class="row">
         <div class="col-5">
-            <h4 class="page-title">{{ page.title }}</h4>
+            <h4 class="page-title">{{ title }}</h4>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/app/inbox/">Inbox</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
                 </ol>
             </nav>
         </div>
         <div class="col-7">
-            <div class="text-right">
+            <div class="text-end">
                 <small>Users</small>
                 <h5 class="text-info">3,458</h5>
             </div>
@@ -35,13 +35,13 @@ permalink: app/inbox/compose
             <ul class="list-group mt-4">
                 <li class="list-group-item list-group-item-title">Folders</li>
                 <li class="list-group-item d-flex justify-content-between align-items-center active">
-                    <a href="javascript:void(0)" class="active list-group-item-action"><i class="mdi mdi-inbox"></i> Inbox <span class="badge badge-success badge-pill float-right">6</span></a>
+                    <a href="javascript:void(0)" class="active list-group-item-action"><i class="mdi mdi-inbox"></i> Inbox <span class="badge bg-success rounded-pill float-end">6</span></a>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <a href="javascript:void(0)" class="list-group-item-action"> <i class="mdi mdi-star"></i> Starred </a>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <a href="javascript:void(0)" class="list-group-item-action"> <i class="mdi mdi-send"></i> Draft <span class="badge badge-danger badge-pill float-right">3</span></a></li>
+                    <a href="javascript:void(0)" class="list-group-item-action"> <i class="mdi mdi-send"></i> Draft <span class="badge bg-danger rounded-pill float-end">3</span></a></li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <a href="javascript:void(0)" class="list-group-item-action"> <i class="mdi mdi-email"></i> Sent Mail </a>
                 </li>
@@ -77,15 +77,15 @@ permalink: app/inbox/compose
                 <form>
                     <div class="card-body card-body-title border-bottom">
                         <div class="input-group mb-2">
-                            <span class="input-group-addon" style="width: 110px;" id="mailFromTo">To:</span>
+                            <span class="input-group-text" style="width: 110px;" id="mailFromTo">To:</span>
                             <input type="text" class="form-control" placeholder="example@example.com">
                         </div>
                         <div class="input-group mb-2">
-                            <span class="input-group-addon" style="width: 110px;" id="mailFromCC">CC:</span>
+                            <span class="input-group-text" style="width: 110px;" id="mailFromCC">CC:</span>
                             <input type="text" class="form-control" placeholder="someone@example.com">
                         </div>
                         <div class="input-group">
-                            <span class="input-group-addon" style="width: 110px;" id="mailFromSubject">Subject:</span>
+                            <span class="input-group-text" style="width: 110px;" id="mailFromSubject">Subject:</span>
                             <input type="text" class="form-control" placeholder="I ran into a bug!">
                         </div>
                     </div>
@@ -101,7 +101,7 @@ permalink: app/inbox/compose
                         </div>-->
                         <div class="form-group mt-4">
                             <button type="submit" class="btn btn-success"><i class="feather icon-send"></i> &nbsp; Send</button>
-                            <button type="submit" class="btn btn-dark float-right"><i class="feather icon-trash-2"></i> &nbsp; Discard</button>
+                            <button type="submit" class="btn btn-dark float-end"><i class="feather icon-trash-2"></i> &nbsp; Discard</button>
                         </div>
                     </div>
                 </form>

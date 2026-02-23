@@ -13,7 +13,7 @@
     @include transition(all .4s ease);
 
     span, div, ul, li, a, i {
-        @include transition(all $animateFast linear)
+        @include transition(all $animateFast linear);
     }
 
     .logo {
@@ -322,11 +322,11 @@
                     }
 
                     .menu-title {
-                        @include opacity(0)
+                        @include opacity(0);
                         width: 0;
                         display: none;
                         overflow: hidden;
-                        @include transition(all $animateFast linear)
+                        @include transition(all $animateFast linear);
                     }
                 }
 
@@ -337,7 +337,7 @@
                         height: $inputSize;
                         width: $navSize;
                         text-align: center;
-                        @include transition(all $animateFast linear)
+                        @include transition(all $animateFast linear);
 
                         i {
                             margin: 0;
@@ -346,17 +346,16 @@
                             &.down-arrow {
                                 right: -100px;
                                 @include opacity(0);
-                                @include transition(all 0.5s linear)
+                                @include transition(all 0.5s linear);
                             }
                         }
 
                         .menu-title {
-                            @include opacity(0)
+                            @include opacity(0);
                             width: 0;
                             display: none;
                             overflow: hidden;
-                            @include transition(all 0.3s linear)
-                            @include transition(all $animateFast linear)
+                            @include transition(all $animateFast linear);
                         }
                     }
                 }

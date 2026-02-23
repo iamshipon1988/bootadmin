@@ -433,7 +433,7 @@
                         padding-right: 0;
                         display: block;
                         text-align: center;
-                        padding-top: ($navSizeMobile - $inputSizeSm) / 2;
+                        padding-top: ($navSizeMobile - $inputSizeSm) * 0.5;
 
                         .avatar {
                             position: relative;

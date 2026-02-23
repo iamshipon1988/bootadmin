@@ -12,16 +12,16 @@ customCSS:
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-5">
-            <h4 class="page-title">{{ page.title }}</h4>
+            <h4 class="page-title">{{ title }}</h4>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
                 </ol>
             </nav>
         </div>
         <div class="col-7">
-            <div class="text-right">
+            <div class="text-end">
                 <small>Users</small>
                 <h5 class="text-info">3,458</h5>
             </div>
@@ -33,7 +33,7 @@ customCSS:
     <div class="card">
         <div class="card-body">
             <div id="calendar"></div>
-            <a href="javascript:void(0)" data-toggle="modal" data-target="#add-new-event" class="calendar-add-button waves-effect">
+            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-event" class="calendar-add-button waves-effect">
                 <i class="feather icon-plus"></i>
             </a>
         </div>
@@ -45,16 +45,16 @@ customCSS:
                     <strong>Legend:</strong>
                 </li>
                 <li class="list-inline-item">
-                    <a href="javascript:void(0)" class="list-group-item-action"><i class="text-danger feather icon-circle mr-2"></i> Work </a>
+                    <a href="javascript:void(0)" class="list-group-item-action"><i class="text-danger feather icon-circle me-2"></i> Work </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="javascript:void(0)" class="list-group-item-action"><i class="text-primary feather icon-circle mr-2"></i> Business </a>
+                    <a href="javascript:void(0)" class="list-group-item-action"><i class="text-primary feather icon-circle me-2"></i> Business </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="javascript:void(0)" class="list-group-item-action"><i class="text-warning feather icon-circle mr-2"></i> Family </a>
+                    <a href="javascript:void(0)" class="list-group-item-action"><i class="text-warning feather icon-circle me-2"></i> Family </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="javascript:void(0)" class="list-group-item-action"><i class="text-info feather icon-circle mr-2"></i> Friends </a>
+                    <a href="javascript:void(0)" class="list-group-item-action"><i class="text-info feather icon-circle me-2"></i> Friends </a>
                 </li>
             </ul>
         </div>
@@ -67,13 +67,13 @@ customCSS:
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title"><strong>Add Event</strong></h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
-                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-bs-dismiss="modal">Delete</button>
             </div>
         </div>
     </div>
@@ -84,7 +84,7 @@ customCSS:
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title"><strong>Add</strong> a category</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form>
@@ -108,8 +108,8 @@ customCSS:
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
-                <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-bs-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

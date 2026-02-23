@@ -486,12 +486,12 @@
 
 // Convert PX to Rem
 @function calculateRem($size) {
-    $remSize: $size / 16px;
+    $remSize: $size * 0.0625;
     @return #{$remSize}rem;
 }
 
 @mixin font-size($sizeValue: 1.6) {
-    font-size: ($sizeValue / 10) + rem;
+    font-size: ($sizeValue * 0.1) + rem;
     font-size: $sizeValue + px;
 }
 
