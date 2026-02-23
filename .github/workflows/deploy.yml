@@ -25,6 +25,8 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run build
+        env:
+          BASEURL: /bootadmin
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
