@@ -1,7 +1,24 @@
 
+# macOS
 style/.DS_Store
-images/.DS_Store
 images/.DS_Store
 .DS_Store
 _includes/.DS_Store
 scripts/.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Build output
+_site/
+
+# AI / LLM context files
+.claude/
+.cursor/
+.aider*
+.copilot/
+*.ai-context
+.windsurfcontext
+.codeiumignore
+

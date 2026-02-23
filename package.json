@@ -1,0 +1,20 @@
+{
+  "name": "bootadmin",
+  "version": "0.2.0",
+  "description": "An open source Bootstrap admin panel theme",
+  "scripts": {
+    "build": "rimraf _site && eleventy",
+    "build:css": "sass style/core/style.scss style/core/style.min.css --style=compressed --no-source-map --silence-deprecation=import,slash-div,color-functions,global-builtin,elseif",
+    "build:vendor": "node -e \"const fs=require('fs');const src='node_modules/bootstrap/dist';fs.copyFileSync(src+'/css/bootstrap.min.css','style/vendor/bootstrap.min.css');fs.copyFileSync(src+'/js/bootstrap.bundle.min.js','scripts/vendor/bootstrap.min.js');const css=['animate.css','animsition.min.css','waves.min.css','dropzone.css','feathericons.css'].map(f=>fs.readFileSync('style/vendor/'+f,'utf8')).join('\\n');fs.writeFileSync('style/vendor/library.min.css',css);console.log('Vendor files updated to Bootstrap 5');\"",
+    "clean": "rimraf _site",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "bootstrap": "^5.3.3",
+    "rimraf": "^6.1.3",
+    "sass": "^1.80.0"
+  },
+  "author": "Sazzad Hossain",
+  "license": "MIT"
+}

@@ -185,30 +185,6 @@
 		}
 	}
 }
-.thead-inverse th {
-	color: #dee2e6;
-	background-color: #111111;
-}
-.thead-default th {
-	color: #495057;
-	background-color: #e9ecef;
-}
-.table-inverse {
-	color: #dee2e6;
-	background-color: #111111;
-	th, td, thead th {
-		border-color: #242424;
-	}
-	&.table-bordered {
-		border: 0;
-	}
-	&.table-striped tbody tr:nth-of-type(odd) {
-		background-color: $bodyColor;
-	}
-	&.table-hover tbody tr:hover {
-		background-color: rgba(255, 255, 255, 0.075);
-	}
-}
 @media (max-width: 991px) {
 	.table-responsive {
 		display: block;

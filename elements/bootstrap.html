@@ -6,16 +6,16 @@ bodyID: bootstrapPage
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-5">
-            <h4 class="page-title">{{ page.title }}</h4>
+            <h4 class="page-title">{{ title }}</h4>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
                 </ol>
             </nav>
         </div>
         <div class="col-7">
-            <div class="text-right">
+            <div class="text-end">
                 <small>Users</small>
                 <h5 class="text-info">3,458</h5>
             </div>
@@ -72,7 +72,7 @@ bodyID: bootstrapPage
 
     			<h4 class="mt-5 mb-3">Button Dropdowns</h4>
     			  <div class="btn-group">
-    			    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary</button>
+    			    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary</button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
     			      <a class="dropdown-item" href="javascript:void(0)">Another action</a>
@@ -82,7 +82,7 @@ bodyID: bootstrapPage
     			    </div>
     			  </div>
     			  <div class="btn-group">
-    			    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Secondary</button>
+    			    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Secondary</button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
     			      <a class="dropdown-item" href="javascript:void(0)">Another action</a>
@@ -92,7 +92,7 @@ bodyID: bootstrapPage
     			    </div>
     			  </div>
     			  <div class="btn-group">
-    			    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Success</button>
+    			    <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Success</button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
     			      <a class="dropdown-item" href="javascript:void(0)">Another action</a>
@@ -102,7 +102,7 @@ bodyID: bootstrapPage
     			    </div>
     			  </div>
     			  <div class="btn-group">
-    			    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</button>
+    			    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
     			      <a class="dropdown-item" href="javascript:void(0)">Another action</a>
@@ -112,7 +112,7 @@ bodyID: bootstrapPage
     			    </div>
     			  </div>
     			  <div class="btn-group">
-    			    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warning</button>
+    			    <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warning</button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
     			      <a class="dropdown-item" href="javascript:void(0)">Another action</a>
@@ -122,7 +122,7 @@ bodyID: bootstrapPage
     			    </div>
     			  </div>
     			  <div class="btn-group">
-    			    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danger</button>
+    			    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danger</button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
     			      <a class="dropdown-item" href="javascript:void(0)">Another action</a>
@@ -135,8 +135,8 @@ bodyID: bootstrapPage
     			  <h4 class="mt-5 mb-3">Split Button Dropdowns</h4>
     			  <div class="btn-group">
     			    <button type="button" class="btn btn-primary">Primary</button>
-    			    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    			      <span class="sr-only">Toggle Dropdown</span>
+    			    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			      <span class="visually-hidden">Toggle Dropdown</span>
     			    </button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
@@ -148,8 +148,8 @@ bodyID: bootstrapPage
     			  </div>
     			  <div class="btn-group">
     			    <button type="button" class="btn btn-secondary">Secondary</button>
-    			    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    			      <span class="sr-only">Toggle Dropdown</span>
+    			    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			      <span class="visually-hidden">Toggle Dropdown</span>
     			    </button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
@@ -161,8 +161,8 @@ bodyID: bootstrapPage
     			  </div>
     			  <div class="btn-group">
     			    <button type="button" class="btn btn-success">Success</button>
-    			    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    			      <span class="sr-only">Toggle Dropdown</span>
+    			    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			      <span class="visually-hidden">Toggle Dropdown</span>
     			    </button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
@@ -174,8 +174,8 @@ bodyID: bootstrapPage
     			  </div>
     			  <div class="btn-group">
     			    <button type="button" class="btn btn-info">Info</button>
-    			    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    			      <span class="sr-only">Toggle Dropdown</span>
+    			    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			      <span class="visually-hidden">Toggle Dropdown</span>
     			    </button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
@@ -187,8 +187,8 @@ bodyID: bootstrapPage
     			  </div>
     			  <div class="btn-group">
     			    <button type="button" class="btn btn-warning">Warning</button>
-    			    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    			      <span class="sr-only">Toggle Dropdown</span>
+    			    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			      <span class="visually-hidden">Toggle Dropdown</span>
     			    </button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
@@ -200,8 +200,8 @@ bodyID: bootstrapPage
     			  </div>
     			  <div class="btn-group">
     			    <button type="button" class="btn btn-danger">Danger</button>
-    			    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    			      <span class="sr-only">Toggle Dropdown</span>
+    			    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			      <span class="visually-hidden">Toggle Dropdown</span>
     			    </button>
     			    <div class="dropdown-menu">
     			      <a class="dropdown-item" href="javascript:void(0)">Action</a>
@@ -467,14 +467,14 @@ bodyID: bootstrapPage
         			<div class="col">
         				<h4 class="mt-5 mb-3">Icons</h4>
         				<div class="input-group">
-        				  <span class="input-group-addon" id="basic-addon1"><i class="feather icon-archive"></i></span>
+        				  <span class="input-group-text" id="basic-addon1"><i class="feather icon-archive"></i></span>
         				  <input type="text" class="form-control" placeholder="With Feather Icons">
         				</div>
         			</div>
         			<div class="col">
         				<h4 class="mt-5 mb-3">Icons</h4>
         				<div class="input-group">
-        				  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+        				  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
         				  <input type="text" class="form-control" placeholder="With Fontawesome Icons">
         				</div>
         			</div>
@@ -482,7 +482,7 @@ bodyID: bootstrapPage
         				<h4 class="mt-5 mb-3">Addon</h4>
         				<div class="input-group">
         				  <input type="text" class="form-control" placeholder="Addon to right">
-        				  <span class="input-group-addon" id="basic-addon2">@example.com</span>
+        				  <span class="input-group-text" id="basic-addon2">@example.com</span>
         				</div>
         			</div>
         		</div>
@@ -508,7 +508,7 @@ bodyID: bootstrapPage
         				<h4 class="mt-5 mb-3">Search</h4>
         				<div class="input-group">
         			      <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
-        			      <span class="input-group-btn">
+        			      <span class="input-group-append">
         			        <button class="btn btn-primary" type="button">Go!</button>
         			      </span>
         			    </div>
@@ -571,14 +571,14 @@ bodyID: bootstrapPage
         		        <h4 class="mt-5 mb-3">Date Icon</h4>
         		        <div class="input-group date">
         				  <input type="text" class="form-control">
-        				  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+        				  <span class="input-group-text"><i class="fa fa-calendar"></i></span>
         				</div>
         	        </div>
         	        <div class="col-md">
         		        <h4 class="mt-5 mb-3">Date Range</h4>
         		        <div class="input-daterange input-group" id="datepicker">
         				    <input type="text" class="input-sm form-control" name="start" />
-        				    <span class="input-group-addon">to</span>
+        				    <span class="input-group-text">to</span>
         				    <input type="text" class="input-sm form-control" name="end" />
         				</div>
         	        </div>
@@ -600,16 +600,16 @@ bodyID: bootstrapPage
         				<h4 class="mt-5 mb-3">Menu</h4>
         				<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         					<a class="navbar-brand" href="javascript:void(0)"><img src="{{ site.baseurl }}/images/demo/logo-white.svg" width="30" height="30" alt=""></a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbar1">
-        						<ul class="navbar-nav ml-auto">
+        						<ul class="navbar-nav ms-auto">
         							<li class="nav-item active"><a class="nav-link" href="javascript:void(0)">Discover</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)">Settings</a></li>
         							<li class="nav-item dropdown">
-        			                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        			                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         			                        Dropdown
         			                    </a>
         			                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -626,16 +626,16 @@ bodyID: bootstrapPage
         				<h4 class="mt-5 mb-3">Icons</h4>
         				<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         					<a class="navbar-brand" href="javascript:void(0)"><img src="{{ site.baseurl }}/images/demo/logo-white.svg" width="30" height="30" alt=""></a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar2" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbar2">
-        						<ul class="navbar-nav ml-auto">
+        						<ul class="navbar-nav ms-auto">
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-globe fa-fw"></i></a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-cog fa-fw"></i></a></li>
         							<li class="nav-item dropdown">
-        			                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        			                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         			                        <i class="fa fa-user fa-fw"></i>
         			                    </a>
         			                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -655,13 +655,13 @@ bodyID: bootstrapPage
         				<h4 class="mt-5 mb-3">Form</h4>
         				<nav class="navbar navbar-expand-lg navbar-light bg-warning">
         					<a class="navbar-brand" href="javascript:void(0)"><img src="{{ site.baseurl }}/images/demo/logo-white.svg" width="30" height="30" alt=""></a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar3" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar3" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbar3">
-        						<form class="form-inline ml-auto">
-        					    	<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        						<form class="form-inline ms-auto">
+        					    	<input class="form-control me-sm-2" type="text" placeholder="Search" aria-label="Search">
         					        <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
         					    </form>
         					</div>
@@ -671,12 +671,12 @@ bodyID: bootstrapPage
         				<h4 class="mt-5 mb-3">Utility</h4>
         				<nav class="navbar navbar-expand-lg navbar-dark bg-success">
         					<a class="navbar-brand" href="javascript:void(0)"><img src="{{ site.baseurl }}/images/demo/logo-white.svg" width="30" height="30" alt=""></a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar4" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar4" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbar4">
-        						<ul class="navbar-nav mr-auto">
+        						<ul class="navbar-nav me-auto">
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-globe fa-fw"></i></a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-cog fa-fw"></i></a></li>
         						</ul>
@@ -694,12 +694,12 @@ bodyID: bootstrapPage
         			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         				<div class="container-fluid">
         					<a class="navbar-brand" href="javascript:void(0)">Primary</a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbarColor02">
-        						<ul class="navbar-nav ml-auto">
+        						<ul class="navbar-nav ms-auto">
         							<li class="nav-item active"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-globe fa-fw"></i> Discover</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-cog fa-fw"></i> Settings</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-user fa-fw"></i> Profile</a></li>
@@ -713,12 +713,12 @@ bodyID: bootstrapPage
         			<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         				<div class="container-fluid">
         					<a class="navbar-brand" href="javascript:void(0)">Secondary</a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbarColor03">
-        						<ul class="navbar-nav ml-auto">
+        						<ul class="navbar-nav ms-auto">
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)">Discover</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)">Settings</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)">Profile</a></li>
@@ -732,12 +732,12 @@ bodyID: bootstrapPage
         			<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         				<div class="container-fluid">
         					<a class="navbar-brand" href="javascript:void(0)">Danger</a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor08" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor08" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbarColor08">
-        						<ul class="navbar-nav ml-auto">
+        						<ul class="navbar-nav ms-auto">
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)">Discover</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)">Settings</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)">Profile</a></li>
@@ -751,12 +751,12 @@ bodyID: bootstrapPage
         			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         				<div class="container-fluid">
         					<a class="navbar-brand" href="javascript:void(0)">Dark</a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor04" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbarColor04">
-        						<ul class="navbar-nav ml-auto">
+        						<ul class="navbar-nav ms-auto">
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-globe fa-fw fa-2x"></i></a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-cog fa-fw fa-2x"></i></a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-user fa-fw fa-2x"></i></a></li>
@@ -770,12 +770,12 @@ bodyID: bootstrapPage
         			<nav class="navbar navbar-expand-lg navbar-light bg-light">
         				<div class="container-fluid">
         					<a class="navbar-brand" href="javascript:void(0)">Light</a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor05" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor05" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbarColor05">
-        						<ul class="navbar-nav ml-auto">
+        						<ul class="navbar-nav ms-auto">
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fab fa-facebook-square fa-fw fa-2x"></i></a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fab fa-twitter fa-fw fa-2x"></i></a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-dribbble fa-fw fa-2x"></i></a></li>
@@ -790,12 +790,12 @@ bodyID: bootstrapPage
         			<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
         				<div class="container-fluid">
         					<a class="navbar-brand" href="javascript:void(0)">Transparent</a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor06" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor06" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbarColor06">
-        						<ul class="navbar-nav ml-auto">
+        						<ul class="navbar-nav ms-auto">
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fab fa-facebook fa-fw"></i> Facebook</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fab fa-twitter fa-fw"></i> Twitter</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-instagram fa-fw"></i> Instagram</a></li>
@@ -809,12 +809,12 @@ bodyID: bootstrapPage
         			<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
         				<div class="container-fluid">
         					<a class="navbar-brand" href="javascript:void(0)">Transparent</a>
-        					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor07" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor07" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         						<span class="navbar-toggler-icon"></span>
         					</button>
 
         					<div class="collapse navbar-collapse" id="navbarColor07">
-        						<ul class="navbar-nav ml-auto">
+        						<ul class="navbar-nav ms-auto">
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fab fa-facebook fa-fw"></i> Facebook</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fab fa-twitter fa-fw"></i> Twitter</a></li>
         							<li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="fa fa-instagram fa-fw"></i> Instagram</a></li>
@@ -843,10 +843,10 @@ bodyID: bootstrapPage
         					<div class="card text-center">
         						<div class="card-header">
         							<ul class="nav nav-tabs card-header-tabs nav-fill" id="tabs-tab" role="tablist">
-        								<li class="nav-item"><a class="nav-link active" id="tabs-home-tab" data-toggle="pill" href="#tabs-home" role="tab" aria-controls="tabs-home" aria-expanded="true">Home</a></li>
-        								<li class="nav-item"><a class="nav-link" id="tabs-profile-tab" data-toggle="pill" href="#tabs-profile" role="tab" aria-controls="tabs-profile" aria-expanded="true">Profile</a></li>
-        								<li class="nav-item"><a class="nav-link" id="tabs-message-tab" data-toggle="pill" href="#tabs-message" role="tab" aria-controls="tabs-message" aria-expanded="true">Message</a></li>
-        								<li class="nav-item"><a class="nav-link" id="tabs-settings-tab" data-toggle="pill" href="#tabs-settings" role="tab" aria-controls="tabs-settings" aria-expanded="true">Settings</a></li>
+        								<li class="nav-item"><a class="nav-link active" id="tabs-home-tab" data-bs-toggle="pill" href="#tabs-home" role="tab" aria-controls="tabs-home" aria-expanded="true">Home</a></li>
+        								<li class="nav-item"><a class="nav-link" id="tabs-profile-tab" data-bs-toggle="pill" href="#tabs-profile" role="tab" aria-controls="tabs-profile" aria-expanded="true">Profile</a></li>
+        								<li class="nav-item"><a class="nav-link" id="tabs-message-tab" data-bs-toggle="pill" href="#tabs-message" role="tab" aria-controls="tabs-message" aria-expanded="true">Message</a></li>
+        								<li class="nav-item"><a class="nav-link" id="tabs-settings-tab" data-bs-toggle="pill" href="#tabs-settings" role="tab" aria-controls="tabs-settings" aria-expanded="true">Settings</a></li>
         							</ul>
         						</div>
         						<div class="card-body">
@@ -870,10 +870,10 @@ bodyID: bootstrapPage
         					<div class="card text-center">
         						<div class="card-header bg-white">
         							<ul class="nav nav-pills card-header-pills nav-fill" id="pills-tab" role="tablist">
-        								<li class="nav-item"><a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-expanded="true">Home</a></li>
-        								<li class="nav-item"><a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-expanded="true">Profile</a></li>
-        								<li class="nav-item"><a class="nav-link" id="pills-message-tab" data-toggle="pill" href="#pills-message" role="tab" aria-controls="pills-message" aria-expanded="true">Message</a></li>
-        								<li class="nav-item"><a class="nav-link" id="pills-settings-tab" data-toggle="pill" href="#pills-settings" role="tab" aria-controls="pills-settings" aria-expanded="true">Settings</a></li>
+        								<li class="nav-item"><a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-expanded="true">Home</a></li>
+        								<li class="nav-item"><a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-expanded="true">Profile</a></li>
+        								<li class="nav-item"><a class="nav-link" id="pills-message-tab" data-bs-toggle="pill" href="#pills-message" role="tab" aria-controls="pills-message" aria-expanded="true">Message</a></li>
+        								<li class="nav-item"><a class="nav-link" id="pills-settings-tab" data-bs-toggle="pill" href="#pills-settings" role="tab" aria-controls="pills-settings" aria-expanded="true">Settings</a></li>
         							</ul>
         						</div>
         						<div class="card-body">
@@ -937,12 +937,12 @@ bodyID: bootstrapPage
 				<div class="mb-4">
 					<nav aria-label="Page navigation example">
 					  <ul class="pagination">
-					    <li class="page-item"><a class="page-link" href="javascript:void(0)"><i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Previous</span></a></li>
+					    <li class="page-item"><a class="page-link" href="javascript:void(0)"><i class="fa fa-chevron-left" aria-hidden="true"></i><span class="visually-hidden">Previous</span></a></li>
 					    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
 					    <li class="page-item active"><a class="page-link" href="javascript:void(0)">2</a></li>
 					    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
 					    <li class="page-item disabled"><a class="page-link" href="javascript:void(0)">4</a></li>
-					    <li class="page-item"><a class="page-link" href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+					    <li class="page-item"><a class="page-link" href="javascript:void(0)"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="visually-hidden">Next</span></a></li>
 					  </ul>
 					</nav>
 				</div>
@@ -1004,11 +1004,11 @@ bodyID: bootstrapPage
 
                 <div class="row">
 	        <div class="col-8 mx-auto">
-		        <div id="carousel2" class="carousel slide" data-ride="carousel">
+		        <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
 				    <ol class="carousel-indicators">
-					    <li data-target="#carousel2" data-slide-to="0" class=""></li>
-					    <li data-target="#carousel2" data-slide-to="1" class=""></li>
-					    <li data-target="#carousel2" data-slide-to="2" class="active"></li>
+					    <li data-bs-target="#carousel2" data-bs-slide-to="0" class=""></li>
+					    <li data-bs-target="#carousel2" data-bs-slide-to="1" class=""></li>
+					    <li data-bs-target="#carousel2" data-bs-slide-to="2" class="active"></li>
 				    </ol>
 		            <div class="carousel-inner img-raised rounded" role="listbox">
 		                <div class="carousel-item">
@@ -1031,13 +1031,13 @@ bodyID: bootstrapPage
 		                </div>
 		            </div>
 
-		            <a class="left carousel-control carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+		            <a class="left carousel-control carousel-control-prev" href="#carousel2" role="button" data-bs-slide="prev">
 		                <span class="fa fa-chevron-left"></span>
-		                <span class="sr-only">Previous</span>
+		                <span class="visually-hidden">Previous</span>
 		            </a>
-		            <a class="right carousel-control carousel-control-next" href="#carousel2" role="button" data-slide="next">
+		            <a class="right carousel-control carousel-control-next" href="#carousel2" role="button" data-bs-slide="next">
 		                <span class="fa fa-chevron-right"></span>
-		                <span class="sr-only">Next</span>
+		                <span class="visually-hidden">Next</span>
 		            </a>
 				</div>
 	        </div>
@@ -1060,9 +1060,7 @@ bodyID: bootstrapPage
         	        <div class="row">
         		        <div class="col">
         			        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        						    <span aria-hidden="true">&times;</span>
-        						</button>
+        						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         						<h4>Warning!</h4>
         						Best check yo self, you're not looking too good.
         					</div>
@@ -1071,27 +1069,21 @@ bodyID: bootstrapPage
         	        <div class="row">
         		        <div class="col-md">
         			        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        						    <span aria-hidden="true">&times;</span>
-        						</button>
+        						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         						<h4>Danger!</h4>
         						Oh snap! Change a few things up and try submitting again.
         					</div>
         		        </div>
         		        <div class="col-md">
         			        <div class="alert alert-success alert-dismissible fade show" role="alert">
-        						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        						    <span aria-hidden="true">&times;</span>
-        						</button>
+        						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         						<h4>Success!</h4>
         						Well done! You successfully read this important alert message.
         					</div>
         		        </div>
         		        <div class="col-md">
         			        <div class="alert alert-info alert-dismissible fade show" role="alert">
-        						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        						    <span aria-hidden="true">&times;</span>
-        						</button>
+        						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         						<h4>Info!</h4>
         						Heads up! This alert needs your attention, but it's not super important.
         					</div>
@@ -1103,35 +1095,35 @@ bodyID: bootstrapPage
 	        <div class="col-md">
 		        <h4 class="mt-5 mb-3">Modals</h4>
 				<!-- classicModal -->
-				<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#classicModal">
+				<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#classicModal">
 				    Classic modal
 				</button>
 
 				<!-- small modal -->
-				<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#smallAlertModal">
+				<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#smallAlertModal">
 				    Small modal
 				</button>
 	        </div>
 
 	        <div class="col-md">
 		        <h4 class="mt-5 mb-3">Tooltips</h4>
-		        <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="To top">Top</button>
-			    <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title="" data-original-title="To right">Right</button>
-			    <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="To bottom">Bottom</button>
-			    <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="left" title="" data-original-title="To left">Left</button>
+		        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-placement="top" title="" data-original-title="To top">Top</button>
+			    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-placement="right" title="" data-original-title="To right">Right</button>
+			    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-placement="bottom" title="" data-original-title="To bottom">Bottom</button>
+			    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-placement="left" title="" data-original-title="To left">Left</button>
 	        </div>
 	        <div class="col-md">
 		        <h4 class="mt-5 mb-3">Popovers</h4>
-		        <button type="button" class="btn btn-primary btn-sm" data-container="body" data-toggle="popover" data-placement="top" data-content="Popover on Top" data-original-title="" title="">
+		        <button type="button" class="btn btn-primary btn-sm" data-container="body" data-bs-toggle="popover" data-placement="top" data-content="Popover on Top" data-original-title="" title="">
 			      Top
 			    </button>
-			    <button type="button" class="btn btn-primary btn-sm" data-container="body" data-toggle="popover" data-placement="right" data-content="Popover on Right" data-original-title="" title="">
+			    <button type="button" class="btn btn-primary btn-sm" data-container="body" data-bs-toggle="popover" data-placement="right" data-content="Popover on Right" data-original-title="" title="">
 			      Right
 			    </button>
-			    <button type="button" class="btn btn-primary btn-sm" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Popover on Bottom" data-original-title="" title="">
+			    <button type="button" class="btn btn-primary btn-sm" data-container="body" data-bs-toggle="popover" data-placement="bottom" data-content="Popover on Bottom" data-original-title="" title="">
 			      Bottom
 			    </button>
-			    <button type="button" class="btn btn-primary btn-sm" data-container="body" data-toggle="popover" data-placement="left" data-content="Popover on Left" data-original-title="" title="">
+			    <button type="button" class="btn btn-primary btn-sm" data-container="body" data-bs-toggle="popover" data-placement="left" data-content="Popover on Left" data-original-title="" title="">
 			      Left
 			    </button>
 	        </div>
@@ -1196,7 +1188,7 @@ bodyID: bootstrapPage
         			  <div class="card">
         			    <img class="card-img" src="{{ site.baseurl }}/images/demo/bg.jpg" alt="Card image">
         			  </div>
-        			  <div class="card p-3 text-right">
+        			  <div class="card p-3 text-end">
         			    <blockquote class="blockquote mb-0">
         			      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
         			      <footer class="blockquote-footer">
@@ -1262,7 +1254,7 @@ bodyID: bootstrapPage
         		<div class="row">
         	        <div class="col-md">
         		        <div class="media my-4">
-        				  	<div class="d-flex mr-3">
+        				  	<div class="d-flex me-3">
         						<div class="icon">
         				  			<i class="fa fa-star fa-2x"></i>
         						</div>
@@ -1275,7 +1267,7 @@ bodyID: bootstrapPage
         	        </div>
         	        <div class="col-md">
         		        <div class="media my-4">
-        				  	<div class="d-flex mr-3">
+        				  	<div class="d-flex me-3">
         						<div class="icon icon-circle">
         				  			<i class="fa fa-star fa-2x"></i>
         						</div>
@@ -1288,7 +1280,7 @@ bodyID: bootstrapPage
         	        </div>
         	        <div class="col-md">
         		        <div class="media my-4">
-        				  	<div class="d-flex mr-3">
+        				  	<div class="d-flex me-3">
         						<div class="icon icon-square">
         				  			<i class="fa fa-star fa-2x"></i>
         						</div>
@@ -1343,7 +1335,7 @@ bodyID: bootstrapPage
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
 	      Single-origin coffee affogato master cleanse la croix vinyl cliche 8-bit unicorn. Succulents paleo godard raclette hammock occupy jean shorts XOXO schlitz tattooed irony etsy fanny pack.
@@ -1351,7 +1343,7 @@ bodyID: bootstrapPage
 	      Post-ironic fixie disrupt tilde banjo etsy poutine fingerstache salvia narwhal meh banh mi next level.
 	  </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-link" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
@@ -1363,16 +1355,16 @@ bodyID: bootstrapPage
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title mx-auto" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-center">
 	      Are you sure you want to do this?
 	  </div>
       <div class="modal-actions">
-        <button type="button" class="btn-link modal-action" data-dismiss="modal">
+        <button type="button" class="btn-link modal-action" data-bs-dismiss="modal">
           <strong>Continue</strong>
         </button>
-        <button type="button" class="btn-link modal-action" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn-link modal-action" data-bs-dismiss="modal">Cancel</button>
       </div>
     </div>
   </div>

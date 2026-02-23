@@ -1,4 +1,4 @@
-{% assign current = page.url | downcase | split: '/' %}
+{% set currentUrl = page.url | lower %}
 
 <!-- Main Menu -->
 <div class="topbar">
@@ -15,11 +15,11 @@
                     <i class="feather icon-menu"></i>
                 </a>
             </div>
-            <div class="col-md-7 text-right">
+            <div class="col-md-7 text-end">
                 <ul>
                     <!-- Profile Menu -->
                     <li class="btn-group user-account">
-                        <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="javascript:;" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="user-content">
                                 <div class="user-name">Andrew Gill</div>
                                 <div class="user-plan">BeeBack Free Tier</div>
@@ -28,7 +28,7 @@
                                 <img src="{{ site.baseurl }}/images/demo/user.jpg" alt="profile" />
                             </div>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right">
+                        <ul class="dropdown-menu dropdown-menu-end">
                             <li><a href="{{ site.baseurl }}/account/profile" class="animsition-link dropdown-item wave-effect"><i class="feather icon-user"></i> Profile</a></li>
                             <li><a href="{{ site.baseurl }}/account/billing" class="animsition-link dropdown-item wave-effect"><i class="feather icon-dollar-sign"></i> Billing</a></li>
                             <li><a href="{{ site.baseurl }}/account/settings" class="animsition-link dropdown-item wave-effect"><i class="feather icon-settings"></i> Settings</a></li>
@@ -41,10 +41,10 @@
                     </li>
                     <!-- Notification Menu -->
                     <li class="btn-group notification">
-                        <a href="javascript:;" class="btn dropdown-toggle wave-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="javascript:;" class="btn dropdown-toggle wave-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="feather icon-bell"><span class="notification-count">27</span></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right">
+                        <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                                 <a href="#" class="wave-effect">
                                     <span class="avatar">
@@ -126,15 +126,15 @@
     <ul class="list-group list-group-flush">
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Cras justo odio
-            <span class="badge badge-primary badge-pill">14</span>
+            <span class="badge bg-primary rounded-pill">14</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Dapibus ac facilisis in
-            <span class="badge badge-primary badge-pill">2</span>
+            <span class="badge bg-primary rounded-pill">2</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Morbi leo risus
-            <span class="badge badge-primary badge-pill">1</span>
+            <span class="badge bg-primary rounded-pill">1</span>
         </li>
     </ul>
 

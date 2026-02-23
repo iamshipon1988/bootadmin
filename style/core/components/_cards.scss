@@ -12,12 +12,12 @@
     }
 
     &.card-hover {
-        @include transition(all $animateFast ease-in-out)
+        @include transition(all $animateFast ease-in-out);
 
         &:hover {
             @include transform(translateY(-4px) scale(1.01));
             @include box-shadow($boxShadowCard);
-            @include transition(all $animateFast ease-in-out)
+            @include transition(all $animateFast ease-in-out);
         }
     }
 
